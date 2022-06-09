@@ -1,3 +1,4 @@
+import boj.BOJ
 import kakao.y2021.KakaoInternship2021
 import kakao.y2022.KakaoInternship2022
 import programmers.Programmers
@@ -12,15 +13,18 @@ fun main() {
 }
 
 class Algorithm {
-    val woowahanTechCamp: WoowahanTechCamp
+    private val woowahanTechCamp: WoowahanTechCamp
         get() = WoowahanTechCamp
-    val kakaoInternship2022: KakaoInternship2022
+    private val kakaoInternship2022: KakaoInternship2022
         get() = KakaoInternship2022
-    val kakaoInternship2021: KakaoInternship2021
+    private val kakaoInternship2021: KakaoInternship2021
         get() = KakaoInternship2021
-    val programmers = Programmers
+    private val programmers: Programmers
+        get() = Programmers
+    private val boj: BOJ
+        get() = BOJ
 
     fun execute() {
-        programmers.practice.levelTwo.matrixEdgeRotation.execute()
+        boj.p16968LicensePlate1.execute()
     }
 }
