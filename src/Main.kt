@@ -2,9 +2,6 @@ import boj.BOJ
 import kakao.y2021.KakaoInternship2021
 import kakao.y2022.KakaoInternship2022
 import programmers.Programmers
-import utils.combination
-import utils.combinationAll
-import utils.factorial
 import woowahan.WoowahanTechCamp
 
 
@@ -25,6 +22,6 @@ class Algorithm {
         get() = BOJ
 
     fun execute() {
-        boj.p16968LicensePlate1.execute()
+        //programmers.practice.levelTwo.joyStick.execute()
     }
 }

@@ -2,6 +2,10 @@ package boj.bruteForce
 
 import common.Solution
 
+/**
+ * 차량 번호판1
+ * https://www.acmicpc.net/problem/16968
+ * */
 class P_16968_LicensePlate1 : Solution {
 
     override fun execute() {
