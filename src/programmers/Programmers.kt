@@ -1,10 +1,7 @@
 package programmers
 
 import common.Solution
-import programmers.practice.level1.CranePuppetGame
-import programmers.practice.level1.KthNumber
-import programmers.practice.level1.Lotto
-import programmers.practice.level1.MockExam
+import programmers.practice.level1.*
 import programmers.practice.level2.*
 import programmers.practice.level3.*
 
@@ -20,7 +17,10 @@ object Programmers {
         val levelFive = LevelFive
 
         object LevelOne {
+            val addMissingNumbers: Solution get() = AddMissingNumbers()
+            val addNegativePositiveNumbers: Solution get() = AddNegativePositiveNumbers()
             val cranePuppetGame: Solution get() = CranePuppetGame()
+            val dotProduct: Solution get() = DotProduct()
             val kThNumber: Solution get() = KthNumber()
             val lotto: Solution get() = Lotto()
             val mockExam: Solution get() = MockExam()

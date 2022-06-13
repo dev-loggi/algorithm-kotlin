@@ -1,7 +1,7 @@
 package boj
 
 import common.Solution
-import java.util.*
+import java.util.ArrayDeque
 
 
 /**
@@ -10,76 +10,103 @@ import java.util.*
  * https://www.acmicpc.net/problem/2667
  * */
 class P_2667_VillageNumbering : Solution {
+/*
+[case1]
+7
+0110100
+0110101
+1110101
+0000111
+0100000
+0111110
+0111000
+
+[case1 answer]
+3
+7
+8
+9
+
+[case2]
+7
+0110100
+0100101
+1110101
+0001011
+1100000
+0101111
+0101001
+
+[case2 answer]
+3
+7
+8
+9
+*/
 
     override fun execute() {
-        // 3, 7, 8, 9
-        var answer: IntArray = solution(7, arrayOf(
-            intArrayOf(0, 1, 1, 0, 1, 0, 0),
-            intArrayOf(0, 1, 1, 0, 1, 0, 1),
-            intArrayOf(1, 1, 1, 0, 1, 0, 1),
-            intArrayOf(0, 0, 0, 0, 1, 1, 1),
-            intArrayOf(0, 1, 0, 0, 0, 0, 0),
-            intArrayOf(0, 1, 1, 1, 1, 1, 0),
-            intArrayOf(0, 1, 1, 1, 0, 0, 0),
-        ))
-        println("answer=${answer.contentToString()}")
+        main()
     }
 
-    fun solution(n: Int, map: Array<IntArray>): IntArray {
-        val answer = mutableListOf(0)
-        val visited = Array(n) { Array(n) { false } }
+    fun main() {
+        val n = readLine()?.toIntOrNull() ?: return
+        val map = mutableListOf<IntArray>()
+        val visited = Array(n) { BooleanArray(n) { false } }
 
-        map.forEachIndexed { i, arr ->
-            arr.forEachIndexed { j, exist ->
-                if (!visited[i][j] && exist == 1) {
-                    answer[0]++
-                    answer.add(
-                        recursiveDFS(map, visited, n, i, j)
-                    )
-                    //logVisited(visited)
+        for (i in 0 until n) {
+            val line = readLine()
+                ?.map { it.digitToInt() }
+                ?.toIntArray() ?: return
+            map.add(line)
+        }
+
+        var k = 1 // 단지 번호
+        for (i in 0 until n) {
+            for (j in 0 until n) {
+                if (map[i][j] != 0 && !visited[i][j]) {
+                    visited[i][j] = true
+                    bfs(map, visited, Point(i, j), k++)
                 }
                 visited[i][j] = true
             }
         }
 
-        return answer.toIntArray()
+        map.forEach { println(it.contentToString()) }
+
+        println(k - 1)
+        (1 until k).map { i -> map.sumOf { it.count { n -> n == i } } }
+            .sorted()
+            .forEach { println(it) }
     }
 
-    private fun recursiveDFS(map: Array<IntArray>, visited: Array<Array<Boolean>>, n: Int, i: Int, j: Int): Int {
-        var count = 1
-        visited[i][j] = true
+    fun bfs(map: List<IntArray>, visited: Array<BooleanArray>, start: Point, k: Int) {
+        val queue = ArrayDeque<Point>().apply { offer(start) }
+        val range = map.indices
 
-        count += visit(map, visited, n, i = i, j = j + 1) // 우
-        count += visit(map, visited, n, i = i + 1, j = j) // 하
-        count += visit(map, visited, n, i = i, j = j - 1) // 좌
-        count += visit(map, visited, n, i = i - 1, j = j) // 상
-
-        return count
-    }
-
-    private fun visit(map: Array<IntArray>, visited: Array<Array<Boolean>>, n: Int, i: Int, j: Int): Int {
-        var count = 0
-
-        if (i in 0 until n && j in 0 until n) {
-            if (!visited[i][j] && map[i][j] == 1) {
-                //print("($i, $j) ")
-                visited[i][j] = true
-                count += recursiveDFS(map, visited, n, i, j)
-            }
-            visited[i][j] = true
+        fun visit(row: Int, col: Int) {
+            if (row !in range || col !in range || visited[row][col] || map[row][col] == 0)
+                return
+            visited[row][col] = true
+            map[row][col] = k
+            queue.offer(Point(row, col))
         }
 
-        return count
+        map[start.row][start.col] = k
+
+        while (queue.isNotEmpty()) {
+            val p = queue.poll()
+
+            visit(p.row - 1, p.col) // 상
+            visit(p.row + 1, p.col) // 하
+            visit(p.row, p.col - 1) // 좌
+            visit(p.row, p.col + 1) // 우
+        }
     }
 
-    private fun logVisited(visited: Array<Array<Boolean>>) {
-        visited.forEach {
-            it.forEach { b ->
-                if (b) print("1 ")
-                else print("0 ")
-            }
-            println()
-        }
+    class Point(val row: Int, val col: Int)
+
+    private fun logVisited(visited: Array<BooleanArray>) {
+        visited.forEach { println(it.map { b -> if (b) 'T' else 'F' }.joinToString("")) }
     }
 
 }

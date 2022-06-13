@@ -2,7 +2,9 @@ import boj.BOJ
 import kakao.y2021.KakaoInternship2021
 import kakao.y2022.KakaoInternship2022
 import programmers.Programmers
+import utils.DataStructure
 import woowahan.WoowahanTechCamp
+import java.util.ArrayDeque
 
 
 fun main() {
@@ -22,6 +24,6 @@ class Algorithm {
         get() = BOJ
 
     fun execute() {
-        //programmers.practice.levelTwo.joyStick.execute()
+        boj.p2667VillageNumbering.execute()
     }
 }
