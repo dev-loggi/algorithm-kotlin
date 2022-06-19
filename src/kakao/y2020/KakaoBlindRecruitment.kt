@@ -22,22 +22,19 @@ class KakaoBlindRecruitment : Solution {
         return answer.joinToString("")
     }
 
-    private fun String.splitUV(): List<String> {
-        var n1 = 0
-        var n2 = 0
-        val u = StringBuilder()
-        var v = ""
-        for (i in this.indices) {
-            val ch = this[i]
-            if (ch == '(') n1++ else n2++
-            u.append(ch)
+    private fun String.splitUV(): Pair<String, String> {
+        if (isBlank()) return "" to ""
 
-            if (n1 > 0 && n2 > 0 && n1 == n2) {
-                v = this.drop(i + 1)
-                break
+        var left = 0
+        var right = 0
+        var uLength = 0
+        for (i in indices) {
+            when (this[i]) {
+                '(' -> left++
+                ')' -> right++
             }
+            if (left == right) { uLength = i + 1; break; }
         }
-
-        return listOf(u.toString(), v)
+        return take(uLength) to drop(uLength)
     }
 }

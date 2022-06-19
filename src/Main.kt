@@ -1,11 +1,11 @@
 import boj.BOJ
+import codility.exercise.Codility_Ex9_BinaryGap
 import kakao.y2021.KakaoInternship2021
 import kakao.y2022.KakaoInternship2022
 import programmers.Programmers
-import utils.DataStructure
+import test.NaverInternship2022
 import woowahan.WoowahanTechCamp
-import java.util.ArrayDeque
-
+import kotlin.math.min
 
 fun main() {
     Algorithm().execute()
@@ -24,6 +24,15 @@ class Algorithm {
         get() = BOJ
 
     fun execute() {
-        boj.p2667VillageNumbering.execute()
+        //boj.boj1175Delivery.execute()
+        //programmers.practice.levelTwo.parenthesisConversion.execute()
+
+
+        NaverInternship2022.apply {
+            p2.execute()
+        }
+
     }
+
+
 }

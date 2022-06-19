@@ -76,3 +76,11 @@ fun <T> List<T>.combination(r: Int): List<List<T>> {
     dfs(0, 0, emptyList())
     return result
 }
+
+fun <T> List<T>.permutation(): List<List<T>> {
+    fun <T> recursive(el: List<T>, fin: List<T> = listOf(), sub: List<T> = el): List<List<T>> {
+        return if (sub.isEmpty()) listOf(fin)
+        else sub.flatMap { recursive(el, fin + it, sub - it) }
+    }
+    return recursive(this)
+}
