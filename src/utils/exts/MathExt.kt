@@ -1,13 +1,15 @@
-package utils
+package utils.exts
 
 import kotlin.math.sqrt
 
 /**
- * [조합(Combination)의 수]
+ * [조합]
+ * 1. nCr = nPr / r! = n! / r!(n-r)!
+ * 2. nCr = n-1Cr-1 + n-1Cr
  * 이항정리
  * 2^n = nC0 + nC1 + ... + nCn
  * 파스칼의 삼각형(이항계수의 성질)
- * nCr = n-1Cr-1 + n-1Cr
+ *
  * */
 fun Int.combination(r: Int): Int {
     if (r !in 0..this) return 0
@@ -17,10 +19,40 @@ fun Int.combination(r: Int): Int {
 }
 
 /**
+ * [중복 조합]
+ * nHr = n+r-1Cr
+ *     = n+r-1Cn-1
+ * */
+fun Int.homoCombination(r: Int): Int {
+    val n = this
+    return (n + r - 1).combination(r)
+}
+
+/**
+ * [순열]
+ * nPr = n! / (n-r)!
+ * */
+fun Int.permutation(r: Int): Int {
+    val n = this
+    return (n.toLong().factorial() / (n - r).factorial().toLong()).toInt()
+}
+
+
+/**
  * [팩토리얼]
  * */
 fun Int.factorial(): Int {
     tailrec fun recursive(n: Int, acc: Int): Int =
+        if (n <= 0) acc
+        else recursive(n - 1, acc * n)
+    return recursive(this, 1)
+}
+
+/**
+ * [팩토리얼]
+ * */
+fun Long.factorial(): Long {
+    tailrec fun recursive(n: Long, acc: Long): Long =
         if (n <= 0) acc
         else recursive(n - 1, acc * n)
     return recursive(this, 1)
