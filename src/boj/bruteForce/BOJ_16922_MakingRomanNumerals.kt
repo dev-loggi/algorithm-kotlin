@@ -20,22 +20,31 @@ class BOJ_16922_MakingRomanNumerals : Solution {
     }
 
     fun solution(N: Int) {
-        val sums = mutableSetOf<Int>()
-        val romans = intArrayOf(1, 5, 10, 50)
+        val answer = intArrayOf(1, 5, 10, 50)
+            .homoCombination(N)
+            .map { it.sum() }
+            .distinct()
+            .size
 
-        fun recursive(depth: Int, start: Int, sum: Int) {
-            if (depth == N) {
-                sums.add(sum)
+        println(answer)
+    }
+
+    fun IntArray.homoCombination(r: Int): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+
+        fun recursive(depth: Int, start: Int, list: List<Int>) {
+            if (depth == r) {
+                result.add(list)
                 return
             }
-            for (i in start until romans.size) {
-                recursive(depth + 1, i, sum + romans[i])
+
+            for (i in start until size) {
+                recursive(depth + 1, i, list.toMutableList().also { it.add(this[i]) })
             }
         }
 
-        recursive(0, 0, 0)
-
-        println(sums.size)
+        recursive(0, 0, emptyList())
+        return result
     }
 }
 /*

@@ -3,12 +3,38 @@ package utils.exts
 /**
  * 순열
  * */
-fun <T> List<T>.permutation(): List<List<T>> {
+fun <T> List<T>.permutationAll(): List<List<T>> {
     fun recursive(el: List<T>, fin: List<T> = listOf(), sub: List<T> = el): List<List<T>> {
         return if (sub.isEmpty()) listOf(fin)
         else sub.flatMap { recursive(el, fin + it, sub - it) }
     }
     return recursive(this)
+}
+
+/**
+ * 순열
+ * */
+fun <T> List<T>.permutation(r: Int): List<List<T>> {
+    val result = mutableListOf<List<T>>()
+
+    fun recursive(depth: Int, list: List<T>) {
+        if (depth == r) {
+            result.add(list)
+            return
+        }
+
+        for (i in indices) {
+            if (list.contains(this[i])) continue
+
+            val newList = list.toMutableList()
+                .also { it.add(this[i]) }
+
+            recursive(depth + 1, newList)
+        }
+    }
+
+    recursive(0, emptyList())
+    return result
 }
 
 /**
