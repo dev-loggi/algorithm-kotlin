@@ -2,7 +2,6 @@ import boj.BOJ
 import kakao.y2021.KakaoInternship2021
 import kakao.y2022.KakaoInternship2022
 import programmers.Programmers
-import utils.exts.combination
 import woowahan.WoowahanTechCamp
 
 fun main() {
@@ -22,8 +21,9 @@ class Algorithm {
         get() = BOJ
 
     fun execute() {
-        //boj.boj16637.execute()
+        boj.p17088.execute()
         //programmers.practice.levelTwo.parenthesisConversion.execute()
+
     }
 }
 

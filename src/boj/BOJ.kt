@@ -6,8 +6,10 @@ import common.Solution
 
 object BOJ {
 
+
     val boj1012OrganicCabbage: Solution get() = BOJ_1012_OrganicCabbage()
     val boj1175Delivery: Solution get() = BOJ_1175_Delivery()
+
 
     val p1260DFSandBFS: Solution get() = P_1260_DFSandBFS()
     val p1913Snail: Solution get() = P_1913_Snail()
@@ -17,7 +19,14 @@ object BOJ {
     val boj2606Virus: Solution get() = BOJ_2606_Virus()
     val p2667VillageNumbering: Solution get() = P_2667_VillageNumbering()
     val p2675StringRepetition: Solution get() = P_2675_StringRepetition()
+    val p2745: Solution get() = BOJ_2745_BaseConversion()
     val p2839SugarDelivery: Solution get() = P_2839_SugarDelivery()
+
+    val p9019: Solution get() = BOJ_9019_DSLR()
+
+    val p11005: Solution get() = BOJ_11005_BaseConversion2()
+
+    val p15683: Solution get() = BOJ_15683_Serveillance()
 
     val boj16637: Solution get() = BOJ_16637_AddParentheses()
     val boj16922MakingRomanNumerals: Solution get() = BOJ_16922_MakingRomanNumerals()
@@ -29,4 +38,6 @@ object BOJ {
     val boj16968LicensePlate1: Solution get() = P_16968_LicensePlate1()
     val boj16971HalfSeasonedHalfFried: Solution get() = BOJ_16971_HalfSeasonedHalfFried()
     val boj16973RectangleEscape: Solution get() = BOJ_16973_RectangleEscape()
+
+    val p17088: Solution get() = BOJ_17088_ArithmeticSequenceTransform()
 }
