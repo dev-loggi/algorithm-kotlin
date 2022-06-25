@@ -1,6 +1,8 @@
 package boj.bruteForce
 
 import common.Solution
+import kotlin.math.abs
+import kotlin.math.absoluteValue
 
 /**
  * 17088
@@ -34,24 +36,18 @@ class BOJ_17088_ArithmeticSequenceTransform : Solution {
         val operators = intArrayOf(1, 0, -1).homoPermutation(2)
         println(operators)
 
-        for (firstOp in operators) {
+        for (op in operators) {
             val B = IntArray(N) { i -> A[i] }
-            B[0] += firstOp[0]
-            B[1] += firstOp[1]
+            B[0] += op[0]
+            B[1] += op[1]
 
             // b1, b2가 나올 수 있는 9가지 경우의 수에 따라 공차(diff)가 결정됨
             val diff = B[1] - B[0]
             for (i in 1 until B.size - 1) {
-                if (B[i + 1] - B[i] == diff)
-                    continue
+                if (abs(diff - (B[i + 1] - B[i])) > 1)
+                    break
 
-                for (op in operators) {
-                    if ((B[i + 1] + op[1]) - (B[i] + op[0]) == diff) {
-                        B[i] += op[0]
-                        B[i + 1] += op[1]
-                        break
-                    }
-                }
+                B[i + 1] = B[i] + diff
             }
 
             if (B.isArithmeticSequence()) {
