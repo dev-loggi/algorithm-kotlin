@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import common.Solution
+import Solution
 import java.util.*
 
 /**

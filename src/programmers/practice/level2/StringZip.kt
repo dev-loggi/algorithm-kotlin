@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import common.Solution
+import Solution
 
 /**
  * 문자열 압축

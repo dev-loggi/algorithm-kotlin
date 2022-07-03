@@ -1,6 +1,7 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
+import boj.BOJSolution.Companion.BRUTE_FORCE
 
 /**
  * 16936
@@ -8,10 +9,13 @@ import common.Solution
  * https://www.acmicpc.net/problem/16936
  * 완전 탐색
  * */
-class BOJ_16936_Division3Multiplication2 : Solution {
+class BOJ_16936_Division3Multiplication2 : BOJSolution() {
 
-    override fun execute() {
-        repeat(2) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -57,16 +61,26 @@ class BOJ_16936_Division3Multiplication2 : Solution {
     }
 }
 
-/*
-[case1]
-6
-4 8 6 3 12 9
-[case1 answer]
-9 3 6 12 4 8
+private val _info = BOJSolution.Info(
+    no = 16936,
+    title = "나3곱2",
+    category = arrayOf(BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16936"
+)
 
-[case2]
-4
-42 28 84 126
-[case2 answer]
-126 42 84 28
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "6\n" +
+        "4 8 6 3 12 9",
+        output =
+        "9 3 6 12 4 8"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "4\n" +
+        "42 28 84 126",
+        output =
+        "126 42 84 28"
+    ),
+)

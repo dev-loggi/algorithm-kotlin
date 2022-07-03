@@ -1,6 +1,7 @@
 package boj.bruteForce
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import java.util.ArrayDeque
 import kotlin.math.max
 
@@ -10,10 +11,13 @@ import kotlin.math.max
  * https://www.acmicpc.net/problem/17281
  * 완전 탐색
  * */
-class BOJ_17281_Baseball : Solution {
+class BOJ_17281_Baseball : BOJSolution() {
 
-    override fun execute() {
-        repeat(6) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -255,61 +259,63 @@ class BOJ_17281_Baseball : Solution {
         return result
     }
 }
-/*
 
-[case1]
-2
-4 0 0 0 0 0 0 0 0
-4 0 0 0 0 0 0 0 0
-[case1 answer]
-1
+private val _info = BOJSolution.Info(
+    no = 17281,
+    title = "야구",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/17281"
+)
 
-[case2]
-2
-4 0 0 0 1 1 1 0 0
-0 0 0 0 0 0 0 0 0
-[case2 answer]
-4
-
-[case3]
-2
-0 4 4 4 4 4 4 4 4
-0 4 4 4 4 4 4 4 4
-[case3 answer]
-43
-
-[case4]
-2
-4 3 2 1 0 4 3 2 1
-1 2 3 4 1 2 3 4 0
-[case4 answer]
-46
-
-[case5]
-9
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-4 4 4 4 4 4 4 4 0
-[case5 answer]
-216
-
-[case6]
-9
-1 2 4 3 0 2 1 0 3
-1 2 1 2 0 0 0 0 1
-3 4 2 3 1 2 3 4 0
-0 1 2 3 4 2 1 0 0
-0 0 0 0 0 0 1 4 4
-0 4 0 4 0 4 0 4 0
-0 4 2 2 2 2 2 2 2
-1 1 1 1 1 1 1 1 0
-0 2 0 3 0 1 0 2 0
-[case6 answer]
-89
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "4 0 0 0 0 0 0 0 0\n" +
+                "4 0 0 0 0 0 0 0 0",
+        output = "1"
+    ),
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "4 0 0 0 1 1 1 0 0\n" +
+                "0 0 0 0 0 0 0 0 0",
+        output = "4"
+    ),
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "0 4 4 4 4 4 4 4 4\n" +
+                "0 4 4 4 4 4 4 4 4",
+        output = "43"
+    ),
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "4 3 2 1 0 4 3 2 1\n" +
+                "1 2 3 4 1 2 3 4 0",
+        output = "46"
+    ),
+    BOJSolution.TestCase(
+        input = "9\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0\n" +
+                "4 4 4 4 4 4 4 4 0",
+        output = "216"
+    ),
+    BOJSolution.TestCase(
+        input = "9\n" +
+                "1 2 4 3 0 2 1 0 3\n" +
+                "1 2 1 2 0 0 0 0 1\n" +
+                "3 4 2 3 1 2 3 4 0\n" +
+                "0 1 2 3 4 2 1 0 0\n" +
+                "0 0 0 0 0 0 1 4 4\n" +
+                "0 4 0 4 0 4 0 4 0\n" +
+                "0 4 2 2 2 2 2 2 2\n" +
+                "1 1 1 1 1 1 1 1 0\n" +
+                "0 2 0 3 0 1 0 2 0",
+        output = "89"
+    ),
+)

@@ -1,6 +1,6 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
 /**
  * 16938
@@ -8,10 +8,13 @@ import common.Solution
  * https://www.acmicpc.net/problem/16938
  * 완전 탐색
  * */
-class BOJ_16938_CampReady : Solution {
+class BOJ_16938_CampReady : BOJSolution() {
 
-    override fun execute() {
-        repeat(3) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -59,23 +62,30 @@ class BOJ_16938_CampReady : Solution {
 
 }
 
-/*
-[case1]
-3 5 6 1
-1 2 3
-[case1 answer]
-2
+private val _info = BOJSolution.Info(
+    no = 16938,
+    title = "캠프 준비",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16938"
+)
 
-[case2]
-4 40 50 10
-10 20 30 25
-[case2 answer]
-2
-
-[case3]
-5 25 35 10
-10 10 20 10 20
-[case3 answer]
-6
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "3 5 6 1\n" +
+        "1 2 3",
+        output = "2"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "4 40 50 10\n" +
+        "10 20 30 25",
+        output = "2"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 25 35 10\n" +
+        "10 10 20 10 20",
+        output = "6"
+    ),
+)

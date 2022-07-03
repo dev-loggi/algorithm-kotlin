@@ -1,6 +1,6 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 import kotlin.math.min
 
 /**
@@ -8,10 +8,13 @@ import kotlin.math.min
  * 양념 반 후라이드 반
  * https://www.acmicpc.net/problem/16917
  * */
-class BOJ_16971_HalfSeasonedHalfFried : Solution {
+class BOJ_16971_HalfSeasonedHalfFried : BOJSolution() {
 
-    override fun execute() {
-        repeat(3) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -47,20 +50,25 @@ class BOJ_16971_HalfSeasonedHalfFried : Solution {
         println(price)
     }
 }
-/*
-[case1]
-1500 2000 1600 3 2
-[case1] - answer
-7900
 
-[case2]
-1500 2000 1900 3 2
-[case2] - answer
-8500
+private val _info = BOJSolution.Info(
+    no = 16971,
+    title = "양념 반 후라이드 반",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16917"
+)
 
-[case3]
-1500 2000 500 90000 100000
-[case3] - answer
-100000000
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "1500 2000 1600 3 2",
+        output = "7900"
+    ),
+    BOJSolution.TestCase(
+        input = "1500 2000 1900 3 2",
+        output = "8500"
+    ),
+    BOJSolution.TestCase(
+        input = "1500 2000 500 90000 100000",
+        output = "100000000"
+    ),
+)

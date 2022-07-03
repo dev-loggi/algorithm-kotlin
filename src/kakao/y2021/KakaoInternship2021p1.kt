@@ -1,6 +1,6 @@
 package kakao.y2021
 
-import common.Solution
+import Solution
 
 class KakaoInternship2021p1 : Solution {
 

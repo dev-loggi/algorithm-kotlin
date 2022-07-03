@@ -1,6 +1,7 @@
-package boj
+package boj.unsolved
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 
 
 /**
@@ -8,9 +9,12 @@ import common.Solution
  * 문자열 반복
  * https://www.acmicpc.net/problem/2675
  * */
-class P_2675_StringRepetition : Solution {
+class BOJ_2675_StringRepetition : BOJSolution() {
 
-    override fun execute() {
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
         main()
     }
 
@@ -39,3 +43,20 @@ class P_2675_StringRepetition : Solution {
         }
     }
 }
+
+private val _info = BOJSolution.Info(
+    no = 2675,
+    title = "문자열 반복",
+    category = arrayOf(BOJSolution.MATERIALIZATION),
+    url = "https://www.acmicpc.net/problem/2675"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "3 ABC\n" +
+                "5 /HTP",
+        output ="AAABBBCCC\n" +
+                "/////HHHHHTTTTTPPPPP"
+    ),
+)

@@ -1,6 +1,6 @@
 package programmers.skillCheck
 
-import common.Solution
+import Solution
 import java.math.BigInteger
 import kotlin.math.max
 

@@ -1,45 +1,15 @@
 package boj.dfsBfs
 
-import common.Solution
-import java.text.DecimalFormat
+import boj.BOJSolution
 import java.util.ArrayDeque
 
-/**
- * 2178
- * 미로 탐색
- * https://www.acmicpc.net/problem/2178
- * */
-class P_2178_MazeExploration : Solution {
+class BOJ_2178_MazeExploration : BOJSolution() {
 
-/*
-4 6
-101111
-101010
-101011
-111011
+    override val info = _info
+    override val testCases = _testCases
 
-4 6
-110110
-110110
-111111
-111101
-
-2 25
-1011101110111011101110111
-1110111011101110111011101
-
-7 7
-1011111
-1110001
-1000001
-1000001
-1000001
-1000001
-1111111
-*/
-
-    override fun execute() {
-        for (i in 0 until 4) main()
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -87,8 +57,6 @@ class P_2178_MazeExploration : Solution {
             visit(p, p.row, p.col + 1) // 우
         }
 
-        val pattern = Array(maze[maze.lastIndex][maze.last().lastIndex].toString().length) { 0 }.joinToString("")
-        maze.forEach { println(it.map { n -> DecimalFormat(pattern).format(n) }) }
         return maze[maze.lastIndex][maze.last().lastIndex]
     }
 
@@ -104,3 +72,46 @@ class P_2178_MazeExploration : Solution {
         println()
     }
 }
+
+private val _info = BOJSolution.Info(
+    no = 2178,
+    title = "미로 탐색",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/2178"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "4 6\n" +
+                "101111\n" +
+                "101010\n" +
+                "101011\n" +
+                "111011",
+        output = "15"
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "4 6\n" +
+                "110110\n" +
+                "110110\n" +
+                "111111\n" +
+                "111101",
+        output = "9"
+    ),
+    BOJSolution.TestCase( // case 3
+        input = "2 25\n" +
+                "1011101110111011101110111\n" +
+                "1110111011101110111011101",
+        output = "38"
+    ),
+    BOJSolution.TestCase( // case 4
+        input = "7 7\n" +
+                "1011111\n" +
+                "1110001\n" +
+                "1000001\n" +
+                "1000001\n" +
+                "1000001\n" +
+                "1000001\n" +
+                "1111111",
+        output = "13"
+    )
+)

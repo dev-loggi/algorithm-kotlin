@@ -1,6 +1,6 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 import kotlin.math.abs
 
 /**
@@ -10,10 +10,13 @@ import kotlin.math.abs
  * https://www.acmicpc.net/problem/17135
  * 완전 탐색
  * */
-class BOJ_17135_CastleDefense : Solution {
+class BOJ_17135_CastleDefense : BOJSolution() {
 
-    override fun execute() {
-        repeat(6) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -38,11 +41,9 @@ class BOJ_17135_CastleDefense : Solution {
 
                 do {
                     count += map.attacks(archers, D)
-                    //println("acc count=$count")
                     readLine()
                 } while (map.next())
 
-                //println("★★총 count=$count")
                 count
             }
 
@@ -104,15 +105,11 @@ class BOJ_17135_CastleDefense : Solution {
 
                 // 거리가 가장 가깝고, 가장 왼쪽에 있는 적군
                 val firstEnemy = enemiesByDistance.minByOrNull { it[1] }!!
-                //enemiesByDistance.map { it.joinToString(" ") }.let { println(it) }
 
                 map[firstEnemy[0]][firstEnemy[1]]++
                 break
             }
         }
-
-        //map.log()
-        //archers.log(map[0].size)
 
         var count = 0
         for (r in indices) for (c in map[r].indices) {
@@ -122,9 +119,6 @@ class BOJ_17135_CastleDefense : Solution {
             map[r][c] = 0
             count++
         }
-
-        //println("a=$count")
-
 
         return count
     }
@@ -162,81 +156,69 @@ class BOJ_17135_CastleDefense : Solution {
         println(arr.joinToString(""))
     }
 }
-/*
-[case1]
-5 5 1
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-1 1 1 1 1
-[case1 answer]
-3
 
-[case2]
-5 5 1
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-1 1 1 1 1
-0 0 0 0 0
-[case2 answer]
-3
+private val _info = BOJSolution.Info(
+    no = 17135,
+    title = "캐슬 디펜스",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/17135"
+)
 
-[case3]
-5 5 2
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-1 1 1 1 1
-0 0 0 0 0
-[case3 answer]
-5
-
-[case4]
-5 5 5
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-[case4 answer]
-15
-
-[case5]
-6 5 1
-1 0 1 0 1
-0 1 0 1 0
-1 1 0 0 0
-0 0 0 1 1
-1 1 0 1 1
-0 0 1 0 0
-[case5 answer]
-9
-
-[case6]
-6 5 2
-1 0 1 0 1
-0 1 0 1 0
-1 1 0 0 0
-0 0 0 1 1
-1 1 0 1 1
-0 0 1 0 0
-[case6 answer]
-14
-
-[case7]
-10 10 5
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-1 1 1 1 1 1 1 1 1 1
-
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "5 5 1\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "1 1 1 1 1",
+        output = "3",
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "5 5 1\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "1 1 1 1 1\n" +
+                "0 0 0 0 0",
+        output = "3",
+    ),
+    BOJSolution.TestCase( // case 3
+        input = "5 5 2\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "1 1 1 1 1\n" +
+                "0 0 0 0 0",
+        output = "5",
+    ),
+    BOJSolution.TestCase( // case 4
+        input = "5 5 5\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 1 1",
+        output = "15",
+    ),
+    BOJSolution.TestCase( // case 5
+        input = "6 5 1\n" +
+                "1 0 1 0 1\n" +
+                "0 1 0 1 0\n" +
+                "1 1 0 0 0\n" +
+                "0 0 0 1 1\n" +
+                "1 1 0 1 1\n" +
+                "0 0 1 0 0",
+        output = "9",
+    ),
+    BOJSolution.TestCase( // case 6
+        input = "6 5 2\n" +
+                "1 0 1 0 1\n" +
+                "0 1 0 1 0\n" +
+                "1 1 0 0 0\n" +
+                "0 0 0 1 1\n" +
+                "1 1 0 1 1\n" +
+                "0 0 1 0 0",
+        output = "14",
+    ),
+)

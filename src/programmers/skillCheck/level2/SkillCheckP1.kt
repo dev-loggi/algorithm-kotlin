@@ -1,8 +1,6 @@
 package programmers.skillCheck.level2
 
-import common.Solution
-import utils.CollectionUtils
-import kotlin.math.pow
+import Solution
 import kotlin.math.sqrt
 
 class SkillCheckP1 : Solution {

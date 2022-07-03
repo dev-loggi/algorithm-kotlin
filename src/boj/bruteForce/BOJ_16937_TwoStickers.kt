@@ -1,6 +1,7 @@
 package boj.bruteForce
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import kotlin.math.max
 
 /**
@@ -9,10 +10,13 @@ import kotlin.math.max
  * https://www.acmicpc.net/problem/16937
  * 완전 탐색
  * */
-class BOJ_16937_TwoStickers : Solution {
+class BOJ_16937_TwoStickers : BOJSolution() {
 
-    override fun execute() {
-        repeat(3) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -76,32 +80,39 @@ class BOJ_16937_TwoStickers : Solution {
     }
 }
 
-/*
-[case1]
-2 2
-2
-1 2
-2 1
-[case1 answer]
-4
+private val _info = BOJSolution.Info(
+    no = 16937,
+    title = "두 스티커",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16937"
+)
 
-[case2]
-10 9
-4
-2 3
-1 1
-5 10
-9 11
-[case2 answer]
-56
-
-[case3]
-10 10
-3
-6 6
-7 7
-20 5
-[case3 answer]
-0
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "2 2\n" +
+        "2\n" +
+        "1 2\n" +
+        "2 1",
+        output = "4"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "10 9\n" +
+        "4\n" +
+        "2 3\n" +
+        "1 1\n" +
+        "5 10\n" +
+        "9 11",
+        output = "4"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "10 10\n" +
+        "3\n" +
+        "6 6\n" +
+        "7 7\n" +
+        "20 5",
+        output = "0"
+    ),
+)

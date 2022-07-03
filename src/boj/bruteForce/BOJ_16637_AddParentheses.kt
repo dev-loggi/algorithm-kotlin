@@ -1,17 +1,14 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
-/**
- * 16637
- * 괄호 추가하기
- * https://www.acmicpc.net/problem/16637
- * 완전 탐색
- * */
-class BOJ_16637_AddParentheses : Solution {
+class BOJ_16637_AddParentheses : BOJSolution() {
 
-    override fun execute() {
-        repeat(6) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -32,9 +29,6 @@ class BOJ_16637_AddParentheses : Solution {
             if (c in op) list.add(c)
             list
         }
-
-        println(operandList)
-        println(operatorList)
 
         val orders = IntArray(operatorList.size) { it }
 
@@ -60,7 +54,6 @@ class BOJ_16637_AddParentheses : Solution {
                     acc = calculate(acc, operands[i + 1], operators[i])
                 }
 
-                println("order=$order, acc=$acc")
                 acc
             }
             .maxOfOrNull { it } ?: 0
@@ -99,45 +92,48 @@ class BOJ_16637_AddParentheses : Solution {
     }
 }
 
-/*
-[case1]
-9
-3+8*7-9*2
-[case1 answer]
-136
+private val _info = BOJSolution.Info(
+    no = 16637,
+    title = "괄호 추가하기",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16637"
+)
 
-[case2]
-5
-8*3+5
-[case2 answer]
-64
-
-[case3]
-7
-8*3+5+2
-[case3 answer]
-66
-
-[case4]
-19
-1*2+3*4*5-6*7*8*9*0
-[case4 answer]
-0
-
-[case5]
-19
-1*2+3*4*5-6*7*8*9*9
-[case5 answer]
-426384
-
-[case6]
-19
-1-9-1-9-1-9-1-9-1-9
-[case6 answer]
-24
-
-
-4
-2+2+2+2
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "9\n" +
+                "3+8*7-9*2",
+        output = "136"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5\n" +
+                "8*3+5",
+        output = "64"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "7\n" +
+                "8*3+5+2",
+        output = "66"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "19\n" +
+                "1*2+3*4*5-6*7*8*9*0",
+        output = "0"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "19\n" +
+                "1*2+3*4*5-6*7*8*9*9",
+        output = "426384"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "19\n" +
+                "1-9-1-9-1-9-1-9-1-9",
+        output = "24"
+    ),
+)

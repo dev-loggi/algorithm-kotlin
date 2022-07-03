@@ -1,20 +1,25 @@
-package boj
+package boj.unsolved
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import java.text.DecimalFormat
 import java.util.ArrayDeque
-import kotlin.random.Random
 
 /**
  * 9019
  * DSLR
  * https://www.acmicpc.net/problem/9019
+ *
+ * TODO: 미해결
  * */
-class BOJ_9019_DSLR : Solution {
+class BOJ_9019_DSLR : BOJSolution() {
+
+    override val info = _info
+    override val testCases = _testCases
 
     private val formatter = DecimalFormat("0000")
 
-    override fun execute() {
+    override fun executeTestCases() {
         main()
     }
 
@@ -82,14 +87,22 @@ class BOJ_9019_DSLR : Solution {
         }
     }
 }
-/*
-[case1]
-3
-1234 3412
-1000 1
-1 16
-[case1 answer]
-LL
-L
-DDDD
-* */
+
+private val _info = BOJSolution.Info(
+    no = 9019,
+    title = "DSLR",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/9019"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "3\n" +
+                "1234 3412\n" +
+                "1000 1\n" +
+                "1 16",
+        output ="LL\n" +
+                "L\n" +
+                "DDDD"
+    )
+)

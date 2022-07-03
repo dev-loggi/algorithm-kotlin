@@ -1,8 +1,8 @@
 package programmers.practice.level1
 
-import common.Solution
+import Solution
 
-/**
+/*
  * 없는 숫자 더하기
  * https://programmers.co.kr/learn/courses/30/lessons/86051?language=kotlin
  * */

@@ -1,6 +1,6 @@
 package codility.exercise
 
-import common.Solution
+import Solution
 
 /**
  * https://app.codility.com/c/run/training369CDM-AJV/

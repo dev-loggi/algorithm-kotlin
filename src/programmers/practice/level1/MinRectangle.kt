@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import common.Solution
+import Solution
 
 /**
  * 최소 직사각형

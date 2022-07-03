@@ -1,6 +1,6 @@
 package programmers.skillCheck.level1
 
-import common.Solution
+import Solution
 import java.util.ArrayDeque
 
 class CranePuppetGame : Solution {

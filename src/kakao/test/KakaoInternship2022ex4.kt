@@ -1,6 +1,6 @@
 package kakao.test
 
-import common.Solution
+import Solution
 
 class KakaoInternship2022ex4 : Solution {
 

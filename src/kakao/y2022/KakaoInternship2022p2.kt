@@ -1,6 +1,6 @@
 package kakao.y2022
 
-import common.Solution
+import Solution
 import java.util.ArrayDeque
 import kotlin.math.min
 

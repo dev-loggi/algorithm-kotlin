@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import common.Solution
+import Solution
 import kotlin.math.sqrt
 
 

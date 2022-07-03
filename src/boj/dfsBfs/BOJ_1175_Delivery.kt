@@ -1,6 +1,6 @@
 package boj.dfsBfs
 
-import common.Solution
+import boj.BOJSolution
 import java.util.ArrayDeque
 
 /**
@@ -10,11 +10,7 @@ import java.util.ArrayDeque
  * bfs
  * */
 // TODO: 미완성
-class BOJ_1175_Delivery : Solution {
-
-    override fun execute() {
-        main()
-    }
+class BOJ_1175_Delivery : BOJSolution() {
 
     companion object {
         const val BACK_SPACE = 8
@@ -24,6 +20,13 @@ class BOJ_1175_Delivery : Solution {
         const val UP = 1
         const val RIGHT = 2
         const val DOWN = 3
+    }
+
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -241,49 +244,51 @@ class BOJ_1175_Delivery : Solution {
     }
 }
 
-/*
-[case1]
-2 3
-SCC
-...
-[case1] - answer
-4
+private val _info = BOJSolution.Info(
+    no = 1175,
+    title = "배달",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/1175"
+)
 
-[case2]
-1 5
-C.C.S
-[case2] - answer
--1
-
-[case3]
-3 3
-#.#
-CSC
-#.#
-[case3] - answer
-5
-
-[case4]
-10 7
-#.#....
-##...#.
-C#...#.
-.....#.
-..#....
-..#S.#.
-.##..#.
-###..##
-..C.#.#
-###.#..
-[case4] - answer
-24
-
-[case5]
-3 36
-#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#C
-.................S..................
-C#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#
-[case5] - answer
-155
-
-*/
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "2 3\n" +
+                "SCC\n" +
+                "...",
+        output = "4"
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "1 5\n" +
+                "C.C.S",
+        output = "-1"
+    ),
+    BOJSolution.TestCase( // case 3
+        input = "3 3\n" +
+                "#.#\n" +
+                "CSC\n" +
+                "#.#",
+        output = "5"
+    ),
+    BOJSolution.TestCase( // case 4
+        input = "10 7\n" +
+                "#.#....\n" +
+                "##...#.\n" +
+                "C#...#.\n" +
+                ".....#.\n" +
+                "..#....\n" +
+                "..#S.#.\n" +
+                ".##..#.\n" +
+                "###..##\n" +
+                "..C.#.#\n" +
+                "###.#..",
+        output = "24"
+    ),
+    BOJSolution.TestCase( // case 5
+        input = "3 36\n" +
+                "#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#C\n" +
+                ".................S..................\n" +
+                "C#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#",
+        output = "155"
+    ),
+)

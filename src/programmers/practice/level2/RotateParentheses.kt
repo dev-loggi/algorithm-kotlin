@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import common.Solution
+import Solution
 import java.util.ArrayDeque
 
 /**

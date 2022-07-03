@@ -1,50 +1,19 @@
-package boj
+package boj.dfsBfs
 
-import common.Solution
+import boj.BOJSolution
 import java.util.ArrayDeque
-
 
 /**
  * 2667
  * 단지 번호 붙이기
  * https://www.acmicpc.net/problem/2667
  * */
-class P_2667_VillageNumbering : Solution {
-/*
-[case1]
-7
-0110100
-0110101
-1110101
-0000111
-0100000
-0111110
-0111000
+class BOJ_2667_VillageNumbering : BOJSolution() {
 
-[case1 answer]
-3
-7
-8
-9
+    override val info = _info
+    override val testCases = _testCases
 
-[case2]
-7
-0110100
-0100101
-1110101
-0001011
-1100000
-0101111
-0101001
-
-[case2 answer]
-3
-7
-8
-9
-*/
-
-    override fun execute() {
+    override fun executeTestCases() {
         main()
     }
 
@@ -110,3 +79,41 @@ class P_2667_VillageNumbering : Solution {
     }
 
 }
+
+private val _info = BOJSolution.Info(
+    no = 2667,
+    title = "단지 번호 붙이기",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/2667"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "7\n" +
+                "0110100\n" +
+                "0110101\n" +
+                "1110101\n" +
+                "0000111\n" +
+                "0100000\n" +
+                "0111110\n" +
+                "0111000",
+        output ="3\n" +
+                "7\n" +
+                "8\n" +
+                "9",
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "7\n" +
+                "0110100\n" +
+                "0100101\n" +
+                "1110101\n" +
+                "0001011\n" +
+                "1100000\n" +
+                "0101111\n" +
+                "0101001",
+        output ="3\n" +
+                "7\n" +
+                "8\n" +
+                "9",
+    ),
+)

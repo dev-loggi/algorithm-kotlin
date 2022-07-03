@@ -2,47 +2,69 @@ package boj
 
 import boj.bruteForce.*
 import boj.dfsBfs.*
-import common.Solution
+import boj.dp.BOJ_2839_SugarDelivery
+import boj.etc.BOJ_11005_BaseConversion2
+import boj.unsolved.*
+import kotlin.reflect.full.createInstance
 
 object BOJ {
 
+    private val solutions = mapOf(
+        // 1000 ~ 1999
+        1012 to BOJ_1012_OrganicCabbage::class,
+        1175 to BOJ_1175_Delivery::class,
+        1260 to BOJ_1260_DFSandBFS::class,
+        1913 to BOJ_1913_Snail::class,
 
-    val boj1012OrganicCabbage: Solution get() = BOJ_1012_OrganicCabbage()
-    val boj1175Delivery: Solution get() = BOJ_1175_Delivery()
-    val p1260DFSandBFS: Solution get() = P_1260_DFSandBFS()
-    val p1913Snail: Solution get() = P_1913_Snail()
+        // 2000 ~ 2999
+        2178 to BOJ_2178_MazeExploration::class,
+        2210 to BOJ_2210_NumPadJump::class,
+        2422 to BOJ_2422_ItalyIcecream::class,
+        2529 to BOJ_2529_InequalitySign::class,
+        2606 to BOJ_2606_Virus::class,
+        2667 to BOJ_2667_VillageNumbering::class,
+        2675 to BOJ_2675_StringRepetition::class,
+        2745 to BOJ_2745_BaseConversion::class,
+        2839 to BOJ_2839_SugarDelivery::class,
 
-    val p2178MazeExploration: Solution get() = P_2178_MazeExploration()
-    val p2210: Solution get() = BOJ_2210_NumPadJump()
-    val p2422: Solution get() = BOJ_2422_ItalyIcecream()
-    val p2529InequalitySign: Solution get() = P_2529_InequalitySign()
-    val boj2606Virus: Solution get() = BOJ_2606_Virus()
-    val p2667VillageNumbering: Solution get() = P_2667_VillageNumbering()
-    val p2675StringRepetition: Solution get() = P_2675_StringRepetition()
-    val p2745: Solution get() = BOJ_2745_BaseConversion()
-    val p2839SugarDelivery: Solution get() = P_2839_SugarDelivery()
+        // 9000 ~ 9999
+        9019 to BOJ_9019_DSLR::class,
 
-    val p9019: Solution get() = BOJ_9019_DSLR()
+        // 11000 ~ 11999
+        11005 to BOJ_11005_BaseConversion2::class,
 
-    val p11005: Solution get() = BOJ_11005_BaseConversion2()
+        // 15000 ~ 15999
+        15683 to BOJ_15683_Serveillance::class,
+        15686 to BOJ_15686_ChickenDelivery::class,
 
-    val p15683: Solution get() = BOJ_15683_Serveillance()
-    val p15686: Solution get() = BOJ_15686_ChickenDelivery()
+        // 16000 ~ 16999
+        16637 to BOJ_16637_AddParentheses::class,
+        16922 to BOJ_16922_MakingRomanNumerals::class,
+        16924 to BOJ_16924_FindCross::class,
+        16936 to BOJ_16936_Division3Multiplication2::class,
+        16937 to BOJ_16937_TwoStickers::class,
+        16938 to BOJ_16938_CampReady::class,
+        16943 to BOJ_16943_NumberReplacement::class,
+        16968 to BOJ_16968_LicensePlate1::class,
+        16971 to BOJ_16971_HalfSeasonedHalfFried::class,
+        16973 to BOJ_16973_RectangleEscape::class,
 
-    val boj16637: Solution get() = BOJ_16637_AddParentheses()
-    val boj16922MakingRomanNumerals: Solution get() = BOJ_16922_MakingRomanNumerals()
-    val boj16924FindCross: Solution get() = BOJ_16924_FindCross()
-    val boj16936Division3Multiplication2: Solution get() = BOJ_16936_Division3Multiplication2()
-    val boj16937: Solution get() = BOJ_16937_TwoStickers()
-    val boj16938: Solution get() = BOJ_16938_CampReady()
-    val boj16943: Solution get() = BOJ_16943_NumberReplacement()
-    val boj16968LicensePlate1: Solution get() = P_16968_LicensePlate1()
-    val boj16971HalfSeasonedHalfFried: Solution get() = BOJ_16971_HalfSeasonedHalfFried()
-    val boj16973RectangleEscape: Solution get() = BOJ_16973_RectangleEscape()
+        // 17000 ~ 17999
+        17088 to BOJ_17088_ArithmeticSequenceTransform::class,
+        17089 to BOJ_17089_ThreeFriends::class,
+        17135 to BOJ_17135_CastleDefense::class,
+        17281 to BOJ_17281_Baseball::class,
+        17406 to BOJ_17406_ArrayRotation4::class,
+    )
 
-    val p17088: Solution get() = BOJ_17088_ArithmeticSequenceTransform()
-    val p17089: Solution get() = BOJ_17089_ThreeFriends()
-    val p17135: Solution get() = BOJ_17135_CastleDefense()
-    val p17281: Solution get() = BOJ_17281_Baseball()
-    val p17406: Solution get() = BOJ_17406_ArrayRotation4()
+    fun execute() {
+        print("BOJ 문제 번호를 입력해주세요: ")
+
+        readLine()?.toIntOrNull()?.let { no ->
+            println()
+            println("=======================================================")
+            solutions[no]?.createInstance()?.execute()
+            println("=======================================================")
+        }
+    }
 }

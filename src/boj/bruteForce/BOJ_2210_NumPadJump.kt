@@ -1,16 +1,13 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
-/**
- * 2210
- * 숫자판 점프
- * https://www.acmicpc.net/submit/2210
- * 완전 탐색
- * */
-class BOJ_2210_NumPadJump : Solution {
+class BOJ_2210_NumPadJump : BOJSolution() {
 
-    override fun execute() {
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
         main()
     }
 
@@ -53,13 +50,21 @@ class BOJ_2210_NumPadJump : Solution {
 
 }
 
-/*
-[case1]
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 2 1
-1 1 1 1 1
-[case1 answer]
-15
-* */
+private val _info = BOJSolution.Info(
+    no = 2210,
+    title = "숫자판 점프",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/submit/2210"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "1 1 1 1 1\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 1 1\n" +
+                "1 1 1 2 1\n" +
+                "1 1 1 1 1",
+        output = "15"
+    )
+)

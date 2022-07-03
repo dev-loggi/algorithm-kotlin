@@ -1,6 +1,6 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
 /**
  * 17089
@@ -8,11 +8,13 @@ import common.Solution
  * https://www.acmicpc.net/problem/17089
  * 완전 탐색
  * */
-class BOJ_17089_ThreeFriends : Solution {
+class BOJ_17089_ThreeFriends : BOJSolution() {
 
-    override fun execute() {
+    override val info = _info
+    override val testCases = _testCases
 
-        repeat(2) { main() }
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -61,25 +63,31 @@ class BOJ_17089_ThreeFriends : Solution {
     }
 
 }
-/*
-[case1]
-5 6
-1 2
-1 3
-2 3
-2 4
-3 4
-4 5
-[case1 answer]
-2
 
-[case2]
-7 4
-2 1
-3 6
-5 1
-1 7
-[case2 answer]
--1
+private val _info = BOJSolution.Info(
+    no = 17089,
+    title = "세 친구",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/17089"
+)
 
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "5 6\n" +
+                "1 2\n" +
+                "1 3\n" +
+                "2 3\n" +
+                "2 4\n" +
+                "3 4\n" +
+                "4 5",
+        output = "2",
+    ),
+    BOJSolution.TestCase(
+        input = "7 4\n" +
+                "2 1\n" +
+                "3 6\n" +
+                "5 1\n" +
+                "1 7",
+        output = "-1",
+    ),
+)

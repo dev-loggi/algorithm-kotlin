@@ -1,18 +1,16 @@
 package boj.bruteForce
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import kotlin.math.abs
 
-/**
- * 15686
- * 치킨 배달
- * https://www.acmicpc.net/problem/15686
- * 완전 탐색
- * */
-class BOJ_15686_ChickenDelivery : Solution {
+class BOJ_15686_ChickenDelivery : BOJSolution() {
 
-    override fun execute() {
-        repeat(4) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -77,45 +75,53 @@ class BOJ_15686_ChickenDelivery : Solution {
         return result
     }
 }
-/*
-[case1]
-5 3
-0 0 1 0 0
-0 0 2 0 1
-0 1 2 0 0
-0 0 1 0 0
-0 0 0 0 2
-[case1 answer]
-5
 
-[case2]
-5 2
-0 2 0 1 0
-1 0 1 0 0
-0 0 0 0 0
-2 0 0 1 1
-2 2 0 1 2
-[case2 answer]
-10
+private val _info = BOJSolution.Info(
+    no = 15686,
+    title = "치킨 배달",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/15686"
+)
 
-[case3]
-5 1
-1 2 0 0 0
-1 2 0 0 0
-1 2 0 0 0
-1 2 0 0 0
-1 2 0 0 0
-[case3 answer]
-11
-
-[case4]
-5 1
-1 2 0 2 1
-1 2 0 2 1
-1 2 0 2 1
-1 2 0 2 1
-1 2 0 2 1
-[case4 answer]
-32
-
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "5 3\n" +
+                "0 0 1 0 0\n" +
+                "0 0 2 0 1\n" +
+                "0 1 2 0 0\n" +
+                "0 0 1 0 0\n" +
+                "0 0 0 0 2",
+        output = "5"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 2\n" +
+                "0 2 0 1 0\n" +
+                "1 0 1 0 0\n" +
+                "0 0 0 0 0\n" +
+                "2 0 0 1 1\n" +
+                "2 2 0 1 2",
+        output = "10"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 1\n" +
+                "1 2 0 0 0\n" +
+                "1 2 0 0 0\n" +
+                "1 2 0 0 0\n" +
+                "1 2 0 0 0\n" +
+                "1 2 0 0 0",
+        output = "11"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 1\n" +
+                "1 2 0 2 1\n" +
+                "1 2 0 2 1\n" +
+                "1 2 0 2 1\n" +
+                "1 2 0 2 1\n" +
+                "1 2 0 2 1",
+        output = "32"
+    ),
+)

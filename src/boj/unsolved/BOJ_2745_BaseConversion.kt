@@ -1,16 +1,20 @@
-package boj
+package boj.unsolved
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 
 /**
  * 2745
  * 진법 변환
  * https://www.acmicpc.net/problem/2745
  * */
-class BOJ_2745_BaseConversion : Solution {
+class BOJ_2745_BaseConversion : BOJSolution() {
 
-    override fun execute() {
-        repeat(5) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -19,8 +23,6 @@ class BOJ_2745_BaseConversion : Solution {
         val B = input[1].toInt()
 
         solution(N, B)
-        solution2(N, B)
-        println()
     }
 
     fun solution(N: String, B: Int) {
@@ -42,9 +44,17 @@ class BOJ_2745_BaseConversion : Solution {
         return acc
     }
 }
-/*
-[case1]
-ZZZZZ 36
-[case1 answer]
-60466175
-* */
+
+private val _info = BOJSolution.Info(
+    no = 2745,
+    title = "진법 변환",
+    category = arrayOf(BOJSolution.MATERIALIZATION),
+    url = "https://www.acmicpc.net/problem/2745"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "ZZZZZ 36",
+        output = "60466175"
+    )
+)

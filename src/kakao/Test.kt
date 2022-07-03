@@ -1,6 +1,6 @@
 package kakao
 
-import common.Solution
+import Solution
 
 class Test : Solution {
 

@@ -1,16 +1,13 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
-/**
- * 2422
- * 한윤정이 이탈리아에 가서 아이스크림을 사먹는데
- * https://www.acmicpc.net/problem/2422
- * 완전 탐색
- * */
-class BOJ_2422_ItalyIcecream : Solution {
+class BOJ_2422_ItalyIcecream : BOJSolution() {
 
-    override fun execute() {
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
         main()
     }
 
@@ -98,27 +95,36 @@ class BOJ_2422_ItalyIcecream : Solution {
         return result
     }
 }
-/*
-[case1]
-5 3
-1 2
-3 4
-1 3
-[case1 answer]
-3
 
-[case2]
-200 10
-1 2
-3 4
-5 6
-7 8
-9 10
-1 3
-1 4
-1 5
-1 6
-1 7
-[case2 answer]
-1311438
-* */
+private val _info = BOJSolution.Info(
+    no = 2422,
+    title = "한윤정이 이탈리아에 가서 아이스크림을 사먹는데",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/2422"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "5 3\n" +
+                "1 2\n" +
+                "3 4\n" +
+                "1 3",
+        output = "3"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "200 10\n" +
+                "1 2\n" +
+                "3 4\n" +
+                "5 6\n" +
+                "7 8\n" +
+                "9 10\n" +
+                "1 3\n" +
+                "1 4\n" +
+                "1 5\n" +
+                "1 6\n" +
+                "1 7",
+        output = "1311438"
+    )
+)

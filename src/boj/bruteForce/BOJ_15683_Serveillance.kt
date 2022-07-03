@@ -1,17 +1,14 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
-/**
- * 15638
- * 감시
- * https://www.acmicpc.net/problem/15683
- * 완전 탐색
- * */
-class BOJ_15683_Serveillance : Solution {
+class BOJ_15683_Serveillance : BOJSolution() {
 
-    override fun execute() {
-        repeat(6) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -102,79 +99,87 @@ class BOJ_15683_Serveillance : Solution {
     }
 }
 
-/*
-[case1]
-4 6
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 1 0 6 0
-0 0 0 0 0 0
-[case1 answer]
-20
+private val _info = BOJSolution.Info(
+    no = 15638,
+    title = "감시",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/15683"
+)
 
-[case2]
-6 6
-0 0 0 0 0 0
-0 2 0 0 0 0
-0 0 0 0 6 0
-0 6 0 0 2 0
-0 0 0 0 0 0
-0 0 0 0 0 5
-[case2 answer]
-15
-
-[case3]
-6 6
-1 0 0 0 0 0
-0 1 0 0 0 0
-0 0 1 0 0 0
-0 0 0 1 0 0
-0 0 0 0 1 0
-0 0 0 0 0 1
-[case3 answer]
-6
-
-[case4]
-6 6
-1 0 0 0 0 0
-0 1 0 0 0 0
-0 0 1 5 0 0
-0 0 5 1 0 0
-0 0 0 0 1 0
-0 0 0 0 0 1
-[case4 answer]
-2
-
-[case5]
-1 7
-0 1 2 3 4 5 6
-[case5 answer]
-0
-
-[case6]
-3 7
-4 0 0 0 0 0 0
-0 0 0 2 0 0 0
-0 0 0 0 0 0 4
-[case6 answer]
-0
-
-[case7]
-1 1
-1
-[case7 answer]
-0
-
-[case8]
-8 8
-0 0 0 0 3 0 0 0
-0 1 0 0 0 0 0 6
-0 0 0 3 0 0 1 0
-0 0 1 0 0 0 0 4
-0 0 0 0 0 1 0 0
-0 6 6 0 0 0 1 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-[case8 answer]
-13
-*/
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "4 6\n" +
+                "0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0\n" +
+                "0 0 1 0 6 0\n" +
+                "0 0 0 0 0 0",
+        output = "20"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "6 6\n" +
+                "0 0 0 0 0 0\n" +
+                "0 2 0 0 0 0\n" +
+                "0 0 0 0 6 0\n" +
+                "0 6 0 0 2 0\n" +
+                "0 0 0 0 0 0\n" +
+                "0 0 0 0 0 5",
+        output = "15"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "6 6\n" +
+                "1 0 0 0 0 0\n" +
+                "0 1 0 0 0 0\n" +
+                "0 0 1 0 0 0\n" +
+                "0 0 0 1 0 0\n" +
+                "0 0 0 0 1 0\n" +
+                "0 0 0 0 0 1",
+        output = "6"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "6 6\n" +
+                "1 0 0 0 0 0\n" +
+                "0 1 0 0 0 0\n" +
+                "0 0 1 5 0 0\n" +
+                "0 0 5 1 0 0\n" +
+                "0 0 0 0 1 0\n" +
+                "0 0 0 0 0 1",
+        output = "2"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "1 7\n" +
+                "0 1 2 3 4 5 6",
+        output = "0"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "3 7\n" +
+                "4 0 0 0 0 0 0\n" +
+                "0 0 0 2 0 0 0\n" +
+                "0 0 0 0 0 0 4",
+        output = "0"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "1 1\n" +
+                "1",
+        output = "0"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "8 8\n" +
+                "0 0 0 0 3 0 0 0\n" +
+                "0 1 0 0 0 0 0 6\n" +
+                "0 0 0 3 0 0 1 0\n" +
+                "0 0 1 0 0 0 0 4\n" +
+                "0 0 0 0 0 1 0 0\n" +
+                "0 6 6 0 0 0 1 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0",
+        output = "13"
+    )
+)

@@ -1,6 +1,6 @@
 package programmers
 
-import common.Solution
+import Solution
 import programmers.practice.level1.*
 import programmers.practice.level2.*
 import programmers.practice.level3.*
@@ -74,7 +74,6 @@ object Programmers {
             val network: Solution get() = Network()
             val sheepAndWolf: Solution get() = SheepAndWolf()
             val travelRoute: Solution get() = TravelRoute()
-            val travelRouteJava: Solution get() = TravelRouteJava()
             val wordConversion: Solution get() = WordConversion()
         }
 

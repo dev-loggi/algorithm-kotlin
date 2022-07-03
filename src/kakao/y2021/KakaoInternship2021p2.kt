@@ -1,6 +1,6 @@
 package kakao.y2021
 
-import common.Solution
+import Solution
 import java.util.ArrayDeque
 
 class KakaoInternship2021p2 : Solution {

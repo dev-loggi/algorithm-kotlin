@@ -1,35 +1,14 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
+class BOJ_2529_InequalitySign : BOJSolution() {
 
-/**
- * 2529
- * 부등호
- * Brute Force(완전 탐색)
- * https://www.acmicpc.net/problem/2529
- * */
-class P_2529_InequalitySign : Solution {
+    override val info = _info
+    override val testCases = _testCases
 
-    override fun execute() {
-        // input
-        // 2
-        // < >
-
-        // output
-        // 897
-        // 021
-
-        // input
-        // 9
-        // > < < < > > > < <
-        // 9876543210
-
-        // output
-        // 9567843012
-        // 1023765489
-
-        for (i in 0 until 2) main()
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -60,16 +39,12 @@ class P_2529_InequalitySign : Solution {
         for (i in operators.indices) {
             for (j in 0..i) {
                 swapIf(operators[j], j, j + 1)
-//                println("(i=$i, j=$j, op=${operators[j]}): ${this.contentToString()}")
             }
-//            println("")
         }
         for (i in operators.lastIndex downTo 0) {
             for (j in operators.lastIndex downTo i) {
                 swapIf(operators[j], j, j + 1)
-//                println("(i=$i, j=$j, op=${operators[j]}): ${this.contentToString()}")
             }
-//            println("")
         }
     }
 
@@ -85,5 +60,30 @@ class P_2529_InequalitySign : Solution {
         this[i] = this[j]
         this[j] = tmp
     }
-
 }
+
+private val _info = BOJSolution.Info(
+    no = 2529,
+    title = "부등호",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/2529"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "2\n" +
+                "< >",
+        output =
+        "897\n" +
+                "021"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "9\n" +
+                "> < < < > > > < <",
+        output =
+        "9567843012\n" +
+                "1023765489"
+    )
+)

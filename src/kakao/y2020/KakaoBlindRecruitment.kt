@@ -1,6 +1,6 @@
 package kakao.y2020
 
-import common.Solution
+import Solution
 
 // 괄호 변환
 // https://programmers.co.kr/learn/courses/30/lessons/60058?language=kotlin

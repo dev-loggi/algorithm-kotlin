@@ -1,6 +1,6 @@
 package codility.challenge
 
-import common.Solution
+import Solution
 
 /**
  * https://app.codility.com/c/run/cert7UQYXD-VQVVY6DAEM8RZW78/

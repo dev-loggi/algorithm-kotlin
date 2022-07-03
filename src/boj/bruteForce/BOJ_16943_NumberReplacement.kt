@@ -1,6 +1,6 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 
 /**
  * 16943
@@ -8,10 +8,13 @@ import common.Solution
  * https://www.acmicpc.net/problem/16943
  * 완전 탐색
  * */
-class BOJ_16943_NumberReplacement : Solution {
+class BOJ_16943_NumberReplacement : BOJSolution() {
 
-    override fun execute() {
-        repeat(3) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -61,19 +64,24 @@ class BOJ_16943_NumberReplacement : Solution {
     }
 }
 
-/*
-[case1]
-1234 3456
-[case1 answer]
-3421
+private val _info = BOJSolution.Info(
+    no = 16943,
+    title = "숫자 재배치",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16943"
+)
 
-[case2]
-1000 5
-[case2 answer]
--1
-
-[case3]
-789 123
-[case3 answer]
--1
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "1234 3456",
+        output = "3421"
+    ),
+    BOJSolution.TestCase(
+        input = "1000 5",
+        output = "-1"
+    ),
+    BOJSolution.TestCase(
+        input = "789 123",
+        output = "-1"
+    ),
+)

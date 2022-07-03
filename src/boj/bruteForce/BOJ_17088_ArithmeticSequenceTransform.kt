@@ -1,8 +1,7 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 import kotlin.math.abs
-import kotlin.math.absoluteValue
 
 /**
  * 17088
@@ -10,10 +9,13 @@ import kotlin.math.absoluteValue
  * https://www.acmicpc.net/problem/17088
  * 완전 탐색
  * */
-class BOJ_17088_ArithmeticSequenceTransform : Solution {
+class BOJ_17088_ArithmeticSequenceTransform : BOJSolution() {
 
-    override fun execute() {
-        repeat(4) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -26,7 +28,6 @@ class BOJ_17088_ArithmeticSequenceTransform : Solution {
     }
 
     fun solution(N: Int, A: IntArray) {
-        println("solution(): ${A.joinToString(" ")}")
         if (N <= 2) {
             println(0)
             return
@@ -34,7 +35,6 @@ class BOJ_17088_ArithmeticSequenceTransform : Solution {
 
         val answer = mutableListOf<Int>()
         val operators = intArrayOf(1, 0, -1).homoPermutation(2)
-        println(operators)
 
         for (op in operators) {
             val B = IntArray(N) { i -> A[i] }
@@ -51,8 +51,6 @@ class BOJ_17088_ArithmeticSequenceTransform : Solution {
             }
 
             if (B.isArithmeticSequence()) {
-                println(B.contentToString())
-
                 val count = A.foldIndexed(0) { idx, acc, n ->
                     if (A[idx] == B[idx]) acc else acc + 1
                 }
@@ -95,28 +93,32 @@ class BOJ_17088_ArithmeticSequenceTransform : Solution {
     }
 }
 
-/*
-[case1]
-4
-24 21 14 10
-[case1 answer]
-3
+private val _info = BOJSolution.Info(
+    no = 17088,
+    title = "등차수열 변환",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/17088"
+)
 
-[case2]
-2
-5 5
-[case2 answer]
-0
-
-[case3]
-3
-14 5 1
-[case3 answer]
--1
-
-[case4]
-5
-1 3 6 9 12
-[case4 answer]
-1
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "4\n" +
+                "24 21 14 10",
+        output = "3"
+    ),
+    BOJSolution.TestCase(
+        input = "2\n" +
+                "5 5",
+        output = "0"
+    ),
+    BOJSolution.TestCase(
+        input = "3\n" +
+                "14 5 1",
+        output = "-1"
+    ),
+    BOJSolution.TestCase(
+        input = "5\n" +
+                "1 3 6 9 12",
+        output = "1"
+    ),
+)

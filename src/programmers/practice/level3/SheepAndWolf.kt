@@ -1,6 +1,6 @@
 package programmers.practice.level3
 
-import common.Solution
+import Solution
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.math.max

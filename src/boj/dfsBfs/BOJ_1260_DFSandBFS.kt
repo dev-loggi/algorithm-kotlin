@@ -1,6 +1,6 @@
 package boj.dfsBfs
 
-import common.Solution
+import boj.BOJSolution
 import java.util.*
 
 /**
@@ -8,56 +8,13 @@ import java.util.*
  * DFS 와 BFS
  * https://www.acmicpc.net/problem/1260
  * */
-class P_1260_DFSandBFS : Solution {
+class BOJ_1260_DFSandBFS : BOJSolution() {
 
-/*
-[case1]
-4 5 1
-1 2
-1 3
-1 4
-2 4
-3 4
-[case1 answer]
-1 2 4 3
-1 2 3 4
+    override val info = _info
+    override val testCases = _testCases
 
-[case2]
-5 5 3
-5 4
-5 2
-1 2
-3 4
-3 1
-[case2 answer]
-3 1 2 5 4
-3 1 4 2 5
-
-[case3]
-1000 1 1000
-999 1000
-[case3 answer]
-1000 999
-1000 999
-
-[case4]
-10 9 1
-1 2
-1 3
-2 4
-2 5
-2 6
-3 7
-3 8
-4 9
-6 10
-[case1 answer]
-1 2 4 9 5 6 10 3 7 8
-1 2 3 4 5 6 7 8 9 10
-
-*/
-    override fun execute() {
-        for (i in 0 until 3) main()
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -119,3 +76,53 @@ class P_1260_DFSandBFS : Solution {
         return result
     }
 }
+
+private val _info = BOJSolution.Info(
+    no = 1260,
+    title = "DFS 와 BFS",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/1260"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "4 5 1\n" +
+                "1 2\n" +
+                "1 3\n" +
+                "1 4\n" +
+                "2 4\n" +
+                "3 4",
+        output ="1 2 4 3\n" +
+                "1 2 3 4"
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "5 5 3\n" +
+                "5 4\n" +
+                "5 2\n" +
+                "1 2\n" +
+                "3 4\n" +
+                "3 1",
+        output ="3 1 2 5 4\n" +
+                "3 1 4 2 5"
+    ),
+    BOJSolution.TestCase( // case 3
+        input = "1000 1 1000\n" +
+                "999 1000",
+        output ="1000 999\n" +
+                "1000 999"
+    ),
+    BOJSolution.TestCase( // case 4
+        input = "10 9 1\n" +
+                "1 2\n" +
+                "1 3\n" +
+                "2 4\n" +
+                "2 5\n" +
+                "2 6\n" +
+                "3 7\n" +
+                "3 8\n" +
+                "4 9\n" +
+                "6 10",
+        output ="1 2 4 9 5 6 10 3 7 8\n" +
+                "1 2 3 4 5 6 7 8 9 10"
+    ),
+)

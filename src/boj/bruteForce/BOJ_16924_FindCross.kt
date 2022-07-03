@@ -1,18 +1,15 @@
 package boj.bruteForce
 
-import common.Solution
+import boj.BOJSolution
 import kotlin.math.max
 
-/**
- * 16924
- * 십자가 찾기
- * https://www.acmicpc.net/problem/16924
- * 완전 탐색
- * */
-class BOJ_16924_FindCross : Solution {
+class BOJ_16924_FindCross : BOJSolution() {
 
-    override fun execute() {
-        repeat(4) { main() }
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -79,49 +76,60 @@ class BOJ_16924_FindCross : Solution {
         }
     }
 }
-/*
-[case1]
-6 8
-....*...
-...**...
-..*****.
-...**...
-....*...
-........
-[case1 answer]
-3
-3 4 1
-3 5 2
-3 5 1
 
-[case2]
-5 5
-.*...
-****.
-.****
-..**.
-.....
-[case2 answer]
-3
-2 2 1
-3 3 1
-3 4 1
+private val _info = BOJSolution.Info(
+    no = 16924,
+    title = "십자가 찾기",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/16924"
+)
 
-[case3]
-5 5
-.*...
-***..
-.*...
-.*...
-.....
-[case3 answer]
--1
-
-[case4]
-3 3
-*.*
-.*.
-*.*
-[case4 answer]
--1
-* */
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input =
+        "6 8\n" +
+                "....*...\n" +
+                "...**...\n" +
+                "..*****.\n" +
+                "...**...\n" +
+                "....*...\n" +
+                "........",
+        output =
+        "3\n" +
+                "3 4 1\n" +
+                "3 5 2\n" +
+                "3 5 1"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 5\n" +
+                ".*...\n" +
+                "****.\n" +
+                ".****\n" +
+                "..**.\n" +
+                ".....",
+        output =
+        "3\n" +
+                "2 2 1\n" +
+                "3 3 1\n" +
+                "3 4 1"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "5 5\n" +
+                ".*...\n" +
+                "***..\n" +
+                ".*...\n" +
+                ".*...\n" +
+                ".....",
+        output = "-1"
+    ),
+    BOJSolution.TestCase(
+        input =
+        "3 3\n" +
+                "*.*\n" +
+                ".*.\n" +
+                "*.*",
+        output = "-1"
+    ),
+)

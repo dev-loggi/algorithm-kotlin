@@ -1,6 +1,7 @@
 package boj.bruteForce
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 
 /**
  * 17406
@@ -8,9 +9,12 @@ import common.Solution
  * https://www.acmicpc.net/problem/17406
  * 완전 탐색
  * */
-class BOJ_17406_ArrayRotation4 : Solution {
+class BOJ_17406_ArrayRotation4 : BOJSolution() {
 
-    override fun execute() {
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
         main()
     }
 
@@ -99,7 +103,6 @@ class BOJ_17406_ArrayRotation4 : Solution {
             }
 
             matrix[r0 - s][c0 - s + 1] = start
-            println()
         }
     }
 
@@ -116,16 +119,24 @@ class BOJ_17406_ArrayRotation4 : Solution {
     }
 
 }
-/*
-[case1]
-5 6 2
-1 2 3 2 5 6
-3 8 7 2 1 3
-8 2 3 1 4 5
-3 4 5 1 1 1
-9 3 2 1 4 3
-3 4 2
-4 2 1
-[case1 answer]
-12
-* */
+
+private val _info = BOJSolution.Info(
+    no = 17406,
+    title = "배열 돌리기4",
+    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    url = "https://www.acmicpc.net/problem/17406"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "5 6 2\n" +
+                "1 2 3 2 5 6\n" +
+                "3 8 7 2 1 3\n" +
+                "8 2 3 1 4 5\n" +
+                "3 4 5 1 1 1\n" +
+                "9 3 2 1 4 3\n" +
+                "3 4 2\n" +
+                "4 2 1",
+        output = "12"
+    )
+)

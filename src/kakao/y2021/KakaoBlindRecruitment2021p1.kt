@@ -1,6 +1,6 @@
 package kakao.y2021
 
-import common.Solution
+import Solution
 
 
 // 신규 아이디 추천

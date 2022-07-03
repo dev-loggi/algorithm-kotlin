@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import common.Solution
+import Solution
 
 /**
  * 3진법 뒤집기

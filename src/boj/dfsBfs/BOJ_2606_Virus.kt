@@ -1,6 +1,7 @@
 package boj.dfsBfs
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import java.util.ArrayDeque
 
 /**
@@ -9,23 +10,12 @@ import java.util.ArrayDeque
  * https://www.acmicpc.net/problem/2606
  * bfs
  * */
-class BOJ_2606_Virus : Solution {
+class BOJ_2606_Virus : BOJSolution() {
 
-/*
-[case1]
-7
-6
-1 2
-2 3
-1 5
-5 2
-5 6
-4 7
-[case1 answer]
-4
-*/
+    override val info = _info
+    override val testCases = _testCases
 
-    override fun execute() {
+    override fun executeTestCases() {
         main()
     }
 
@@ -68,3 +58,24 @@ class BOJ_2606_Virus : Solution {
         return infected.size - 1
     }
 }
+
+private val _info = BOJSolution.Info(
+    no = 2606,
+    title = "바이러스",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/2606"
+)
+
+private val _testCases = arrayOf(
+    BOJSolution.TestCase(
+        input = "7\n" +
+                "6\n" +
+                "1 2\n" +
+                "2 3\n" +
+                "1 5\n" +
+                "5 2\n" +
+                "5 6\n" +
+                "4 7",
+        output = "4"
+    )
+)

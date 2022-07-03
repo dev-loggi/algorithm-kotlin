@@ -1,6 +1,7 @@
 package boj.dfsBfs
 
-import common.Solution
+import Solution
+import boj.BOJSolution
 import java.text.DecimalFormat
 import java.util.ArrayDeque
 
@@ -10,10 +11,13 @@ import java.util.ArrayDeque
  * https://www.acmicpc.net/problem/16973
  * bfs
  * */
-class BOJ_16973_RectangleEscape : Solution {
+class BOJ_16973_RectangleEscape : BOJSolution() {
 
-    override fun execute() {
-        for (i in 0 until 4) main()
+    override val info = _info
+    override val testCases = _testCases
+
+    override fun executeTestCases() {
+        main()
     }
 
     fun main() {
@@ -66,8 +70,6 @@ class BOJ_16973_RectangleEscape : Solution {
             for (r in s.rangeH) if (matrix[r][s.right] == -1) return // 우벽 확인
             for (c in s.rangeW) if (matrix[s.bottom][c] == -1) return // 하벽 확인
 
-            println("visit(): $p, $s")
-
             queue.offer(Point(s.row, s.col))
             visited[s.row][s.col] = true
             matrix[s.row][s.col] = matrix[p.row][p.col] + 1
@@ -75,7 +77,6 @@ class BOJ_16973_RectangleEscape : Solution {
 
         while (queue.isNotEmpty()) {
             val p = queue.poll()
-            println("\n$p")
 
             if (p.row == Fr && p.col == Fc)
                 break
@@ -85,7 +86,6 @@ class BOJ_16973_RectangleEscape : Solution {
             visit(p, Square(square.width, square.height, p.row, p.col - 1)) // 좌
             visit(p, Square(square.width, square.height, p.row, p.col + 1)) // 우
 
-            matrix.forEach { println(it.map { n -> DecimalFormat("00").format(n) }) }
         }
 
         return if (matrix[Fr][Fc] != 0) matrix[Fr][Fc] else -1
@@ -112,70 +112,73 @@ class BOJ_16973_RectangleEscape : Solution {
     data class Point(val row: Int, val col: Int)
 }
 
-/*
-[case1]
-4 5
-0 0 0 0 0
-0 0 1 0 0
-0 0 0 0 0
-0 0 0 0 0
-2 2 1 1 1 4
-[case1] - answer
-7
+private val _info = BOJSolution.Info(
+    no = 16973,
+    title = "직사각형 탈출",
+    category = arrayOf(BOJSolution.BFS),
+    url = "https://www.acmicpc.net/problem/16973"
+)
 
-[case2]
-6 7
-0 0 0 0 0 0 0
-0 0 0 1 0 0 0
-0 0 0 0 0 0 0
-0 0 0 0 0 0 1
-0 0 1 0 0 0 0
-0 0 0 0 0 0 0
-2 3 1 1 5 5
-[case2] - answer
-8
-
-[case3]
-6 7
-0 0 0 0 0 0 0
-0 0 0 1 0 0 0
-0 0 0 1 0 0 0
-0 0 0 0 0 0 1
-0 0 1 0 0 0 0
-0 0 0 0 0 0 0
-2 3 1 1 5 5
-[case3] - answer
--1
-
-[case4]
-10 8
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 1 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-2 2 1 1 1 7
-[case4] - answer
-16
-
-[case5]
-10 8
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 1 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 1 0 0 1 0 0
-0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-2 2 6 3 1 7
-[case5] - answer
-9
-*/
+private val _testCases = arrayOf(
+    BOJSolution.TestCase( // case 1
+        input = "4 5\n" +
+                "0 0 0 0 0\n" +
+                "0 0 1 0 0\n" +
+                "0 0 0 0 0\n" +
+                "0 0 0 0 0\n" +
+                "2 2 1 1 1 4",
+        output = "7"
+    ),
+    BOJSolution.TestCase( // case 2
+        input = "6 7\n" +
+                "0 0 0 0 0 0 0\n" +
+                "0 0 0 1 0 0 0\n" +
+                "0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 1\n" +
+                "0 0 1 0 0 0 0\n" +
+                "0 0 0 0 0 0 0\n" +
+                "2 3 1 1 5 5",
+        output = "8"
+    ),
+    BOJSolution.TestCase( // case 3
+        input = "6 7\n" +
+                "0 0 0 0 0 0 0\n" +
+                "0 0 0 1 0 0 0\n" +
+                "0 0 0 1 0 0 0\n" +
+                "0 0 0 0 0 0 1\n" +
+                "0 0 1 0 0 0 0\n" +
+                "0 0 0 0 0 0 0\n" +
+                "2 3 1 1 5 5",
+        output = "-1"
+    ),
+    BOJSolution.TestCase( // case 4
+        input = "10 8\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 1 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "2 2 1 1 1 7",
+        output = "16"
+    ),
+    BOJSolution.TestCase( // case 5
+        input = "10 8\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 1 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 1 0 0 1 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "2 2 6 3 1 7",
+        output = "9"
+    ),
+)
