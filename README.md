@@ -38,6 +38,12 @@
 | [2839](https://www.acmicpc.net/problem/2839) | [설탕 배달](src/boj/dp/BOJ_2839_SugarDelivery.kt) | DP |
 <br/>
 
+* 8000 ~ 8999
+
+| 번호                                          | 제목                                                   | 비고    |
+|----------------------------------------------|------------------------------------------------------|-------|
+| [8111](https://www.acmicpc.net/problem/8111) | [0 과 1](src/boj/dfsBfs/BOJ_8111_ZeroAndOne.kt) | BFS |
+<br/>
 
 * 9000 ~ 9999
 
@@ -87,6 +93,7 @@
 |------------------------------------------------|------------------------------------------------------|-------|
 | [17088](https://www.acmicpc.net/problem/17088) | [등차수열 변환](src/boj/bruteForce/BOJ_17088_ArithmeticSequenceTransform.kt) | 완전 탐색 |
 | [17089](https://www.acmicpc.net/problem/17089) | [세 친구](src/boj/bruteForce/BOJ_17089_ThreeFriends.kt) | 완전 탐색 |
+| [17071](https://www.acmicpc.net/problem/17071) | [숨바꼭질 5](src/boj/dfsBfs/BOJ_17071_HideAndSeek5.kt) | BFS |
 | [17135](https://www.acmicpc.net/problem/17135) | [캐슬 디펜스](src/boj/bruteForce/BOJ_17135_CastleDefense.kt) | 완전 탐색 |
 | [17281](https://www.acmicpc.net/problem/17281) | [야구](src/boj/bruteForce/BOJ_17281_Baseball.kt) | 완전 탐색 |
 | [17406](https://www.acmicpc.net/problem/17406) | [배열 돌리기4](src/boj/bruteForce/BOJ_17406_ArrayRotation4.kt) | 완전 탐색 |

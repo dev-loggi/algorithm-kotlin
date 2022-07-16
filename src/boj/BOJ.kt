@@ -27,6 +27,9 @@ object BOJ {
         2745 to BOJ_2745_BaseConversion::class,
         2839 to BOJ_2839_SugarDelivery::class,
 
+        // 8000 ~ 8999
+        8111 to BOJ_8111_ZeroAndOne::class,
+
         // 9000 ~ 9999
         9019 to BOJ_9019_DSLR::class,
 
@@ -50,6 +53,7 @@ object BOJ {
         16973 to BOJ_16973_RectangleEscape::class,
 
         // 17000 ~ 17999
+        17071 to BOJ_17071_HideAndSeek5::class,
         17088 to BOJ_17088_ArithmeticSequenceTransform::class,
         17089 to BOJ_17089_ThreeFriends::class,
         17135 to BOJ_17135_CastleDefense::class,
