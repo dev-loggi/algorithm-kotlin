@@ -14,6 +14,7 @@ object BOJ {
         1012 to BOJ_1012_OrganicCabbage::class,
         1175 to BOJ_1175_Delivery::class,
         1260 to BOJ_1260_DFSandBFS::class,
+        1525 to BOJ_1525_Puzzle::class,
         1913 to BOJ_1913_Snail::class,
 
         // 2000 ~ 2999
