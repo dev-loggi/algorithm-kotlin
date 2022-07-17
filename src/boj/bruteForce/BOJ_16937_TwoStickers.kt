@@ -1,6 +1,5 @@
 package boj.bruteForce
 
-import Solution
 import boj.BOJSolution
 import kotlin.math.max
 
@@ -10,16 +9,9 @@ import kotlin.math.max
  * https://www.acmicpc.net/problem/16937
  * 완전 탐색
  * */
-class BOJ_16937_TwoStickers : BOJSolution() {
+class BOJ_16937_TwoStickers : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val H = input[0].toInt() // 모눈종이 세로 크기
         val W = input[1].toInt() // 모눈종이 가로 크기
@@ -80,14 +72,14 @@ class BOJ_16937_TwoStickers : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16937,
     title = "두 스티커",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16937"
+    problemUrl = "https://www.acmicpc.net/problem/16937"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "2 2\n" +

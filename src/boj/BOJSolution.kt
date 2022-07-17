@@ -1,8 +1,9 @@
 package boj
 
-import Solution
-
-abstract class BOJSolution : Solution {
+abstract class BOJSolution(
+    private val info: Info,
+    private val testCases: Array<TestCase>
+) {
 
     companion object {
         const val MATERIALIZATION = "구현"
@@ -13,25 +14,22 @@ abstract class BOJSolution : Solution {
         const val DP = "DP"
     }
 
-    class Info(val no: Int, val title: String, val category: Array<String>, val url: String)
+    class Info(val no: Int, val title: String, val category: Array<String>, val problemUrl: String, val solutionUrl: String = "")
     class TestCase(val input: String, val output: String)
 
-    abstract val info: Info
-    abstract val testCases: Array<TestCase>
+    abstract fun main()
 
-    abstract fun executeTestCases()
-
-    final override fun execute() {
+    fun execute() {
         println("[BOJ ${info.no}]: ${info.title}")
         println(info.category.joinToString(", "))
-        println("${info.url}\n")
+        println("${info.problemUrl}\n")
 
         testCases.forEachIndexed { index, testCase ->
             println("[예제 입력 ${index + 1}]")
             println(testCase.input)
             println("\n* input:")
 
-            executeTestCases()
+            main()
 
             println("* answer:")
             println(testCase.output)

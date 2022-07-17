@@ -8,16 +8,9 @@ import java.util.ArrayDeque
  * 단지 번호 붙이기
  * https://www.acmicpc.net/problem/2667
  * */
-class BOJ_2667_VillageNumbering : BOJSolution() {
+class BOJ_2667_VillageNumbering : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val n = readLine()?.toIntOrNull() ?: return
         val map = mutableListOf<IntArray>()
         val visited = Array(n) { BooleanArray(n) { false } }
@@ -80,14 +73,14 @@ class BOJ_2667_VillageNumbering : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2667,
     title = "단지 번호 붙이기",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/2667"
+    problemUrl = "https://www.acmicpc.net/problem/2667"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "7\n" +
                 "0110100\n" +

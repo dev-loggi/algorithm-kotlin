@@ -1,6 +1,5 @@
 package boj.bruteForce
 
-import Solution
 import boj.BOJSolution
 
 /**
@@ -9,16 +8,9 @@ import boj.BOJSolution
  * https://www.acmicpc.net/problem/17406
  * 완전 탐색
  * */
-class BOJ_17406_ArrayRotation4 : BOJSolution() {
+class BOJ_17406_ArrayRotation4 : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         // 1 ≤ A[i][j] ≤ 100
         // 1 ≤ s
         // 1 ≤ r-s < r < r+s ≤ N
@@ -120,14 +112,14 @@ class BOJ_17406_ArrayRotation4 : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 17406,
     title = "배열 돌리기4",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/17406"
+    problemUrl = "https://www.acmicpc.net/problem/17406"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "5 6 2\n" +
                 "1 2 3 2 5 6\n" +

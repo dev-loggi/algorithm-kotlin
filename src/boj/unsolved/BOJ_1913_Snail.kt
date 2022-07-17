@@ -15,16 +15,9 @@ import java.text.DecimalFormat
  * 22  7  6  5 16
  * 21 20 19 18 17
  * */
-class BOJ_1913_Snail : BOJSolution() {
+class BOJ_1913_Snail : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()?.toIntOrNull() ?: return
         val number = readLine()?.toIntOrNull() ?: return
 
@@ -113,14 +106,14 @@ class BOJ_1913_Snail : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 1913,
     title = "달팽이1",
     category = arrayOf(BOJSolution.MATERIALIZATION),
-    url = "https://www.acmicpc.net/problem/1913"
+    problemUrl = "https://www.acmicpc.net/problem/1913"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "7\n" +
                 "35",

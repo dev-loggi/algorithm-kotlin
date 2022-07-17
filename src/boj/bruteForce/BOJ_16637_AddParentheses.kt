@@ -2,16 +2,9 @@ package boj.bruteForce
 
 import boj.BOJSolution
 
-class BOJ_16637_AddParentheses : BOJSolution() {
+class BOJ_16637_AddParentheses : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()!!.toInt()
         val equation = readLine()!!.toCharArray()
 
@@ -92,14 +85,14 @@ class BOJ_16637_AddParentheses : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16637,
     title = "괄호 추가하기",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16637"
+    problemUrl = "https://www.acmicpc.net/problem/16637"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "9\n" +

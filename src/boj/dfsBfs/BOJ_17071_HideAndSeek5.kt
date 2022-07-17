@@ -3,7 +3,13 @@ package boj.dfsBfs
 import boj.BOJSolution
 import java.util.ArrayDeque
 
-class BOJ_17071_HideAndSeek5 : BOJSolution() {
+/*
+ * 17071
+ * 숨바꼭질 5
+ * https://www.acmicpc.net/problem/17071
+ * https://jsl663.tistory.com/32
+ * */
+class BOJ_17071_HideAndSeek5 : BOJSolution(info(), testCases()) {
 
     companion object {
         private const val MAX = 500_000
@@ -12,14 +18,7 @@ class BOJ_17071_HideAndSeek5 : BOJSolution() {
         private val DM = intArrayOf(1, 1, 2) // 곱하기
     }
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 수빈이의 위치(0 ≤ N ≤ 500,000)
         val K = input[1].toInt() // 동생의 위치(0 ≤ K ≤ 500,000)
@@ -73,14 +72,14 @@ class BOJ_17071_HideAndSeek5 : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 17071,
     title = "숨바꼭질 5",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/17071",
+    problemUrl = "https://www.acmicpc.net/problem/17071",
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "5 17",
         output = "2"

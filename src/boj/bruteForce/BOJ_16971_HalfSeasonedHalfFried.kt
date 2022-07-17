@@ -8,16 +8,9 @@ import kotlin.math.min
  * 양념 반 후라이드 반
  * https://www.acmicpc.net/problem/16917
  * */
-class BOJ_16971_HalfSeasonedHalfFried : BOJSolution() {
+class BOJ_16971_HalfSeasonedHalfFried : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val A = input[0].toInt() // 양념 치킨 가격
         val B = input[1].toInt() // 후라이드 치킨 가격
@@ -51,14 +44,14 @@ class BOJ_16971_HalfSeasonedHalfFried : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16971,
     title = "양념 반 후라이드 반",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16917"
+    problemUrl = "https://www.acmicpc.net/problem/16917"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "1500 2000 1600 3 2",
         output = "7900"

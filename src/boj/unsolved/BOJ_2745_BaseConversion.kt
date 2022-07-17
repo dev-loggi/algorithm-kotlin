@@ -1,6 +1,5 @@
 package boj.unsolved
 
-import Solution
 import boj.BOJSolution
 
 /**
@@ -8,16 +7,9 @@ import boj.BOJSolution
  * 진법 변환
  * https://www.acmicpc.net/problem/2745
  * */
-class BOJ_2745_BaseConversion : BOJSolution() {
+class BOJ_2745_BaseConversion : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0]
         val B = input[1].toInt()
@@ -45,14 +37,14 @@ class BOJ_2745_BaseConversion : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2745,
     title = "진법 변환",
     category = arrayOf(BOJSolution.MATERIALIZATION),
-    url = "https://www.acmicpc.net/problem/2745"
+    problemUrl = "https://www.acmicpc.net/problem/2745"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "ZZZZZ 36",
         output = "60466175"

@@ -8,16 +8,9 @@ import boj.BOJSolution
  * https://www.acmicpc.net/problem/16938
  * 완전 탐색
  * */
-class BOJ_16938_CampReady : BOJSolution() {
+class BOJ_16938_CampReady : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // N개의 문제
         val L = input[1].toInt() // L <= 출제할 문제 난이도의 합
@@ -62,14 +55,14 @@ class BOJ_16938_CampReady : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16938,
     title = "캠프 준비",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16938"
+    problemUrl = "https://www.acmicpc.net/problem/16938"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "3 5 6 1\n" +

@@ -9,20 +9,13 @@ import java.util.ArrayDeque
  * https://www.acmicpc.net/problem/8111
  * https://velog.io/@hyeon930/BOJ-8111-0%EA%B3%BC1-Java
  * */
-class BOJ_8111_ZeroAndOne : BOJSolution() {
-
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
+class BOJ_8111_ZeroAndOne : BOJSolution(info(), testCases()) {
 
     companion object {
         private const val MAX = 20000
     }
 
-    fun main() {
+    override fun main() {
         val T = readLine()!!.toInt() // 테스트 케이스 갯수(T < 10)
         val answers = mutableListOf<String>()
 
@@ -101,14 +94,14 @@ class BOJ_8111_ZeroAndOne : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 8111,
     title = "0 과 1",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/8111"
+    problemUrl = "https://www.acmicpc.net/problem/8111"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "6\n" +
                 "17\n" +

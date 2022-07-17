@@ -2,16 +2,9 @@ package boj.bruteForce
 
 import boj.BOJSolution
 
-class BOJ_16922_MakingRomanNumerals : BOJSolution() {
+class BOJ_16922_MakingRomanNumerals : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()!!.toInt()
 
         solution(N)
@@ -46,14 +39,14 @@ class BOJ_16922_MakingRomanNumerals : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16922,
     title = "로마 숫자 만들기",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16922"
+    problemUrl = "https://www.acmicpc.net/problem/16922"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "1",
         output = "4"

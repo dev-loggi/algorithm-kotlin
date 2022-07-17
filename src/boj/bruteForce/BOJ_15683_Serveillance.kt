@@ -2,16 +2,9 @@ package boj.bruteForce
 
 import boj.BOJSolution
 
-class BOJ_15683_Serveillance : BOJSolution() {
+class BOJ_15683_Serveillance : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 사무실 세로 크기
         val M = input[1].toInt() // 사무실 가로 크기
@@ -99,14 +92,14 @@ class BOJ_15683_Serveillance : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 15638,
     title = "감시",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/15683"
+    problemUrl = "https://www.acmicpc.net/problem/15683"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "4 6\n" +

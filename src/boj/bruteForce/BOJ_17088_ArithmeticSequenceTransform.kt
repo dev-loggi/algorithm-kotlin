@@ -9,16 +9,9 @@ import kotlin.math.abs
  * https://www.acmicpc.net/problem/17088
  * 완전 탐색
  * */
-class BOJ_17088_ArithmeticSequenceTransform : BOJSolution() {
+class BOJ_17088_ArithmeticSequenceTransform : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()!!.toInt() // 수열의 크기
         val A = readLine()!!.split(" ") // 수열
             .map { it.toInt() }
@@ -93,14 +86,14 @@ class BOJ_17088_ArithmeticSequenceTransform : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 17088,
     title = "등차수열 변환",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/17088"
+    problemUrl = "https://www.acmicpc.net/problem/17088"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "4\n" +
                 "24 21 14 10",

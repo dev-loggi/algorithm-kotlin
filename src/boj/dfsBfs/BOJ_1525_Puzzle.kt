@@ -1,15 +1,15 @@
 package boj.dfsBfs
 
 import boj.BOJSolution
-import main
 import java.util.ArrayDeque
 
 /**
  * 1525
  * 퍼즐
  * https://www.acmicpc.net/problem/1525
+ * https://jsl663.tistory.com/31
  * */
-class BOJ_1525_Puzzle : BOJSolution() {
+class BOJ_1525_Puzzle : BOJSolution(info(), testCases()) {
 
     companion object {
         private const val DEST = "123456780"
@@ -18,7 +18,7 @@ class BOJ_1525_Puzzle : BOJSolution() {
         private val DY = intArrayOf(0, -1, 0, 1)
     }
 
-    fun main() {
+    override fun main() {
         var puzzle = ""
 
         for (i in 0 until 3) {
@@ -33,30 +33,30 @@ class BOJ_1525_Puzzle : BOJSolution() {
         if (puzzle == DEST)
             return 0
 
-        val dist = mutableSetOf(puzzle)
+        val puzzleSet = mutableSetOf(puzzle)
         val queue = ArrayDeque(listOf(puzzle))
 
-        var count = 0
+        var count = 0 // 이동 횟수
 
-        while (queue.isNotEmpty()) {
+        while (queue.isNotEmpty()) { // BFS
             count++
 
-            for (i in queue.indices) {
+            for (i in queue.indices) { // BFS 한 사이클
                 val p = queue.poll()
                 val idx = p.indexOf('0')
 
-                for (dir in 0 until 4) {
+                for (dir in 0 until 4) { // 빈 칸('0') 상, 하, 좌, 우 이동
                     val next = p.move(idx, dir)
                         ?: continue
 
-                    if (next == DEST)
+                    if (next == DEST) // 정렬 완료
                         return count
 
-                    if (dist.contains(next))
+                    if (puzzleSet.contains(next)) // 중복 체크
                         continue
 
                     queue.offer(next)
-                    dist.add(next)
+                    puzzleSet.add(next)
                 }
             }
         }
@@ -76,37 +76,27 @@ class BOJ_1525_Puzzle : BOJSolution() {
         sb.setCharAt(ni, this[i])
         return sb.toString()
     }
-
-    private fun String.log() {
-        for (i in this.indices) {
-            print("${this[i]} ")
-            if (i % 3 == 2) println()
-        }
-        println()
-    }
-
-    override fun executeTestCases() { main() }
-
-    override val info = Info(
-        no = 1525,
-        title = "퍼즐",
-        category = arrayOf(BFS),
-        url = "https://www.acmicpc.net/problem/1525"
-    )
-
-    override val testCases = arrayOf(
-        TestCase(
-            input = "1 0 3\n" +
-                    "4 2 5\n" +
-                    "7 8 6",
-            output = "3"
-        ),
-        TestCase(
-            input = "3 6 0\n" +
-                    "8 1 2\n" +
-                    "7 4 5",
-            output = "-1"
-        )
-    )
-
 }
+
+private fun info() = BOJSolution.Info(
+    no = 1525,
+    title = "퍼즐",
+    category = arrayOf(BOJSolution.BFS),
+    problemUrl = "https://www.acmicpc.net/problem/1525",
+    solutionUrl = "https://jsl663.tistory.com/31"
+)
+
+private fun testCases() = arrayOf(
+    BOJSolution.TestCase(
+        input = "1 0 3\n" +
+                "4 2 5\n" +
+                "7 8 6",
+        output = "3"
+    ),
+    BOJSolution.TestCase(
+        input = "3 6 0\n" +
+                "8 1 2\n" +
+                "7 4 5",
+        output = "-1"
+    )
+)

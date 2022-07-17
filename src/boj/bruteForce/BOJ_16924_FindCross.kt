@@ -3,16 +3,9 @@ package boj.bruteForce
 import boj.BOJSolution
 import kotlin.math.max
 
-class BOJ_16924_FindCross : BOJSolution() {
+class BOJ_16924_FindCross : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt()
         val M = input[1].toInt()
@@ -77,14 +70,14 @@ class BOJ_16924_FindCross : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16924,
     title = "십자가 찾기",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16924"
+    problemUrl = "https://www.acmicpc.net/problem/16924"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "6 8\n" +

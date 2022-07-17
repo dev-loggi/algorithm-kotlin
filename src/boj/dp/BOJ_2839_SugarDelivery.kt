@@ -1,6 +1,5 @@
 package boj.dp
 
-import Solution
 import boj.BOJSolution
 
 /**
@@ -9,16 +8,9 @@ import boj.BOJSolution
  * https://www.acmicpc.net/problem/2839
  * DP
  * */
-class BOJ_2839_SugarDelivery : BOJSolution() {
+class BOJ_2839_SugarDelivery : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()?.toIntOrNull() ?: return
 
         // N = 5 * a + 3 * b
@@ -45,14 +37,14 @@ class BOJ_2839_SugarDelivery : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2839,
     title = "설탕 배달",
     category = arrayOf(BOJSolution.DP),
-    url = "https://www.acmicpc.net/problem/2839"
+    problemUrl = "https://www.acmicpc.net/problem/2839"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "18",
         output = "4",

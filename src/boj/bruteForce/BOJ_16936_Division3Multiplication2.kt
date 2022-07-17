@@ -9,16 +9,9 @@ import boj.BOJSolution.Companion.BRUTE_FORCE
  * https://www.acmicpc.net/problem/16936
  * 완전 탐색
  * */
-class BOJ_16936_Division3Multiplication2 : BOJSolution() {
+class BOJ_16936_Division3Multiplication2 : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()!!.toInt()
         val sequence = readLine()!!.split(" ")
             .map { it.toLong() }
@@ -61,14 +54,14 @@ class BOJ_16936_Division3Multiplication2 : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16936,
     title = "나3곱2",
     category = arrayOf(BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16936"
+    problemUrl = "https://www.acmicpc.net/problem/16936"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "6\n" +

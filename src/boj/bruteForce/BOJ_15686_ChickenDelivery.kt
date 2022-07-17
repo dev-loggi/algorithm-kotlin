@@ -1,19 +1,11 @@
 package boj.bruteForce
 
-import Solution
 import boj.BOJSolution
 import kotlin.math.abs
 
-class BOJ_15686_ChickenDelivery : BOJSolution() {
+class BOJ_15686_ChickenDelivery : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 지도 세로 크기(2 ≤ N ≤ 50)
         val M = input[1].toInt() // 폐업을 시키지 않을 치킨집의 최대 갯수(1 ≤ M ≤ 13)
@@ -76,14 +68,14 @@ class BOJ_15686_ChickenDelivery : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 15686,
     title = "치킨 배달",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/15686"
+    problemUrl = "https://www.acmicpc.net/problem/15686"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "5 3\n" +

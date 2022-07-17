@@ -7,16 +7,9 @@ import boj.BOJSolution
  * 차량 번호판1
  * https://www.acmicpc.net/problem/16968
  * */
-class BOJ_16968_LicensePlate1 : BOJSolution() {
+class BOJ_16968_LicensePlate1 : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val formats = readLine()?.map { it } ?: return
 
         val map = mapOf(
@@ -37,14 +30,14 @@ class BOJ_16968_LicensePlate1 : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16968,
     title = "차량 번호판1",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/16968"
+    problemUrl = "https://www.acmicpc.net/problem/16968"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "dd",
         output = "90"

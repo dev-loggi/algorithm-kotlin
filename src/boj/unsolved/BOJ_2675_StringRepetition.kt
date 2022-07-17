@@ -1,6 +1,5 @@
 package boj.unsolved
 
-import Solution
 import boj.BOJSolution
 
 
@@ -9,16 +8,9 @@ import boj.BOJSolution
  * 문자열 반복
  * https://www.acmicpc.net/problem/2675
  * */
-class BOJ_2675_StringRepetition : BOJSolution() {
+class BOJ_2675_StringRepetition : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val case = readLine()?.toIntOrNull() ?: return
         val repeats = mutableListOf<Int>()
         val stringList = mutableListOf<String>()
@@ -44,14 +36,14 @@ class BOJ_2675_StringRepetition : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2675,
     title = "문자열 반복",
     category = arrayOf(BOJSolution.MATERIALIZATION),
-    url = "https://www.acmicpc.net/problem/2675"
+    problemUrl = "https://www.acmicpc.net/problem/2675"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "3 ABC\n" +

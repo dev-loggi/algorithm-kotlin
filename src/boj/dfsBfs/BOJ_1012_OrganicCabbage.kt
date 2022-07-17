@@ -3,16 +3,9 @@ package boj.dfsBfs
 import boj.BOJSolution
 import java.util.ArrayDeque
 
-class BOJ_1012_OrganicCabbage : BOJSolution() {
+class BOJ_1012_OrganicCabbage : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val T = readLine()?.toIntOrNull() ?: return // 테스트 케이스 갯수
         val answers = mutableListOf<Int>()
 
@@ -95,14 +88,14 @@ class BOJ_1012_OrganicCabbage : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 1012,
     title = "유기농 배추",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/1012"
+    problemUrl = "https://www.acmicpc.net/problem/1012"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "10 8 17\n" +

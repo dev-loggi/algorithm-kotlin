@@ -8,16 +8,9 @@ import boj.BOJSolution
  * https://www.acmicpc.net/problem/17089
  * 완전 탐색
  * */
-class BOJ_17089_ThreeFriends : BOJSolution() {
+class BOJ_17089_ThreeFriends : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 사람의 수(3 ≤ N ≤ 4,000)
         val M = input[1].toInt() // 친구 관계의 수(0 ≤ M ≤ 4,000)
@@ -64,14 +57,14 @@ class BOJ_17089_ThreeFriends : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 17089,
     title = "세 친구",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/17089"
+    problemUrl = "https://www.acmicpc.net/problem/17089"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "5 6\n" +
                 "1 2\n" +

@@ -1,6 +1,5 @@
 package boj.unsolved
 
-import Solution
 import boj.BOJSolution
 import java.text.DecimalFormat
 import java.util.ArrayDeque
@@ -12,18 +11,11 @@ import java.util.ArrayDeque
  *
  * TODO: 미해결
  * */
-class BOJ_9019_DSLR : BOJSolution() {
+class BOJ_9019_DSLR : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
+    private val formatter = DecimalFormat()
 
-    private val formatter = DecimalFormat("0000")
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val T = readLine()!!.toInt()
         val answers = mutableListOf<String>()
 
@@ -88,14 +80,14 @@ class BOJ_9019_DSLR : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 9019,
     title = "DSLR",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/9019"
+    problemUrl = "https://www.acmicpc.net/problem/9019"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "3\n" +
                 "1234 3412\n" +

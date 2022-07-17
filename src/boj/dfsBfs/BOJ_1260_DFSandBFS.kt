@@ -8,16 +8,9 @@ import java.util.*
  * DFS 와 BFS
  * https://www.acmicpc.net/problem/1260
  * */
-class BOJ_1260_DFSandBFS : BOJSolution() {
+class BOJ_1260_DFSandBFS : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val nmv = readLine()?.split(" ") ?: return
         val n = nmv[0].toInt()
         val m = nmv[1].toInt()
@@ -77,14 +70,14 @@ class BOJ_1260_DFSandBFS : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 1260,
     title = "DFS 와 BFS",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/1260"
+    problemUrl = "https://www.acmicpc.net/problem/1260"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "4 5 1\n" +
                 "1 2\n" +

@@ -3,16 +3,9 @@ package boj.dfsBfs
 import boj.BOJSolution
 import java.util.ArrayDeque
 
-class BOJ_2178_MazeExploration : BOJSolution() {
+class BOJ_2178_MazeExploration : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()?.split(" ") ?: return
         val n = input[0].toIntOrNull() ?: return
         val m = input[1].toIntOrNull() ?: return
@@ -73,14 +66,14 @@ class BOJ_2178_MazeExploration : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2178,
     title = "미로 탐색",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/2178"
+    problemUrl = "https://www.acmicpc.net/problem/2178"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "4 6\n" +
                 "101111\n" +

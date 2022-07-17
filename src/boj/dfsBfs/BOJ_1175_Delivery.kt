@@ -10,7 +10,7 @@ import java.util.ArrayDeque
  * bfs
  * */
 // TODO: 미완성
-class BOJ_1175_Delivery : BOJSolution() {
+class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
 
     companion object {
         const val BACK_SPACE = 8
@@ -22,14 +22,7 @@ class BOJ_1175_Delivery : BOJSolution() {
         const val DOWN = 3
     }
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 세로 크기
         val M = input[1].toInt() // 가로 크기
@@ -244,14 +237,14 @@ class BOJ_1175_Delivery : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 1175,
     title = "배달",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/1175"
+    problemUrl = "https://www.acmicpc.net/problem/1175"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "2 3\n" +
                 "SCC\n" +

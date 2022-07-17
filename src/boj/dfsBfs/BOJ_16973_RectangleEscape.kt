@@ -1,8 +1,6 @@
 package boj.dfsBfs
 
-import Solution
 import boj.BOJSolution
-import java.text.DecimalFormat
 import java.util.ArrayDeque
 
 /**
@@ -11,16 +9,9 @@ import java.util.ArrayDeque
  * https://www.acmicpc.net/problem/16973
  * bfs
  * */
-class BOJ_16973_RectangleEscape : BOJSolution() {
+class BOJ_16973_RectangleEscape : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val input1 = readLine()!!.split(" ")
         val N = input1[0].toInt()
         val M = input1[1].toInt()
@@ -112,14 +103,14 @@ class BOJ_16973_RectangleEscape : BOJSolution() {
     data class Point(val row: Int, val col: Int)
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 16973,
     title = "직사각형 탈출",
     category = arrayOf(BOJSolution.BFS),
-    url = "https://www.acmicpc.net/problem/16973"
+    problemUrl = "https://www.acmicpc.net/problem/16973"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase( // case 1
         input = "4 5\n" +
                 "0 0 0 0 0\n" +

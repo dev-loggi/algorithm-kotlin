@@ -2,16 +2,9 @@ package boj.bruteForce
 
 import boj.BOJSolution
 
-class BOJ_2210_NumPadJump : BOJSolution() {
+class BOJ_2210_NumPadJump : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val matrix = Array(5) { CharArray(5) }
         for (i in 0 until 5) {
             matrix[i] = readLine()!!.split(" ")
@@ -50,14 +43,14 @@ class BOJ_2210_NumPadJump : BOJSolution() {
 
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2210,
     title = "숫자판 점프",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/submit/2210"
+    problemUrl = "https://www.acmicpc.net/submit/2210"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "1 1 1 1 1\n" +

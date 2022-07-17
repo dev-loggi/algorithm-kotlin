@@ -2,16 +2,9 @@ package boj.bruteForce
 
 import boj.BOJSolution
 
-class BOJ_2529_InequalitySign : BOJSolution() {
+class BOJ_2529_InequalitySign : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val k = readLine()?.toIntOrNull() ?: return
         val operators = readLine()?.split(" ") ?: return
 
@@ -62,14 +55,14 @@ class BOJ_2529_InequalitySign : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 2529,
     title = "부등호",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/2529"
+    problemUrl = "https://www.acmicpc.net/problem/2529"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input =
         "2\n" +

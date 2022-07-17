@@ -1,6 +1,5 @@
 package boj.bruteForce
 
-import Solution
 import boj.BOJSolution
 import java.util.ArrayDeque
 import kotlin.math.max
@@ -11,16 +10,9 @@ import kotlin.math.max
  * https://www.acmicpc.net/problem/17281
  * 완전 탐색
  * */
-class BOJ_17281_Baseball : BOJSolution() {
+class BOJ_17281_Baseball : BOJSolution(info(), testCases()) {
 
-    override val info = _info
-    override val testCases = _testCases
-
-    override fun executeTestCases() {
-        main()
-    }
-
-    fun main() {
+    override fun main() {
         val N = readLine()!!.toInt() // 이닝 수(2 ≤ N ≤ 50)
         val playersByInning = (0 until N).map {
             readLine()!!.split(" ").map { it.toInt() }.toIntArray()
@@ -260,14 +252,14 @@ class BOJ_17281_Baseball : BOJSolution() {
     }
 }
 
-private val _info = BOJSolution.Info(
+private fun info() = BOJSolution.Info(
     no = 17281,
     title = "야구",
     category = arrayOf(BOJSolution.BRUTE_FORCE),
-    url = "https://www.acmicpc.net/problem/17281"
+    problemUrl = "https://www.acmicpc.net/problem/17281"
 )
 
-private val _testCases = arrayOf(
+private fun testCases() = arrayOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "4 0 0 0 0 0 0 0 0\n" +
