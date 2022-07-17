@@ -17,7 +17,7 @@
 | 번호                                         | 제목                       | 유형       | 해설                                    |
 |--------------------------------------------|---------------------------|----------|---------------------------------------|
 | [1012](https://www.acmicpc.net/problem/1012) |[유기농 배추](src/boj/dfsBfs/BOJ_1012_OrganicCabbage.kt)| BFS      |
-| [1175](https://www.acmicpc.net/problem/1175) |[배달](src/boj/dfsBfs/BOJ_1175_Delivery.kt)| BFS      |
+| [1175](https://www.acmicpc.net/problem/1175) |[배달](src/boj/dfsBfs/BOJ_1175_Delivery.kt)| BFS      | [blog](https://jsl663.tistory.com/33) |
 | [1260](https://www.acmicpc.net/problem/1260) |[DFS 와 BFS](src/boj/dfsBfs/BOJ_1260_DFSandBFS.kt)| DFS, BFS |
 | [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      | [blog](https://jsl663.tistory.com/31) |
 | [1913](https://www.acmicpc.net/problem/1913) |[달팽이1](src/boj/unsolved/BOJ_1913_Snail.kt)| 구현       |
