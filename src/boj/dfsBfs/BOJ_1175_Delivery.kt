@@ -7,6 +7,7 @@ import java.util.ArrayDeque
  * 1175
  * 배달
  * https://www.acmicpc.net/problem/1175
+ * https://jsl663.tistory.com/33
  * bfs
  * */
 class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
@@ -108,7 +109,8 @@ private fun info() = BOJSolution.Info(
     no = 1175,
     title = "배달",
     category = arrayOf(BOJSolution.BFS),
-    problemUrl = "https://www.acmicpc.net/problem/1175"
+    problemUrl = "https://www.acmicpc.net/problem/1175",
+    solutionUrl = "https://jsl663.tistory.com/33"
 )
 
 private fun testCases() = arrayOf(
