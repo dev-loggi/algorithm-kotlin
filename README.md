@@ -14,19 +14,19 @@
 
 * 1000 ~ 1999
 
-| 번호                                         | 제목                       | 비고       |
-|--------------------------------------------|---------------------------|----------|
+| 번호                                         | 제목                       | 유형       | 해설                                    |
+|--------------------------------------------|---------------------------|----------|---------------------------------------|
 | [1012](https://www.acmicpc.net/problem/1012) |[유기농 배추](src/boj/dfsBfs/BOJ_1012_OrganicCabbage.kt)| BFS      |
 | [1175](https://www.acmicpc.net/problem/1175) |[배달](src/boj/dfsBfs/BOJ_1175_Delivery.kt)| BFS      |
 | [1260](https://www.acmicpc.net/problem/1260) |[DFS 와 BFS](src/boj/dfsBfs/BOJ_1260_DFSandBFS.kt)| DFS, BFS |
-| [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      |
+| [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      | [blog](https://jsl663.tistory.com/31) |
 | [1913](https://www.acmicpc.net/problem/1913) |[달팽이1](src/boj/unsolved/BOJ_1913_Snail.kt)| 구현       |
 <br/>
 
 
 * 2000 ~ 2999
 
-| 번호                                          | 제목                                                   | 비고    |
+| 번호                                          | 제목                                                   | 유형    |
 |----------------------------------------------|------------------------------------------------------|-------|
 | [2178](https://www.acmicpc.net/problem/2178) | [미로 탐색](src/boj/dfsBfs/BOJ_2178_MazeExploration.kt)  | BFS   |
 | [2210](https://www.acmicpc.net/submit/2210) | [숫자판 점프](src/boj/bruteForce/BOJ_2210_NumPadJump.kt) | 완전 탐색 |
@@ -41,31 +41,31 @@
 
 * 8000 ~ 8999
 
-| 번호                                          | 제목                                                   | 비고    |
-|----------------------------------------------|------------------------------------------------------|-------|
+| 번호                                          | 제목                                                   | 유형    | 해설 |
+|----------------------------------------------|------------------------------------------------------|-------|-----|
 | [8111](https://www.acmicpc.net/problem/8111) | [0 과 1](src/boj/dfsBfs/BOJ_8111_ZeroAndOne.kt) | BFS |
 <br/>
 
 * 9000 ~ 9999
 
-| 번호                                          | 제목                                                   | 비고    |
-|----------------------------------------------|------------------------------------------------------|-------|
+| 번호                                          | 제목                                                   | 유형    | 해설 |
+|----------------------------------------------|------------------------------------------------------|-------|-----|
 | [9019](https://www.acmicpc.net/problem/9019) | [DSLR](src/boj/unsolved/BOJ_9019_DSLR.kt) | BFS |
 <br/>
 
 
 * 11000 ~ 11999
 
-| 번호                                             | 제목                                                   | 비고    |
-|------------------------------------------------|------------------------------------------------------|-------|
+| 번호                                             | 제목                                                   | 유형    | 해설 |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
 | [11005](https://www.acmicpc.net/problem/11005) | [진법 변환2](src/boj/etc/BOJ_11005_BaseConversion2.kt) | 구현 |
 <br/>
 
 
 * 15000 ~ 15999
 
-| 번호                                             | 제목                                                   | 비고    |
-|------------------------------------------------|------------------------------------------------------|-------|
+| 번호                                             | 제목                                                   | 유형    | 해설 |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
 | [15683](https://www.acmicpc.net/problem/15683) | [감시](src/boj/bruteForce/BOJ_15683_Serveillance.kt) | 완전 탐색 |
 | [15686](https://www.acmicpc.net/problem/15686) | [치킨 배달](src/boj/bruteForce/BOJ_15686_ChickenDelivery.kt) | 완전 탐색 |
 <br/>
@@ -73,8 +73,8 @@
 
 * 16000 ~ 16999
 
-| 번호                                             | 제목                                                   | 비고    |
-|------------------------------------------------|------------------------------------------------------|-------|
+| 번호                                             | 제목                                                   | 유형    | 해설 |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
 | [16637](https://www.acmicpc.net/problem/16637) | [괄호 추가하기](src/boj/bruteForce/BOJ_16637_AddParentheses.kt) | 완전 탐색 |
 | [16922](https://www.acmicpc.net/problem/16922) | [로마 숫자 만들기](src/boj/bruteForce/BOJ_16922_MakingRomanNumerals.kt) | 완전 탐색 |
 | [16924](https://www.acmicpc.net/problem/16924) | [십자가 찾기](src/boj/bruteForce/BOJ_16924_FindCross.kt) | 완전 탐색 |
@@ -90,11 +90,11 @@
 
 * 17000 ~ 17999
 
-| 번호                                             | 제목                                                   | 비고    |
-|------------------------------------------------|------------------------------------------------------|-------|
+| 번호                                             | 제목                                                   | 유형    | 해설  |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
 | [17088](https://www.acmicpc.net/problem/17088) | [등차수열 변환](src/boj/bruteForce/BOJ_17088_ArithmeticSequenceTransform.kt) | 완전 탐색 |
 | [17089](https://www.acmicpc.net/problem/17089) | [세 친구](src/boj/bruteForce/BOJ_17089_ThreeFriends.kt) | 완전 탐색 |
-| [17071](https://www.acmicpc.net/problem/17071) | [숨바꼭질 5](src/boj/dfsBfs/BOJ_17071_HideAndSeek5.kt) | BFS |
+| [17071](https://www.acmicpc.net/problem/17071) | [숨바꼭질 5](src/boj/dfsBfs/BOJ_17071_HideAndSeek5.kt) | BFS   | [blog](https://jsl663.tistory.com/32) |
 | [17135](https://www.acmicpc.net/problem/17135) | [캐슬 디펜스](src/boj/bruteForce/BOJ_17135_CastleDefense.kt) | 완전 탐색 |
 | [17281](https://www.acmicpc.net/problem/17281) | [야구](src/boj/bruteForce/BOJ_17281_Baseball.kt) | 완전 탐색 |
 | [17406](https://www.acmicpc.net/problem/17406) | [배열 돌리기4](src/boj/bruteForce/BOJ_17406_ArrayRotation4.kt) | 완전 탐색 |
@@ -104,7 +104,7 @@
 
 * 코딩테스트 연습 Level 1
 
-|  레벨  |제목|비고|
+|  레벨  |제목|유형|
 |:----:|----|----|
 |  1   |[없는 숫자 더하기](src/programmers/practice/level1/AddMissingNumbers.kt)|
 |  1   |[음양 더하기](src/programmers/practice/level1/AddNegativePositiveNumbers.kt)|
@@ -127,7 +127,7 @@
 
 * 코딩테스트 연습 Level 2
 
-|레벨|제목|비고|
+|레벨|제목|유형|
 |:----:|----|----|
 |  2   |[양궁 대회](src/programmers/practice/level2/ArcheryCompetition.kt)|
 |  2   |[카펫](src/programmers/practice/level2/Carpet.kt)|
@@ -158,7 +158,7 @@
 
 * 코딩테스트 연습 Level 3
 
-|  레벨  |제목|비고|
+|  레벨  |제목|유형|
 |:----:|----|----|
 |  3   |[베스트 앨범](src/programmers/practice/level3/BestAlbum.kt)|
 |  3   |[섬 연결하기](src/programmers/practice/level3/ConnectingIslands.kt)|
