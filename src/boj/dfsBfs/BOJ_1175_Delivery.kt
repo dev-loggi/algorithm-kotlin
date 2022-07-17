@@ -9,17 +9,11 @@ import java.util.ArrayDeque
  * https://www.acmicpc.net/problem/1175
  * bfs
  * */
-// TODO: 미완성
 class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
 
     companion object {
-        const val BACK_SPACE = 8
-        const val CR = 13
-
-        const val LEFT = 0
-        const val UP = 1
-        const val RIGHT = 2
-        const val DOWN = 3
+        private val MR = intArrayOf(0, -1, 0, 1) // move row
+        private val MC = intArrayOf(-1, 0, 1, 0) // move col
     }
 
     override fun main() {
@@ -28,212 +22,85 @@ class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
         val M = input[1].toInt() // 가로 크기
 
         val map = Array(N) { CharArray(M) }
-        var start: Point? = null
-        var c1: Point? = null
-        var c2: Point? = null
 
+        var cnt = 0
         for (r in 0 until N) {
             map[r] = readLine()!!.toCharArray()
 
-            for (c in 0 until map[r].size) {
-                if (map[r][c] == 'S') {
-                    start = Point(r, c)
-                } else if (map[r][c] == 'C') {
-                    if (c1 == null) c1 = Point(r, c)
-                    else if (c2 == null) c2 = Point(r, c)
+            for (c in map[r].indices) {
+                if (map[r][c] == 'C') {
+                    if (cnt == 0) cnt++
+                    else map[r][c] = 'D' // 두 번째 목적지를 'D'로 치환
                 }
             }
         }
 
-        println(dp(map, start!!))
+        solution(map, N, M).let { println(it) }
     }
 
-    fun dp(
-        map: Array<CharArray>,
-        start: Point
-    ): Int {
-        println("dp(): start=$start")
-        map.forEach { println(it.joinToString("")) }
-        println()
+    fun solution(map: Array<CharArray>, N: Int, M: Int): Int {
+        val rangeR = 0 until N
+        val rangeC = 0 until M
 
-        val fakeMap = Array(6) { Array(map.size) { r -> CharArray(map[r].size) { c -> map[r][c] } } }
-        val answers = mutableListOf<Point>()
+        val (sr, sc) = map.find { it == 'S' } // 민식이의 초기 위치(sr, sc)
 
-        // dp[dest][row][col][direction]
-        // dest=0: start -> c1
-        // dest=1: c1 -> c2
-        // dest=2: finish
+        // visited[s][r][c][d]
+        // s=0: S -> C 까지의 경로
+        // s=1: C -> D
+        // s=2: D -> C
+        // r: row, c: col, d: direction
+        val visited = Array(3) { Array(N) { Array(M) { BooleanArray(4) } } }
+        for (d in 0 until 4) visited[0][sr][sc][d] = true
 
-        // dest=3: start -> c2
-        // dest=4: c2 -> c1
-        // dest=5: finish
-
-        // direction: LEFT(1), UP(2), RIGHT(3), DOWN(4)
-
-        val dp = Array(6) { Array(map.size) { Array(map[0].size) {
-            BooleanArray(4)
-        } } }.apply {
-            this[0][start.row][start.col][LEFT] = true
-            this[0][start.row][start.col][UP] = true
-            this[0][start.row][start.col][RIGHT] = true
-            this[0][start.row][start.col][DOWN] = true
-
-            this[3][start.row][start.col][LEFT] = true
-            this[3][start.row][start.col][UP] = true
-            this[3][start.row][start.col][RIGHT] = true
-            this[3][start.row][start.col][DOWN] = true
-        }
-
-        val queue = ArrayDeque<Point>().apply {
-            add(Point(start.row, start.col, 0, -1)) // S -> C1 -> C2
-            add(Point(start.row, start.col, 3, -1)) // S -> C2 -> C1
-        }
-
-        val rangeRow = map.indices
-        val rangeCol = map[0].indices
-
-        fun visit(prev: Point, row: Int, col: Int, direction: Int) {
-            if (row !in rangeRow || col !in rangeCol || map[row][col] == '#')
-                return
-
-            if (dp[prev.dest][row][col][direction])
-                return
-
-            //println("queue.size=${queue.size}")
-            println("Prev: $prev")
-            println("Next: row=$row, col=$col, direction=$direction")
-
-            val newPoint = if (map[row][col] == 'C') {
-                dp[prev.dest][row][col][direction] = true
-                dp[prev.dest + 1][row][col][direction] = true
-
-                Point(row, col, prev.dest + 1, direction, prev.count + 1)
-            } else {
-                dp[prev.dest][row][col][direction] = true
-
-                Point(row, col, prev.dest, direction, prev.count + 1)
-            }
-
-            queue.offer(newPoint)
-            fakeMap[prev.dest][prev.row][prev.col] = '.'
-            fakeMap[prev.dest][row][col] = 'P'
-            fakeMap[prev.dest].forEach { println(it.joinToString("")) }
-            println()
-
-//            print(Char(BACK_SPACE))
-//            print(Char(CR))
-            readLine()
-            //Thread.sleep(1000)
-        }
-
-        while (queue.isNotEmpty()) {
-            val p = queue.poll()
-
-            if (p.dest == 2 || p.dest == 5) {
-                answers.add(p)
-            } else {
-                if (p.direction != LEFT) visit(p, p.row, p.col - 1, LEFT) // 좌
-                if (p.direction != UP) visit(p, p.row - 1, p.col, UP) // 상
-                if (p.direction != RIGHT) visit(p, p.row, p.col + 1, RIGHT) // 우
-                if (p.direction != DOWN) visit(p, p.row + 1, p.col, DOWN) // 하
-            }
-        }
-
-        println(answers)
-
-        return answers.minOfOrNull { it.count } ?: -1
-    }
-
-    fun dp2(
-        map: Array<CharArray>,
-        start: Point
-    ): Int {
-        val fakeMap = Array(map.size) { r -> CharArray(map[r].size) { c -> map[r][c] } }
-        val answers = mutableListOf<Point>()
-
-        // dp[dest][row][col][direction]
-        // dest=0: start -> c1 or start -> c2
-        // dest=1: c1 -> c2 or c2 -> c1
-        // direction: 좌(0), 상(1), 우(2), 하(3)
-        val dp = Array(3) { Array(map.size) { Array(map[0].size) {
-            BooleanArray(4)
-        } } }
-        val queue = ArrayDeque<Point>().apply {
-            add(start)
-        }
-
-        val rangeRow = map.indices
-        val rangeCol = map[0].indices
-
-        dp[0][start.row][start.col][LEFT] = true
-        dp[0][start.row][start.col][UP] = true
-        dp[0][start.row][start.col][RIGHT] = true
-        dp[0][start.row][start.col][DOWN] = true
+        val queue = ArrayDeque<IntArray>()
+        queue.offer(intArrayOf(0, sr, sc, -1)) // 출발지
 
         var count = 0
-        fun visit(prev: Point, row: Int, col: Int, direction: Int) {
-            if (row !in rangeRow || col !in rangeCol || map[row][col] == '#')
-                return
-
-            if (dp[prev.dest][row][col][direction])
-                return
-
+        while (queue.isNotEmpty()) { // BFS
             count++
-            println("count=$count, queue.size=${queue.size}")
-            println("prev: $prev")
-            println("next: row=$row, col=$col, direction=$direction")
 
-            val newPoint = if (map[row][col] == 'C') {
-                dp[prev.dest][row][col][direction] = true
-                dp[prev.dest + 1][row][col][direction] = true
+            for (i in queue.indices) { // 큐 한 사이클 돌기
+                val (s, r, c, d) = queue.poll()
 
-                Point(row, col, prev.dest + 1, prev.count + 1)
-            } else {
-                dp[prev.dest][row][col][direction] = true
+                for (dn in 0 until 4) { // 상, 하, 좌, 우 이동
+                    if (d == dn) // 기존 방향 제외
+                        continue
 
-                Point(row, col, prev.dest, prev.count + 1)
-            }
+                    val rn = r + MR[dn]
+                    val cn = c + MC[dn]
 
-            queue.offer(newPoint)
-            fakeMap[prev.row][prev.col] = '.'
-            fakeMap[row][col] = 'P'
-            fakeMap.forEach { println(it.joinToString("")) }
-            println()
+                    if (rn !in rangeR || cn !in rangeC || map[rn][cn] == '#' || visited[s][rn][cn][dn])
+                        continue
 
-//            print(Char(BACK_SPACE))
-//            print(Char(CR))
-            readLine()
-            //Thread.sleep(1000)
-        }
+                    val block = map[rn][cn]
 
-        while (queue.isNotEmpty()) {
-            val p = queue.poll()
+                    if (block == 'C' || block == 'D') {
+                        if (s == 0) { // 목적지 첫 번째 도착
+                            val next = if (block == 'C') 1 else 2
 
-            if (p.dest == 2) {
-                answers.add(p)
-            } else {
-                visit(p, p.row, p.col - 1, LEFT) // 좌
-                visit(p, p.row - 1, p.col, UP) // 상
-                visit(p, p.row, p.col + 1, RIGHT) // 우
-                visit(p, p.row + 1, p.col, DOWN) // 하
+                            // 방금 거쳐간 목적지에 다시 들어오지 않게 하기
+                            for (j in 0 until 4)
+                                visited[next][rn][cn][j] = true
+
+                            queue.offer(intArrayOf(next, rn, cn, dn))
+                        } else { // 두 번째 목적지 도착
+                            return count
+                        }
+                    } else {
+                        visited[s][rn][cn][dn] = true
+                        queue.offer(intArrayOf(s, rn, cn, dn))
+                    }
+                }
             }
         }
 
-        println(answers)
-
-        return answers.minOf { it.count }
+        return -1
     }
 
-    data class Point(
-        val row: Int,
-        val col: Int,
-        val dest: Int = 0,
-        val direction: Int = 0,
-        val count: Int = 0
-    ) {
-        override fun toString(): String {
-            return "row=$row, col=$col, dest=$dest, direction=$direction, count=$count"
-        }
+    private fun Array<CharArray>.find(predicate: (Char) -> Boolean): Pair<Int, Int> {
+        for (r in indices) for (c in this[r].indices)
+            if (predicate(this[r][c])) return r to c
+        return -1 to -1
     }
 }
 
