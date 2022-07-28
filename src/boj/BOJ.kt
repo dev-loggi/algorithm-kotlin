@@ -4,6 +4,7 @@ import boj.bruteForce.*
 import boj.dfsBfs.*
 import boj.dp.BOJ_2839_SugarDelivery
 import boj.etc.BOJ_11005_BaseConversion2
+import boj.etc.BOJ_2902_WhyIsKMPaKMP
 import boj.unsolved.*
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
@@ -39,6 +40,7 @@ object BOJ {
         2675 -> BOJ_2675_StringRepetition::class
         2745 -> BOJ_2745_BaseConversion::class
         2839 -> BOJ_2839_SugarDelivery::class
+        2902 -> BOJ_2902_WhyIsKMPaKMP::class
 
         // 8000 ~ 8999
         8111 -> BOJ_8111_ZeroAndOne::class
@@ -61,6 +63,7 @@ object BOJ {
         16937 -> BOJ_16937_TwoStickers::class
         16938 -> BOJ_16938_CampReady::class
         16943 -> BOJ_16943_NumberReplacement::class
+        16959 -> BOJ_16959_ChessboardTravel1::class
         16968 -> BOJ_16968_LicensePlate1::class
         16971 -> BOJ_16971_HalfSeasonedHalfFried::class
         16973 -> BOJ_16973_RectangleEscape::class
