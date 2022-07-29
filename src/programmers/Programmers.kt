@@ -1,6 +1,7 @@
 package programmers
 
 import Solution
+import programmers.mockExam.*
 import programmers.practice.level1.*
 import programmers.practice.level2.*
 import programmers.practice.level3.*
@@ -9,6 +10,7 @@ import programmers.practice.level4.MazeEscape
 object Programmers {
     val practice = Practice
     val skillCheck = SkillCheck
+    val mockExam = MockExam
 
     object Practice {
         val levelOne = LevelOne
@@ -62,6 +64,7 @@ object Programmers {
             val triangleSnail: Solution get() = TriangleSnail()
             val trucksCrossingBridge: Solution get() = TrucksCrossingBridge()
             val tuple: Solution get() = Tuple()
+            val twoDifferentBits: Solution get() = TwoDifferentBits()
         }
 
         object LevelThree {
@@ -88,5 +91,16 @@ object Programmers {
 
     object SkillCheck {
 
+    }
+
+    object MockExam {
+        val p1_1: Pro_MockExam1_1 get() = Pro_MockExam1_1()
+        val p1_2: Pro_MockExam1_2 get() = Pro_MockExam1_2()
+        val p1_3: Pro_MockExam1_3 get() = Pro_MockExam1_3()
+        val p1_4: Pro_MockExam1_4 get() = Pro_MockExam1_4()
+
+        val p2_1: Pro_MockExam2_1 get() = Pro_MockExam2_1()
+        val p2_2: Pro_MockExam2_2 get() = Pro_MockExam2_2()
+        val p2_3: Pro_MockExam2_3 get() = Pro_MockExam2_3()
     }
 }
