@@ -14,7 +14,7 @@
 
 * 1000 ~ 1999
 
-| 번호                                         | 제목                       | 유형       | 해설                                    |
+| 번호                                         | 제목                       | 유형       | 풀이                                    |
 |--------------------------------------------|---------------------------|----------|---------------------------------------|
 | [1012](https://www.acmicpc.net/problem/1012) |[유기농 배추](src/boj/dfsBfs/BOJ_1012_OrganicCabbage.kt)| BFS      |
 | [1175](https://www.acmicpc.net/problem/1175) |[배달](src/boj/dfsBfs/BOJ_1175_Delivery.kt)| BFS      | [blog](https://jsl663.tistory.com/33) |
@@ -26,8 +26,8 @@
 
 * 2000 ~ 2999
 
-| 번호                                          | 제목                                                   | 유형    |
-|----------------------------------------------|------------------------------------------------------|-------|
+| 번호                                          | 제목                                                   | 유형    | 풀이  |
+|----------------------------------------------|------------------------------------------------------|-------|-----|
 | [2178](https://www.acmicpc.net/problem/2178) | [미로 탐색](src/boj/dfsBfs/BOJ_2178_MazeExploration.kt)  | BFS   |
 | [2210](https://www.acmicpc.net/submit/2210) | [숫자판 점프](src/boj/bruteForce/BOJ_2210_NumPadJump.kt) | 완전 탐색 |
 | [2422](https://www.acmicpc.net/problem/2422) | [한윤정이 이탈리아에 가서 아이스크림을 사먹는데](src/boj/bruteForce/BOJ_2422_ItalyIcecream.kt) | 완전 탐색 |
@@ -37,34 +37,42 @@
 | [2675](https://www.acmicpc.net/problem/2675) | [문자열 반복](src/boj/unsolved/BOJ_2675_StringRepetition.kt) | 구현 |
 | [2745](https://www.acmicpc.net/problem/2745) | [진법 변환](src/boj/unsolved/BOJ_2745_BaseConversion.kt) | 구현 |
 | [2839](https://www.acmicpc.net/problem/2839) | [설탕 배달](src/boj/dp/BOJ_2839_SugarDelivery.kt) | DP |
+| [2902](https://www.acmicpc.net/problem/2902) | [KMP는 왜 KMP일까?](src/boj/etc/BOJ_2902_WhyIsKMPaKMP.kt) | 구현 |
 <br/>
 
 * 8000 ~ 8999
 
-| 번호                                          | 제목                                                   | 유형    | 해설 |
+| 번호                                          | 제목                                                   | 유형    | 풀이 |
 |----------------------------------------------|------------------------------------------------------|-------|-----|
 | [8111](https://www.acmicpc.net/problem/8111) | [0 과 1](src/boj/dfsBfs/BOJ_8111_ZeroAndOne.kt) | BFS |
 <br/>
 
 * 9000 ~ 9999
 
-| 번호                                          | 제목                                                   | 유형    | 해설 |
-|----------------------------------------------|------------------------------------------------------|-------|-----|
-| [9019](https://www.acmicpc.net/problem/9019) | [DSLR](src/boj/unsolved/BOJ_9019_DSLR.kt) | BFS |
+| 번호                                          | 제목                                                   | 유형   | 풀이 |
+|----------------------------------------------|------------------------------------------------------|------|-----|
+| [9019](https://www.acmicpc.net/problem/9019) | [DSLR](src/boj/unsolved/BOJ_9019_DSLR.kt) | BFS  |
+| [9328](https://www.acmicpc.net/problem/9328) | [열쇠](src/boj/dfsBfs/BOJ_9328_Key.kt) | BFS  |
 <br/>
 
 
 * 11000 ~ 11999
 
-| 번호                                             | 제목                                                   | 유형    | 해설 |
+| 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [11005](https://www.acmicpc.net/problem/11005) | [진법 변환2](src/boj/etc/BOJ_11005_BaseConversion2.kt) | 구현 |
 <br/>
 
+* 12000 ~ 12999
+
+| 번호                                             | 제목                                                   | 유형    | 풀이 |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
+| [12851](https://www.acmicpc.net/problem/12851) | [숨바꼭질 2](src/boj/dfsBfs/BOJ_12851_HideAndSeek2.kt) | BFS |
+<br/>
 
 * 15000 ~ 15999
 
-| 번호                                             | 제목                                                   | 유형    | 해설 |
+| 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [15683](https://www.acmicpc.net/problem/15683) | [감시](src/boj/bruteForce/BOJ_15683_Serveillance.kt) | 완전 탐색 |
 | [15686](https://www.acmicpc.net/problem/15686) | [치킨 배달](src/boj/bruteForce/BOJ_15686_ChickenDelivery.kt) | 완전 탐색 |
@@ -73,7 +81,7 @@
 
 * 16000 ~ 16999
 
-| 번호                                             | 제목                                                   | 유형    | 해설 |
+| 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [16637](https://www.acmicpc.net/problem/16637) | [괄호 추가하기](src/boj/bruteForce/BOJ_16637_AddParentheses.kt) | 완전 탐색 |
 | [16922](https://www.acmicpc.net/problem/16922) | [로마 숫자 만들기](src/boj/bruteForce/BOJ_16922_MakingRomanNumerals.kt) | 완전 탐색 |
@@ -90,7 +98,7 @@
 
 * 17000 ~ 17999
 
-| 번호                                             | 제목                                                   | 유형    | 해설  |
+| 번호                                             | 제목                                                   | 유형    | 풀이  |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [17088](https://www.acmicpc.net/problem/17088) | [등차수열 변환](src/boj/bruteForce/BOJ_17088_ArithmeticSequenceTransform.kt) | 완전 탐색 |
 | [17089](https://www.acmicpc.net/problem/17089) | [세 친구](src/boj/bruteForce/BOJ_17089_ThreeFriends.kt) | 완전 탐색 |
