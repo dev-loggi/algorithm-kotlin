@@ -1,0 +1,5 @@
+#1 OFF
+#2 OFF
+#3 ON
+#4 ON
+#5 OFF
