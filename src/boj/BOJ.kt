@@ -47,6 +47,7 @@ object BOJ {
 
         // 9000 ~ 9999
         9019 -> BOJ_9019_DSLR::class
+        9328 -> BOJ_9328_Key::class
 
         // 11000 ~ 11999
         11005 -> BOJ_11005_BaseConversion2::class
