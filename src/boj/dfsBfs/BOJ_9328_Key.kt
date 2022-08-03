@@ -59,8 +59,9 @@ class BOJ_9328_Key : BOJSolution(info(), testCases()) {
             entrances.add(intArrayOf(r, c))
         }
 
+        // 빌딩의 모든 입구마다 bfs 탐색
+        // key 보유 갯수가 더 이상 증가하지 않을 때까지 루프를 돌림
         var prevKeyCount: Int
-
         do {
             prevKeyCount = keys.size
 

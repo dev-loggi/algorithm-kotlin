@@ -107,6 +107,9 @@ class BOJ_16920_ExpansionGame : BOJSolution(info(), testCases()) {
                     expandedCount += 1
                 }
             }
+
+            if (queue.isEmpty())
+                break
         }
 
         return expandedCount
