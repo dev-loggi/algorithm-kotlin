@@ -56,11 +56,13 @@ object BOJ {
         12851 -> BOJ_12851_HideAndSeek2::class
 
         // 15000 ~ 15999
+        15653 -> BOJ_15653_MarbleEscape4::class
         15683 -> BOJ_15683_Serveillance::class
         15686 -> BOJ_15686_ChickenDelivery::class
 
         // 16000 ~ 16999
         16637 -> BOJ_16637_AddParentheses::class
+        16920 -> BOJ_16920_ExpansionGame::class
         16922 -> BOJ_16922_MakingRomanNumerals::class
         16924 -> BOJ_16924_FindCross::class
         16936 -> BOJ_16936_Division3Multiplication2::class
