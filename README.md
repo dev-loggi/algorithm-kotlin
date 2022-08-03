@@ -84,6 +84,7 @@
 | 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [16637](https://www.acmicpc.net/problem/16637) | [괄호 추가하기](src/boj/bruteForce/BOJ_16637_AddParentheses.kt) | 완전 탐색 |
+| [16920](https://www.acmicpc.net/problem/16920) | [확장 게임](src/boj/dfsBfs/BOJ_16920_ExpansionGame.kt) | BFS | [blog](https://jsl663.tistory.com/35) |
 | [16922](https://www.acmicpc.net/problem/16922) | [로마 숫자 만들기](src/boj/bruteForce/BOJ_16922_MakingRomanNumerals.kt) | 완전 탐색 |
 | [16924](https://www.acmicpc.net/problem/16924) | [십자가 찾기](src/boj/bruteForce/BOJ_16924_FindCross.kt) | 완전 탐색 |
 | [16936](https://www.acmicpc.net/problem/16936) | [나3곱2](src/boj/bruteForce/BOJ_16936_Division3Multiplication2.kt) | 완전 탐색 |
