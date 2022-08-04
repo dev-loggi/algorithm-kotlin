@@ -6,11 +6,15 @@ import java.util.*
 /**
  * 15558
  * 점프 게임
+ *
+ * 시간 제한: 2초
+ * 메모리 제한: 512MB
  * */
 class BOJ_15558_JumpGame : BOJSolution(info(), testCases()) {
 
     companion object {
-        private val MOVE = intArrayOf(-1, 1, 1)
+        private val DL = intArrayOf(0, 0, 1)
+        private val DI = intArrayOf(-1, 1, 1)
     }
 
     override fun main() {
@@ -21,7 +25,7 @@ class BOJ_15558_JumpGame : BOJSolution(info(), testCases()) {
             readln().map { it.digitToInt() }.toIntArray()
         }
 
-        MOVE[2] = k
+        DI[2] = k
 
         solution(lines, N, k).let { println(it) }
     }
@@ -34,27 +38,31 @@ class BOJ_15558_JumpGame : BOJSolution(info(), testCases()) {
         queue.offer(intArrayOf(0, 0))
         visited[0][0] = true
 
+        var nextTime = 0
+
         while (queue.isNotEmpty()) {
-            val (line, i) = queue.poll()
+            nextTime += 1
 
-            for (c in 0..2) {
-                val line2 = if (c == 2) (line + 1) % 2 else line
-                val i2 = i + MOVE[c]
+            for (q in queue.indices) {
+                val (line, i) = queue.poll() ?: break
 
-                if (i2 >= N) {
-                    isSucceed = true
-                    break
+                for (c in 0..2) {
+                    val line2 = (line + DL[c]) % 2
+                    val i2 = i + DI[c]
+
+                    if (i2 >= N) {
+                        isSucceed = true
+                        queue.clear()
+                        break
+                    }
+
+                    if (i2 < nextTime || visited[line2][i2] || lines[line2][i2] == 0)
+                        continue
+
+                    visited[line2][i2] = true
+                    queue.offer(intArrayOf(line2, i2))
                 }
-
-                if (i2 < 0 || visited[line2][i2] || lines[line2][i2] == 0)
-                    continue
-
-                visited[line2][i2] = true
-                queue.offer(intArrayOf(line2, i2))
             }
-
-            if (isSucceed)
-                break
         }
 
         return if (isSucceed) 1 else 0
@@ -82,4 +90,17 @@ private fun testCases() = arrayOf(
                 "011001",
         output = "0",
     ),
+//    // 반례
+//    BOJSolution.TestCase(
+//        input = "1 1" +
+//                "1" +
+//                "1",
+//        output = "1"
+//    ),
+//    BOJSolution.TestCase(
+//        input = "1 1" +
+//                "1" +
+//                "0",
+//        output = "1"
+//    ),
 )
