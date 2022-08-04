@@ -74,6 +74,7 @@
 
 | 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
+| [15558](https://www.acmicpc.net/problem/15558) | [점프 게임](src/boj/dfsBfs/BOJ_15558_JumpGame.kt) | BFS |
 | [15653](https://www.acmicpc.net/problem/15653) | [구슬 탈출 4](src/boj/dfsBfs/BOJ_15653_MarbleEscape4.kt) | BFS | [blog](https://jsl663.tistory.com/33) |
 | [15683](https://www.acmicpc.net/problem/15683) | [감시](src/boj/bruteForce/BOJ_15683_Serveillance.kt) | 완전 탐색 |
 | [15686](https://www.acmicpc.net/problem/15686) | [치킨 배달](src/boj/bruteForce/BOJ_15686_ChickenDelivery.kt) | 완전 탐색 |
