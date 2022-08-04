@@ -27,6 +27,7 @@ object BOJ {
         1012 -> BOJ_1012_OrganicCabbage::class
         1175 -> BOJ_1175_Delivery::class
         1260 -> BOJ_1260_DFSandBFS::class
+        1385 -> BOJ_1385_HoneyComb::class
         1525 -> BOJ_1525_Puzzle::class
         1913 -> BOJ_1913_Snail::class
 
