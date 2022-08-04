@@ -56,6 +56,7 @@ object BOJ {
         12851 -> BOJ_12851_HideAndSeek2::class
 
         // 15000 ~ 15999
+        15558 -> BOJ_15558_JumpGame::class
         15653 -> BOJ_15653_MarbleEscape4::class
         15683 -> BOJ_15683_Serveillance::class
         15686 -> BOJ_15686_ChickenDelivery::class
