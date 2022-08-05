@@ -12,6 +12,8 @@ abstract class BOJSolution(
         const val BFS = "BFS"
         const val GREEDY = "Greedy"
         const val DP = "DP"
+        const val SLIDING_WINDOW = "Sliding Window"
+        const val TWO_POINTER = "Two Pointer"
     }
 
     class Info(val no: Int, val title: String, val category: Array<String>, val problemUrl: String, val solutionUrl: String = "")
