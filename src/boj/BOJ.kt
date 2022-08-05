@@ -4,6 +4,8 @@ import boj.bruteForce.*
 import boj.dfsBfs.*
 import boj.dp.BOJ_2839_SugarDelivery
 import boj.etc.BOJ_11005_BaseConversion2
+import boj.etc.BOJ_21921_Blog
+import boj.etc.BOJ_2470_TwoSolutions
 import boj.etc.BOJ_2902_WhyIsKMPaKMP
 import boj.unsolved.*
 import kotlin.reflect.KClass
@@ -35,6 +37,7 @@ object BOJ {
         2178 -> BOJ_2178_MazeExploration::class
         2210 -> BOJ_2210_NumPadJump::class
         2422 -> BOJ_2422_ItalyIcecream::class
+        2470 -> BOJ_2470_TwoSolutions::class
         2529 -> BOJ_2529_InequalitySign::class
         2606 -> BOJ_2606_Virus::class
         2667 -> BOJ_2667_VillageNumbering::class
@@ -71,6 +74,7 @@ object BOJ {
         16937 -> BOJ_16937_TwoStickers::class
         16938 -> BOJ_16938_CampReady::class
         16943 -> BOJ_16943_NumberReplacement::class
+        16952 -> BOJ_16952_ChessboardTravel2::class
         16959 -> BOJ_16959_ChessboardTravel1::class
         16968 -> BOJ_16968_LicensePlate1::class
         16971 -> BOJ_16971_HalfSeasonedHalfFried::class
@@ -83,6 +87,10 @@ object BOJ {
         17135 -> BOJ_17135_CastleDefense::class
         17281 -> BOJ_17281_Baseball::class
         17406 -> BOJ_17406_ArrayRotation4::class
+
+        // 21000 ~ 21999
+        21921 -> BOJ_21921_Blog::class
+
         else -> null
     }
 }
