@@ -6,8 +6,9 @@ import java.util.ArrayDeque
 /*
  * 16959
  * 체스판 여행1
- * https://www.acmicpc.net/problem/16959
- * bfs
+ *
+ * 시간 제한: 2초
+ * 메모리 제한: 512 MB
  * */
 class BOJ_16959_ChessboardTravel1 : BOJSolution(info(), testCases()) {
 
@@ -15,6 +16,8 @@ class BOJ_16959_ChessboardTravel1 : BOJSolution(info(), testCases()) {
         private const val NIGHT = 0
         private const val BISHOP = 1
         private const val ROOK = 2
+
+        private val PIECES = NIGHT..ROOK
 
         private val MOVE = arrayOf(
             arrayOf( // NIGHT
@@ -30,132 +33,132 @@ class BOJ_16959_ChessboardTravel1 : BOJSolution(info(), testCases()) {
         )
     }
 
+    data class Node(
+        val n: Int,
+        val piece: Int,
+        val row: Int,
+        val col: Int,
+        val time: Int
+    ) {
+        val nextNum: Int
+            get() = n + 1
+
+        fun getNext(n: Int = this.n, piece: Int = this.piece, row: Int = this.row, col: Int = this.col): Node {
+            return Node(n, piece, row, col, time + 1)
+        }
+    }
+
+    private var N = 0
+    private var destination = 1
+    private lateinit var range: IntRange
+    private lateinit var board: Array<IntArray>
+    private lateinit var visited: Array<Array<Array<BooleanArray>>>
+    private lateinit var queue: ArrayDeque<Node>
+
     override fun main() {
-        val N = readLine()!!.toInt() // (3 ≤ N ≤ 10)
-        val board = Array(N) { IntArray(N) }
+        N = readLine()!!.toInt() // 체스판의 크기 (3 ≤ N ≤ 10)
+
+        destination = N * N
+        range = 0 until N
+        board = Array(N) { intArrayOf() }
 
         var r0 = -1 // 시작 위치 row
         var c0 = -1 // 시작 위치 col
 
         for (r in 0 until N) {
             board[r] = readLine()!!.split(" ")
-                .map { it.toInt() - 1 } // 인덱스 매핑을 위해 모든 원소 -1
+                .map { it.toInt() } // 인덱스와 매핑하기 위해 모든 원소 -1
+                .onEachIndexed { c, n -> if (n == 1) { r0 = r; c0 = c } }
                 .toIntArray()
-
-            if (r0 > 0 || c0 > 0)
-                continue
-
-            for (c in board[r].indices) {
-                if (board[r][c] == 0) {
-                    r0 = r
-                    c0 = c
-                }
-            }
         }
 
-        solution(N, board, r0, c0).let { println(it) }
+        solution(r0, c0).let { println(it) }
+        queue.clear()
     }
 
-    fun solution(N: Int, board: Array<IntArray>, r0: Int, c0: Int): Int {
-        val range = 0 until N
-        val last = N * N - 1
-
-        // visited[n][h][r][c]
-        // n: 말의 출발 번호(0 ≤ n ≤ N^2 - 1)
-        // h: horse(말 종류)
+    fun solution(r0: Int, c0: Int): Int {
+        // visited[n][p][r][c]
+        // n: 체스 말의 출발 번호(0 ≤ n ≤ N^2 - 1)
+        // p: piece(체스 말의 종류)
         // r: row
         // c: col
-        val visited = Array(N * N) { Array(3) { Array(N) { BooleanArray(N) } } }
-        val queue = ArrayDeque<IntArray>()
+        visited = Array(destination + 1) { Array(3) { Array(N) { BooleanArray(N) } } }
+        queue = ArrayDeque<Node>()
 
-        for (h in 0 until 3) {
-            visited[0][h][r0][c0] = true
-            queue.offer(intArrayOf(0, h, r0, c0))
+        for (p in PIECES) {
+            visited[1][p][r0][c0] = true
+            queue.offer(Node(1, p, r0, c0, 0))
         }
 
-        var sec = 0
+        while (queue.isNotEmpty()) {
+            val cur = queue.poll()
 
-        while (queue.isNotEmpty()) { // BFS
-            sec++
+            if (cur.n == destination) {
+                queue.clear()
+                return cur.time
+            }
 
-            for (q in queue.indices) { // sec 당 queue 사이클
-                val cur = queue.poll()
-                val (n, h, r, c) = cur
+            // 1. 피스 변경
+            for (p in PIECES) {
+                if (p == cur.piece || visited[cur.n][p][cur.row][cur.col])
+                    continue
 
-                if (n == last) // 마지막 목적지 도착
-                    return sec - 1
+                visited[cur.n][cur.piece][cur.row][cur.col] = true
+                queue.offer(cur.getNext(piece = p))
+            }
 
-                // 1. 말 변경
-                for (h2 in 0 until 3) {
-                    if (visited[n][h2][r][c])
-                        continue
-
-                    visited[n][h2][r][c] = true
-                    queue.offer(intArrayOf(n, h2, r, c))
-                }
-
-                // 2. 말 이동
-                when (h) {
-                    NIGHT -> for (move in MOVE[h]) {
-                        val next = moveNight(cur, move, board, visited, range)
-                            ?: continue
-
-                        queue.offer(next)
-                    }
-                    BISHOP, ROOK -> for (move in MOVE[h]) {
-                        var r2 = r + move[0]
-                        var c2 = c + move[1]
-
-                        while (r2 in range && c2 in range) {
-                            val n2 =
-                                if (board[r2][c2] == n + 1) n + 1 // 다음 목적지 도착
-                                else n // 미도착
-
-                            if (visited[n2][h][r2][c2])
-                                break
-
-                            visited[n][h][r2][c2] = true
-
-                            if (n2 == last) // N*N 도착
-                                return sec
-
-                            visited[n2][h][r2][c2] = true
-                            queue.offer(intArrayOf(n2, h, r2, c2))
-
-                            r2 += move[0]
-                            c2 += move[1]
-                        }
-                    }
-                }
+            // 2. 피스 이동
+            when (cur.piece) {
+                NIGHT -> moveNight(cur)
+                BISHOP, ROOK -> moveBishopOrRook(cur)
             }
         }
 
-        return sec
+        return 0
     }
 
-    private fun moveNight(
-        cur: IntArray, move: IntArray,
-        board: Array<IntArray>,
-        visited: Array<Array<Array<BooleanArray>>>,
-        range: IntRange
-    ): IntArray? {
-        val (n, h, r, c) = cur
+    private fun moveNight(cur: Node) {
+        for (move in MOVE[cur.piece]) {
+            val r = cur.row + move[0]
+            val c = cur.col + move[1]
 
-        val r2 = r + move[0]
-        val c2 = c + move[1]
+            if (r !in range || c !in range || visited[cur.n][cur.piece][r][c])
+                continue
 
-        if (r2 !in range || c2 !in range)
-            return null
+            visited[cur.n][cur.piece][r][c] = true
 
-        val n2 =
-            if (board[r2][c2] == n + 1) n + 1 // 다음 목적지 도착
-            else n // 미도착
+            if (board[r][c] == cur.nextNum) { // 다음 목적지 도착
+                visited[cur.nextNum][cur.piece][r][c] = true
 
-        if (visited[n2][h][c2][r2])
-            return null
+                queue.offer(cur.getNext(cur.nextNum, cur.piece, r, c))
+            } else { // 미도착
+                queue.offer(cur.getNext(row = r, col = c))
+            }
+        }
+    }
 
-        visited[n2][h][r2][c2] = true
-        return intArrayOf(n2, h, r2, c2)
+    private fun moveBishopOrRook(cur: Node) {
+        for (move in MOVE[cur.piece]) {
+            var r = cur.row + move[0]
+            var c = cur.col + move[1]
+
+            while (r in range && c in range) {
+                if (!visited[cur.n][cur.piece][r][c]) {
+                    visited[cur.n][cur.piece][r][c] = true
+
+                    if (board[r][c] == cur.nextNum) { // 다음 목적지 도착
+                        visited[cur.nextNum][cur.piece][r][c] = true
+                        queue.offer(cur.getNext(cur.nextNum, cur.piece, r, c))
+                        break
+                    } else { // 미도착
+                        queue.offer(cur.getNext(row = r, col = c))
+                    }
+                }
+
+                r += move[0]
+                c += move[1]
+            }
+        }
     }
 }
 

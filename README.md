@@ -84,16 +84,17 @@
 
 * 16000 ~ 16999
 
-| 번호                                             | 제목                                                   | 유형    | 풀이 |
-|------------------------------------------------|------------------------------------------------------|-------|-----|
+| 번호                                             | 제목                                                   | 유형    | 풀이                                     |
+|------------------------------------------------|------------------------------------------------------|-------|----------------------------------------|
 | [16637](https://www.acmicpc.net/problem/16637) | [괄호 추가하기](src/boj/bruteForce/BOJ_16637_AddParentheses.kt) | 완전 탐색 |
-| [16920](https://www.acmicpc.net/problem/16920) | [확장 게임](src/boj/dfsBfs/BOJ_16920_ExpansionGame.kt) | BFS | [blog](https://jsl663.tistory.com/35) |
+| [16920](https://www.acmicpc.net/problem/16920) | [확장 게임](src/boj/dfsBfs/BOJ_16920_ExpansionGame.kt) | BFS | [blog](https://jsl663.tistory.com/35)  |
 | [16922](https://www.acmicpc.net/problem/16922) | [로마 숫자 만들기](src/boj/bruteForce/BOJ_16922_MakingRomanNumerals.kt) | 완전 탐색 |
 | [16924](https://www.acmicpc.net/problem/16924) | [십자가 찾기](src/boj/bruteForce/BOJ_16924_FindCross.kt) | 완전 탐색 |
 | [16936](https://www.acmicpc.net/problem/16936) | [나3곱2](src/boj/bruteForce/BOJ_16936_Division3Multiplication2.kt) | 완전 탐색 |
 | [16937](https://www.acmicpc.net/problem/16937) | [두 스티커](src/boj/bruteForce/BOJ_16937_TwoStickers.kt) | 완전 탐색 |
 | [16938](https://www.acmicpc.net/problem/16938) | [캠프 준비](src/boj/bruteForce/BOJ_16938_CampReady.kt) | 완전 탐색 |
 | [16943](https://www.acmicpc.net/problem/16943) | [숫자 재배치](src/boj/bruteForce/BOJ_16943_NumberReplacement.kt) | 완전 탐색 |
+| [16959](https://www.acmicpc.net/problem/16959) | [체스판 여행 1](src/boj/dfsBfs/BOJ_16959_ChessboardTravel1.kt) | BFS | [blog](https://jsl663.tistory.com/40)  |
 | [16968](https://www.acmicpc.net/problem/16968) | [차량 번호판1](src/boj/bruteForce/BOJ_16968_LicensePlate1.kt) | 완전 탐색 |
 | [16971](https://www.acmicpc.net/problem/16917) | [양념 반 후라이드 반](src/boj/bruteForce/BOJ_16971_HalfSeasonedHalfFried.kt) | 완전 탐색 |
 | [16973](https://www.acmicpc.net/problem/16973) | [직사각형 탈출](src/boj/dfsBfs/BOJ_16973_RectangleEscape.kt) | BFS |
