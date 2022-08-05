@@ -32,6 +32,7 @@
 | [2178](https://www.acmicpc.net/problem/2178) | [미로 탐색](src/boj/dfsBfs/BOJ_2178_MazeExploration.kt)  | BFS   |
 | [2210](https://www.acmicpc.net/submit/2210) | [숫자판 점프](src/boj/bruteForce/BOJ_2210_NumPadJump.kt) | 완전 탐색 |
 | [2422](https://www.acmicpc.net/problem/2422) | [한윤정이 이탈리아에 가서 아이스크림을 사먹는데](src/boj/bruteForce/BOJ_2422_ItalyIcecream.kt) | 완전 탐색 |
+| [2470](https://www.acmicpc.net/problem/2470) | [두 용액](src/boj/etc/BOJ_2470_TwoSolutions.kt) | 투 포인터 |
 | [2529](https://www.acmicpc.net/problem/2529) | [부등호](src/boj/bruteForce/BOJ_2529_InequalitySign.kt) | 완전 탐색 |
 | [2606](https://www.acmicpc.net/problem/2606) | [바이러스](src/boj/dfsBfs/BOJ_2606_Virus.kt) | BFS |
 | [2667](https://www.acmicpc.net/problem/2667) | [단지 번호 붙이기](src/boj/dfsBfs/BOJ_2667_VillageNumbering.kt) | BFS |
@@ -41,12 +42,14 @@
 | [2902](https://www.acmicpc.net/problem/2902) | [KMP는 왜 KMP일까?](src/boj/etc/BOJ_2902_WhyIsKMPaKMP.kt) | 구현 |
 <br/>
 
+
 * 8000 ~ 8999
 
 | 번호                                          | 제목                                                   | 유형    | 풀이 |
 |----------------------------------------------|------------------------------------------------------|-------|-----|
 | [8111](https://www.acmicpc.net/problem/8111) | [0 과 1](src/boj/dfsBfs/BOJ_8111_ZeroAndOne.kt) | BFS |
 <br/>
+
 
 * 9000 ~ 9999
 
@@ -112,6 +115,17 @@
 | [17281](https://www.acmicpc.net/problem/17281) | [야구](src/boj/bruteForce/BOJ_17281_Baseball.kt) | 완전 탐색 |
 | [17406](https://www.acmicpc.net/problem/17406) | [배열 돌리기4](src/boj/bruteForce/BOJ_17406_ArrayRotation4.kt) | 완전 탐색 |
 <br/>
+
+
+* 17000 ~ 17999
+
+| 번호                                             | 제목                                                   | 유형    | 풀이  |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
+| [21921](https://www.acmicpc.net/problem/21921) | [블로그](src/boj/etc/BOJ_21921_Blog.kt) | 슬라이딩 윈도우 |
+<br/>
+
+
+
 
 ## Programmers
 
