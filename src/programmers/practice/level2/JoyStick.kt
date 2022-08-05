@@ -1,6 +1,7 @@
 package programmers.practice.level2
 
 import Solution
+import kotlin.math.absoluteValue
 
 
 /**
@@ -16,19 +17,60 @@ class JoyStick : Solution {
         solution("JAN").let { println("answer=$it") } // 23
     }
 
-    fun solution(name: String): Int {
-        println("solution(): $name")
+    private val Int.abs: Int
+        get() = absoluteValue
 
+    fun solution(str: String): Int {
+        val name = str.toCharArray()
 
+        val arr = IntArray(10)
 
-        val builder = StringBuilder(Array(name.length) { 'A' }.joinToString(""))
+        arr.sliceArray(0 until 3).sum()
 
-        name.sumOf { it.code}
-        val visited = BooleanArray(5) { false }
+        return 0
+    }
 
-        visited.all { it }
+    fun solution2(str: String): Int {
+        val name = str.toCharArray()
+        val range = name.indices
+        var changedCharCount = name.count { it != 'A' }
 
-        var answer = 0
-        return answer
+        if (changedCharCount == 0)
+            return 0
+
+        var count = 0
+
+        if (name[0] != 'A') {
+            count += name[0] - 'A'
+            name[0] = 'A'
+            changedCharCount--
+        }
+
+        var idx = 0
+        var j = 0
+        var k = 0
+        while (true) {
+
+            while (j in range && name[j] == 'A') {
+                j = (j + 1) % name.size
+            }
+            while (name[k] == 'A') {
+                k = if (k - 1 in range) k - 1 else range.last
+            }
+
+            val d1 = (idx - j).abs
+            val d2 = (idx - k).abs
+
+            idx = if (d1 < d2) j else k
+            count += if (d1 < d2) d1 else d2
+
+            count += name[idx] - 'A'
+            name[idx] = 'A'
+
+            if (--changedCharCount == 0)
+                break
+        }
+
+        return count
     }
 }
