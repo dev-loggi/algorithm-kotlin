@@ -3,9 +3,7 @@ package swExpertAcademy.codeBattle;
 import swExpertAcademy._inputs.InputFile;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
@@ -14,7 +12,7 @@ import java.util.StringTokenizer;
  * 시간 : 10개 테스트케이스를 합쳐서 C++의 경우 1초 / Java의 경우 2초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
  * */
-public class SWEA_CodeBattle_P35 {
+public class SWEA_CodeBattle_P36 {
 
     public static class UserSolution {
         public void init(int N) {
@@ -174,7 +172,7 @@ public class SWEA_CodeBattle_P35 {
 
 
     public static void main(String[] args) throws Exception {
-		System.setIn(new java.io.FileInputStream(InputFile.number(35)));
+		System.setIn(new java.io.FileInputStream(InputFile.number(36)));
 
         br = new BufferedReader(new InputStreamReader(System.in));
 

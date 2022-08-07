@@ -6,9 +6,9 @@ import java.io.FileInputStream;
 import java.util.Scanner;
 
 /**
- * [No. 34] 10806. 수 만들기
+ * [No. 34] 3000. 중간값 구하기
  *
- * 시간 : 100개 테스트케이스를 합쳐서 C의 경우 1초 / C++의 경우 1초 / Java의 경우 2초 / Python의 경우 2초
+ * 시간 : 10개 테스트케이스를 합쳐서 C의 경우 10초 / C++의 경우 10초 / Java의 경우 20초 / Python의 경우 30초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
  * */
 public class SWEA_CodeBattle_P34 {
