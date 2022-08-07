@@ -2,6 +2,7 @@ package boj
 
 import boj.bruteForce.*
 import boj.dfsBfs.*
+import boj.dp.BOJ_11048_Move
 import boj.dp.BOJ_2839_SugarDelivery
 import boj.etc.BOJ_11005_BaseConversion2
 import boj.etc.BOJ_21921_Blog
@@ -55,6 +56,7 @@ object BOJ {
 
         // 11000 ~ 11999
         11005 -> BOJ_11005_BaseConversion2::class
+        11048 -> BOJ_11048_Move::class
 
         // 12000 ~ 12999
         12851 -> BOJ_12851_HideAndSeek2::class
