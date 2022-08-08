@@ -2,6 +2,7 @@ package boj
 
 import boj.bruteForce.*
 import boj.dfsBfs.*
+import boj.dp.BOJ_10942_Palindrome
 import boj.dp.BOJ_11048_Move
 import boj.dp.BOJ_11060_JumpJump
 import boj.dp.BOJ_2839_SugarDelivery
@@ -54,6 +55,9 @@ object BOJ {
         // 9000 ~ 9999
         9019 -> BOJ_9019_DSLR::class
         9328 -> BOJ_9328_Key::class
+
+        // 10000 ~ 10999
+        10942 -> BOJ_10942_Palindrome::class
 
         // 11000 ~ 11999
         11005 -> BOJ_11005_BaseConversion2::class
