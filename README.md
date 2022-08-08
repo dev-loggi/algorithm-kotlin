@@ -65,7 +65,8 @@
 | 번호                                             | 제목                                                 | 유형  | 풀이 |
 |------------------------------------------------|----------------------------------------------------|-----|-----|
 | [11005](https://www.acmicpc.net/problem/11005) | [진법 변환2](src/boj/etc/BOJ_11005_BaseConversion2.kt) | 구현  |
-| [11048](https://www.acmicpc.net/problem/11048) | [진법 변환2](src/boj/dp/BOJ_11048_Move.kt)             | DP  |
+| [11048](https://www.acmicpc.net/problem/11048) | [이동하기](src/boj/dp/BOJ_11048_Move.kt)               | DP  |
+| [11060](https://www.acmicpc.net/problem/11060) | [점프 점프](src/boj/dp/BOJ_11060_JumpJump.kt)          | DP  |
 <br/>
 
 * 12000 ~ 12999
