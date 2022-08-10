@@ -1,6 +1,11 @@
 package swExpertAcademy.codeBattle;
 
+import swExpertAcademy._inputs.InputFile;
+
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,87 +17,116 @@ import java.util.Scanner;
  * */
 public class SWEA_CodeBattle_P16 {
 
+    private static final int[] dx = {1, -1, 0, 0};
+    private static final int[] dy = {0, 0, 1, -1};
+    private static int N;
+    private static int[][] board;
+    private static int maxCore;   // 이전 연결된 코어 최대 개수
+    private static int minLen;
+    private static ArrayList<Core> list;
 
-    public static class Point {
-        int r, c;
+    public static class Core {
+        int x;
+        int y;
 
-        public Point(int r, int c) {
-            this.r = r; this.c = c;
+        Core(int x, int y){
+            this.x = x;
+            this.y = y;
         }
     }
 
-    private static final int CORE_MAX = 12;
-    private static int[][] cases;
-    private static boolean[] visited;
+    private static void solution(int currCore, int len, int index) {
+        if (index == list.size()) {
+            if (maxCore < currCore) {
+                maxCore = currCore;
+                minLen = len;
+            } else if (maxCore == currCore) {
+                minLen = Math.min(minLen, len);
+            }
+            return;
+        }
 
-    public static void main(String args[]) throws Exception {
-        System.setIn(new FileInputStream("res/input.txt"));
+        Core core = list.get(index);
+        int curX = core.x;
+        int curY = core.y;
+        int curLen = 0;
+
+        for (int i = 0; i < 4; i++) {
+            int nextX = curX;
+            int nextY = curY;
+            boolean isOk = true;
+
+            while (true) {
+                nextX += dx[i];
+                nextY += dy[i];
+
+                if (nextX >= 0 && nextY >= 0 && nextX <= N-1 && nextY <= N-1) { // range 체크
+                    // 코어나 전선 위치가 아니고 가장자리에 닿았을 때
+                    if (board[nextX][nextY] != 1 && (nextX == 0 || nextY == 0 || nextX == N-1 || nextY == N-1)) {
+                        board[nextX][nextY] = 1;
+                        curLen++;
+                        break;
+                    }
+                    // 코어나 전선 위치가 아니고 다음 칸으로 이동 가능하면
+                    if (board[nextX][nextY] != 1) {
+                        board[nextX][nextY] = 1;
+                        curLen++;
+
+                        if (board[nextX][nextY] != 1 && (nextX == 0 || nextY == 0 || nextX == N-1 || nextY == N-1))
+                            break;
+                    } else {   // 코어 or 전선위치
+                        isOk = false;
+                        break;
+                    }
+                }
+
+            }
+            if(isOk) {
+                solution(currCore+1, len+curLen, index+1);
+            } else {
+                solution(currCore, len, index+1);
+            }
+
+            int tempX = curX;
+            int tempY = curY;
+
+            while (tempX != nextX && tempY != nextY) {
+                tempX += dx[i];
+                tempY += dy[i];
+                board[tempX][tempY] = 0;
+            }
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        System.setIn(new FileInputStream(InputFile.number(16)));
 
         Scanner sc = new Scanner(System.in);
+
         int T = Integer.parseInt(sc.nextLine());
 
         for (int test_case = 1; test_case <= T; test_case++) {
-            int N = Integer.parseInt(sc.nextLine()); // 보드의 크기 (7 ≤ N ≤ 12)
-
-            int[][] board = new int[N][N];
-            ArrayList<Point> cores = new ArrayList<>();
+            N = Integer.parseInt(sc.nextLine());
+            board = new int[N][N];
+            maxCore = 0;
+            minLen = 1000000;
+            list = new ArrayList<>();   // 코어 위치 저장
 
             for (int i = 0; i < N; i++) {
-                String[] line = sc.nextLine().split(" ");
+                String[] str = sc.nextLine().split(" ");
 
                 for (int j = 0; j < N; j++) {
-                    board[i][j] = Integer.parseInt(line[j + 1]);
+                    board[i][j] = Integer.parseInt(str[j]);
 
-                    if (board[i][j] == 1) { // 코어 위치 저장
-                        cores.add(new Point(i, j));
+                    if (board[i][j] == 1 && i!=0 && i!=N-1 && j!=0 && j!=N-1) {   // 연결해야 할 코어 위치 저장
+                        list.add(new Core(i, j));
                     }
                 }
             }
 
-            int answer = solution(N - 2, board, cores.toArray(new Point[0]));
+            solution(0, 0, 0);
 
-            System.out.printf("#%d %d", test_case, answer);
+            System.out.printf("#%d %d\n", test_case, minLen);
         }
-
-        sc.close();
-    }
-
-
-
-    private static int solution(int N, int[][] board, Point[] cores) {
-
-
-        return 0;
-    }
-
-    public static int[][] permutation(int n) {
-        int size = factorial(n);
-        cases = new int[size][n];
-        visited = new boolean[n + 1];
-        permutation(n, 0, new int[1]);
-        return cases;
-    }
-
-    private static void permutation(int r, int depth, int[] k) {
-        if (depth == r) {
-            k[0]++;
-            return;
-        }
-
-        for (int i = 1; i <= r; i++) {
-            if (visited[i])
-                continue;
-
-            cases[k[0]][depth] = i;
-            visited[i] = true;
-            permutation(r, depth + 1, k);
-            visited[i] = false;
-        }
-    }
-
-    public static int factorial(int n) {
-        int res = 1;
-        for (int i = 2; i <= n; i++) res *= i;
-        return res;
     }
 }

@@ -1,6 +1,7 @@
 package swExpertAcademy.codeBattle;
 
 import swExpertAcademy._inputs.InputFile;
+import swExpertAcademy.codeBattle.userSolution.SWEA_P36_UserSolution;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,32 +10,11 @@ import java.util.StringTokenizer;
 /**
  * [No. 35] 9416. Social Media
  *
- * 시간 : 10개 테스트케이스를 합쳐서 C++의 경우 1초 / Java의 경우 2초
- * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
+ * 실행 시간 : 최대 50개의 테스트 케이스를 합쳐서 3 초 이내
+ * 메모리 : Heap, Global, Stack 등을 모두 합해 최대 256MB 까지 사용 가능
+ * (단, 스택은 최대 1MB 까지 사용 가능)
  * */
-public class SWEA_CodeBattle_P36 {
-
-    public static class UserSolution {
-        public void init(int N) {
-
-        }
-
-        public void follow(int uID1, int uID2, int timestamp) {
-
-        }
-
-        public void makePost(int uID, int pID, int timestamp) {
-        }
-
-        public void like(int pID, int timestamp) {
-
-        }
-
-        public void getFeed(int uID, int timestamp, int pIDList[]) {
-
-        }
-    }
-
+public class SWEA_P36 {
 
     private static int mSeed;
     private static int pseudo_rand() {
@@ -55,7 +35,7 @@ public class SWEA_CodeBattle_P36 {
     private static int min_post_cnt;
 
     private static BufferedReader br;
-    private static final UserSolution user = new UserSolution();
+    private static final SWEA_P36_UserSolution user = new SWEA_P36_UserSolution();
 
     private static boolean run() throws Exception {
         int uId1;
@@ -154,6 +134,7 @@ public class SWEA_CodeBattle_P36 {
                     ans_pIdList[i] = Integer.parseInt(stdin.nextToken());
                 }
 
+                boolean flag = true;
                 for (int i = 0; i < 10; i++)
                 {
                     if (ans_pIdList[i] == 0)
@@ -162,14 +143,40 @@ public class SWEA_CodeBattle_P36 {
                     if (ans_pIdList[i] != pIdList[i])
                     {
                         ret = false;
+                        flag = false;
                     }
                 }
+
+//                logln("    ▶▶ ans=[%b]", flag);
+//                log("    ▶▶ ans=");
+//                printArray(ans_pIdList);
+//                log("    ▶▶ ret=");
+//                printArray(pIdList);
             }
         }
-
+//        user.printInfo();
         return ret;
     }
 
+    private static void printArray(int[] arr) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i=0; i<arr.length; i++) {
+            if (arr[i] == 0) break;
+            sb.append(arr[i]).append(", ");
+        }
+        if (sb.length() != 1) sb.delete(sb.length()-2, sb.length());
+        sb.append(']');
+        logln(sb.toString());
+    }
+
+    private static void logln(String s, Object ... args) {
+        log(s + "\n", args);
+    }
+
+    private static void log(String s, Object ... args) {
+        System.out.printf(s, args);
+    }
 
     public static void main(String[] args) throws Exception {
 		System.setIn(new java.io.FileInputStream(InputFile.number(36)));
@@ -180,7 +187,7 @@ public class SWEA_CodeBattle_P36 {
         StringTokenizer stdin = new StringTokenizer(br.readLine(), " ");
         tc = Integer.parseInt(stdin.nextToken());
         answer_score = Integer.parseInt(stdin.nextToken());
-
+//        tc = 4;
         for (int t = 1; t <= tc; t++)
         {
             int score;

@@ -1,6 +1,7 @@
 package swExpertAcademy.codeBattle;
 
 import swExpertAcademy._inputs.InputFile;
+import swExpertAcademy.codeBattle.userSolution.SWEA_P34_Solution;
 
 import java.io.FileInputStream;
 import java.util.Scanner;
@@ -13,23 +14,40 @@ import java.util.Scanner;
  * */
 public class SWEA_CodeBattle_P34 {
 
+    private static final int DIVISOR = 20171109;
+
     public static void main(String args[]) throws Exception {
         System.setIn(new FileInputStream(InputFile.number(34)));
+
+        SWEA_P34_Solution solution = new SWEA_P34_Solution();
 
         Scanner sc = new Scanner(System.in);
         int T = Integer.parseInt(sc.nextLine());
 
         for (int test_case = 1; test_case <= T; test_case++) {
+            String[] info = sc.nextLine().split(" ");
 
-            int answer = solution();
+            int N = Integer.parseInt(info[0]);
+            int A = Integer.parseInt(info[1]);
 
-            System.out.printf("#%d %d\n", test_case, answer);
+            solution.init(N, A);
+
+            int sum = 0;
+
+            for (int i = 0; i < N; i++) {
+                String[] numbers = sc.nextLine().split(" ");
+
+                int res = solution.add(
+                    Integer.parseInt(numbers[0]),
+                    Integer.parseInt(numbers[1])
+                );
+                System.out.printf("res=%d\n", res);
+                sum = (sum + res) % DIVISOR;
+            }
+
+            System.out.printf("#%d %d\n", test_case, sum);
         }
 
         sc.close();
-    }
-
-    private static int solution() {
-        return 0;
     }
 }
