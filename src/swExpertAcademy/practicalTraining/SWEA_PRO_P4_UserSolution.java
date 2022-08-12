@@ -1,31 +1,24 @@
 package swExpertAcademy.practicalTraining;
 
-import java.util.Arrays;
-
 /**
  * [No. 4] 14611. [Pro] 계산 게임 (8/16)
  *
  * 시간 : 25개 테스트케이스를 합쳐서 C++의 경우 3초 / Java의 경우 3초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
- *
- * 세그먼트 트리(Segment Tree)
  * */
 public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
 
     private static final int SIZE = 100_005;
     private static final int DIVISOR = 20;
 
+    private int start, end;
     private final int[] numbers = new int[SIZE];
     private final int[] subSum = new int[SIZE];
     private final int[] jokerCount = new int[SIZE];
-    private int start, end;
-
     private final int[] jokerSumOf = new int[5];
-    private int joker;
 
     @Override
     public void init(int mJoker, int[] mNumbers) {
-//        log("● init: mJoker=%d, mNumbers=%s", mJoker, Arrays.toString(mNumbers));
         start = 50_000;
         end = 50_004;
 
@@ -56,13 +49,10 @@ public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
         subSum[start + 1] = sum;
 
         changeJoker(mJoker);
-//        printInfo();
     }
 
     @Override
     public void putCards(int mDir, int[] mNumbers) {
-//        log("★ putCards: mDir=%d, mNumbers=%s", mDir, Arrays.toString(mNumbers));
-
         if (mDir == 0) { // 왼쪽 추가
             start -= 5;
 
@@ -92,7 +82,6 @@ public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
 
             end += 5;
         }
-//        printInfo();
     }
 
     @Override
@@ -115,7 +104,6 @@ public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
 
     @Override
     public void changeJoker(int mValue) {
-        joker = mValue;
         int sum = mValue;
         for (int i = 1; i <= 4; i++) {
             jokerSumOf[i] = sum;
@@ -137,14 +125,6 @@ public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
             jokerCount[i] = jokerCnt;
             subSum[i] = sum;
         }
-    }
-
-    public void printInfo() {
-        log("   ♣ printInfo: start=%d, end=%d, joker=%d", start, end, joker);
-        log("       numbers=   %s", arrayToString(numbers, start, end));
-        log("       subSum=    %s", arrayToString(subSum, start, end));
-        log("       jokerCount=%s", arrayToString(jokerCount, start, end));
-        log("       jokerSumOf=%s", arrayToString(jokerSumOf, 0, 4));
     }
 
     private String arrayToString(int[] arr, int start, int end) {
