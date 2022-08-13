@@ -13,8 +13,9 @@
 ## BOJ
 
 <details>
-<summary>BOJ: 1000 ~ 1999</summary>
-<div markdown="0">
+<summary>&nbsp;BOJ: 1000 ~ 1999</summary>
+<div markdown="1">
+<br/>
 
 | 번호                                         | 제목                       | 유형       | 풀이                                    |
 |--------------------------------------------|---------------------------|----------|---------------------------------------|
@@ -25,14 +26,13 @@
 | [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      | [blog](https://jsl663.tistory.com/31) |
 | [1913](https://www.acmicpc.net/problem/1913) |[달팽이1](src/boj/unsolved/BOJ_1913_Snail.kt)| 구현       |
 
-
 </div>
 </details>
 
+<details>
+<summary>&nbsp;BOJ: 2000 ~ 2999</summary>
+<div markdown="1">
 <br/>
-
-
-* 2000 ~ 2999
 
 | 번호                                          | 제목                                                   | 유형    | 풀이  |
 |----------------------------------------------|------------------------------------------------------|-------|-----|
@@ -47,15 +47,22 @@
 | [2745](https://www.acmicpc.net/problem/2745) | [진법 변환](src/boj/unsolved/BOJ_2745_BaseConversion.kt) | 구현 |
 | [2839](https://www.acmicpc.net/problem/2839) | [설탕 배달](src/boj/dp/BOJ_2839_SugarDelivery.kt) | DP |
 | [2902](https://www.acmicpc.net/problem/2902) | [KMP는 왜 KMP일까?](src/boj/etc/BOJ_2902_WhyIsKMPaKMP.kt) | 구현 |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 8000 ~ 8999</summary>
+<div markdown="1">
 <br/>
-
-
-* 8000 ~ 8999
 
 | 번호                                          | 제목                                                   | 유형    | 풀이 |
 |----------------------------------------------|------------------------------------------------------|-------|-----|
 | [8111](https://www.acmicpc.net/problem/8111) | [0 과 1](src/boj/dfsBfs/BOJ_8111_ZeroAndOne.kt) | BFS |
-<br/>
+
+</div>
+</details>
 
 
 * 9000 ~ 9999
