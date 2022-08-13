@@ -6,14 +6,14 @@
 
 1. [BOJ](#boj)
 2. [Programmers](#programmers)
-3. SW Expert Academy(삼성전자 S/W 알고리즘 특강)
+3. [SW Expert Academy(삼성전자 S/W 알고리즘 특강)](#SW Expert Academy)
 
 <br/>
 
 ## BOJ
 
 <details>
-<summary>&nbsp;BOJ: 1000 ~ 1999</summary>
+<summary>&nbsp;BOJ: 1000 ~ 1999 (6)</summary>
 <div markdown="1">
 <br/>
 
@@ -31,7 +31,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 2000 ~ 2999</summary>
+<summary>&nbsp;BOJ: 2000 ~ 2999 (11)</summary>
 <div markdown="1">
 <br/>
 
@@ -54,7 +54,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 8000 ~ 8999</summary>
+<summary>&nbsp;BOJ: 8000 ~ 8999 (1)</summary>
 <div markdown="1">
 <br/>
 
@@ -67,7 +67,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 9000 ~ 9999</summary>
+<summary>&nbsp;BOJ: 9000 ~ 9999 (2)</summary>
 <div markdown="1">
 <br/>
 
@@ -81,7 +81,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 10000 ~ 10999</summary>
+<summary>&nbsp;BOJ: 10000 ~ 10999 (1)</summary>
 <div markdown="1">
 <br/>
 
@@ -94,7 +94,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 11000 ~ 11999</summary>
+<summary>&nbsp;BOJ: 11000 ~ 11999 (3)</summary>
 <div markdown="1">
 <br/>
 
@@ -109,7 +109,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 12000 ~ 12999</summary>
+<summary>&nbsp;BOJ: 12000 ~ 12999 (1)</summary>
 <div markdown="1">
 <br/>
 
@@ -120,8 +120,9 @@
 </div>
 </details>
 
+
 <details>
-<summary>&nbsp;BOJ: 15000 ~ 15999</summary>
+<summary>&nbsp;BOJ: 15000 ~ 15999 (4)</summary>
 <div markdown="1">
 <br/>
 
@@ -137,7 +138,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 16000 ~ 16999</summary>
+<summary>&nbsp;BOJ: 16000 ~ 16999 (12)</summary>
 <div markdown="1">
 <br/>
 
@@ -161,7 +162,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 17000 ~ 17999</summary>
+<summary>&nbsp;BOJ: 17000 ~ 17999 (6)</summary>
 <div markdown="1">
 <br/>
 
@@ -179,7 +180,7 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 21000 ~ 21999</summary>
+<summary>&nbsp;BOJ: 21000 ~ 21999 (1)</summary>
 <div markdown="1">
 <br/>
 
@@ -195,7 +196,7 @@
 ## Programmers
 
 <details>
-<summary>&nbsp;Programmers: Level1</summary>
+<summary>&nbsp;Programmers: Level1 (18)</summary>
 <div markdown="1">
 <br/>
 
@@ -224,7 +225,7 @@
 
 
 <details>
-<summary>&nbsp;Programmers: Level2</summary>
+<summary>&nbsp;Programmers: Level2 (25)</summary>
 <div markdown="1">
 <br/>
 
@@ -261,7 +262,7 @@
 
 
 <details>
-<summary>&nbsp;Programmers: Level3</summary>
+<summary>&nbsp;Programmers: Level3 (10)</summary>
 <div markdown="1">
 <br/>
 
@@ -286,7 +287,7 @@
 
 
 <details>
-<summary>&nbsp;Basic</summary>
+<summary>&nbsp;Basic (42)</summary>
 <div markdown="1">
 <br/>
 
@@ -341,15 +342,16 @@
 
 
 <details>
-<summary>&nbsp;Professional</summary>
+<summary>&nbsp;Professional (3)</summary>
 <div markdown="1">
 <br/>
 
-| 순서  | 제목                                                                               | 유형                   |
-|:---:|----------------------------------------------------------------------------------|----------------------|
-|  2  | [긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                   |
-|  3  | [메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                   |
-|  4  | [계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
+| 순서  | 제목                                                                                     | 유형                   |
+|:---:|----------------------------------------------------------------------------------------|----------------------|
+|  1  | -                                                                                      |                      |
+|  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                   |
+|  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                   |
+|  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
 
 </div>
 </details>
