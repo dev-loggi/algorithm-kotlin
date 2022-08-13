@@ -1,5 +1,7 @@
 package swExpertAcademy.practicalTraining;
 
+import java.util.Arrays;
+
 /**
  * [No. 4] 14611. [Pro] 계산 게임 (8/16)
  *
@@ -13,16 +15,25 @@ public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
     private static final int SIZE = 100_005;
     private static final int DIVISOR = 20;
 
-    private int start, end;
+    private int start, end, joker;
     private final int[] numbers = new int[SIZE];
     private final int[] subSum = new int[SIZE];
     private final int[] jokerCount = new int[SIZE];
-    private final int[] jokerSumOf = new int[5];
+    private final int[][] jokerSumOf = new int[31][6];
+
+    public SWEA_PRO_P04_UserSolution() {
+        for (int joker = 1; joker <= 30; joker++) {
+            for (int count = 1; count <= 5; count++) {
+                jokerSumOf[joker][count] = joker * count;
+            }
+        }
+    }
 
     @Override
     public void init(int mJoker, int[] mNumbers) {
         start = 50_000;
         end = 50_004;
+        joker = mJoker;
 
         int jokerCnt = 0;
         int sum = 0;
@@ -41,16 +52,14 @@ public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
         jokerCount[start] = jokerCnt;
         subSum[start] = sum;
 
-        jokerCnt -= mNumbers[0] == -1 ? 1 : 0;
-        jokerCnt += mNumbers[4] == -1 ? 1 : 0;
+        jokerCnt -= (mNumbers[0] == -1) ? 1 : 0;
+        jokerCnt += (mNumbers[4] == -1) ? 1 : 0;
 
         sum -= mNumbers[0] != -1 ? mNumbers[0] : 0;
         sum += mNumbers[4] != -1 ? mNumbers[4] : 0;
 
         jokerCount[start + 1] = jokerCnt;
         subSum[start + 1] = sum;
-
-        changeJoker(mJoker);
     }
 
     @Override
@@ -58,31 +67,47 @@ public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
         if (mDir == 0) { // 왼쪽 추가
             start -= 5;
 
-            int jokerCnt = 0;
-            int sum = 0;
+            System.arraycopy(mNumbers, 0, numbers, start, 5);
 
-            for (int i = 0; i < 5; i++) {
-                int num = mNumbers[i];
+            int sum = subSum[start + 5];
+            int jokerCnt = jokerCount[start + 5];
 
-                numbers[start + i] = num;
+            for (int i = start + 4; i >= start; i--) {
+                int oldNumber = numbers[i + 4];
+                int newNumber = numbers[i];
 
-                if (i == 4) continue;
+                if (oldNumber == -1) jokerCnt -= 1;
+                else sum -= oldNumber;
 
-                if (num == -1) jokerCnt += 1;
-                else sum += num;
+                if (newNumber == -1) jokerCnt += 1;
+                else sum += newNumber;
+
+                jokerCount[i] = jokerCnt;
+                subSum[i] = sum;
             }
-
-            jokerCount[start] = jokerCnt;
-            subSum[start] = sum;
-
-            fillSubSum(jokerCnt, sum, start + 1, start + 7);
-
         } else { // 오른쪽 추가
-            System.arraycopy(mNumbers, 0, numbers, end + 1, 5);
-
-            fillSubSum(jokerCount[end - 3], subSum[end - 3], end - 2, end + 3);
-
             end += 5;
+
+            System.arraycopy(mNumbers, 0, numbers, end - 4, 5);
+
+            int left = end - 7;
+            int right = end - 3;
+            int sum = subSum[left - 1];
+            int jokerCnt = jokerCount[left - 1];
+
+            for (int i = left; i <= right; i++) {
+                int oldNumber = numbers[i - 1];
+                int newNumber = numbers[i + 3];
+
+                if (oldNumber == -1) jokerCnt -= 1;
+                else sum -= oldNumber;
+
+                if (newNumber == -1) jokerCnt += 1;
+                else sum += newNumber;
+
+                jokerCount[i] = jokerCnt;
+                subSum[i] = sum;
+            }
         }
     }
 
@@ -92,7 +117,7 @@ public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
         int last = end - 2;
 
         for (int i = start; i < last; i++) {
-            if ((subSum[i] + jokerSumOf[jokerCount[i]]) % DIVISOR == mNum) {
+            if ((subSum[i] + jokerSumOf[joker][jokerCount[i]]) % DIVISOR == mNum) {
                 n += 1;
             }
             if (n == mNth) {
@@ -106,27 +131,13 @@ public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
 
     @Override
     public void changeJoker(int mValue) {
-        int sum = mValue;
-        for (int i = 1; i <= 4; i++) {
-            jokerSumOf[i] = sum;
-            sum += mValue;
-        }
+        joker = mValue;
     }
 
-    private void fillSubSum(int jokerCnt, int sum, int start, int end) {
-        for (int i = start; i < end; i++) {
-            int oldNumber = numbers[i - 1];
-            int newNumber = numbers[i + 3];
-
-            if (oldNumber == -1) jokerCnt -= 1;
-            else sum -= oldNumber;
-
-            if (newNumber == -1) jokerCnt += 1;
-            else sum += newNumber;
-
-            jokerCount[i] = jokerCnt;
-            subSum[i] = sum;
-        }
+    private void printInfo() {
+        log("    numbers=%s", arrayToString(numbers, start, end));
+        log("    subSum=%s", arrayToString(subSum, start, end));
+        log("    jokerCount=%s", arrayToString(jokerCount, start, end));
     }
 
     private String arrayToString(int[] arr, int start, int end) {
