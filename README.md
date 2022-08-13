@@ -6,13 +6,15 @@
 
 1. [BOJ](#boj)
 2. [Programmers](#programmers)
-
+3. []
 
 <br/>
 
 ## BOJ
 
-* 1000 ~ 1999
+<details>
+<summary>BOJ: 1000 ~ 1999</summary>
+<div markdown="0">
 
 | 번호                                         | 제목                       | 유형       | 풀이                                    |
 |--------------------------------------------|---------------------------|----------|---------------------------------------|
@@ -22,6 +24,11 @@
 | [1385](https://www.acmicpc.net/problem/1385) |[벌집](src/boj/dfsBfs/BOJ_1385_HoneyComb.kt) | BFS | [blog](https://jsl663.tistory.com/38) |
 | [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      | [blog](https://jsl663.tistory.com/31) |
 | [1913](https://www.acmicpc.net/problem/1913) |[달팽이1](src/boj/unsolved/BOJ_1913_Snail.kt)| 구현       |
+
+
+</div>
+</details>
+
 <br/>
 
 
