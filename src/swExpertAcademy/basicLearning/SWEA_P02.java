@@ -8,6 +8,8 @@ import java.util.Scanner;
  *
  * 시간   : 10000개 테스트케이스를 합쳐서 C의 경우 1초 / C++의 경우 1초 / Java의 경우 2초 / Python의 경우 2초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
+ *
+ * 비트 연산
  * */
 public class SWEA_P02 {
 

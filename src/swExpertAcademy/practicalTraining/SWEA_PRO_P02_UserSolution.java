@@ -1,6 +1,5 @@
 package swExpertAcademy.practicalTraining;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -19,7 +18,7 @@ import java.util.TreeMap;
  * 5. 각 테스트 케이스에서 participant() 함수의 호출 횟수는 500 이하이다.<br/>
  * 6. 사다리 게임을 진행했을 때, 한 참가자가 지나게 되는 가로줄의 개수는 항상 5,000개 이하이다.<br/>
  * */
-public class SWEA_PRO_P2_UserSolution {
+public class SWEA_PRO_P02_UserSolution {
 
     private static final int MAX_ID = 100;
 

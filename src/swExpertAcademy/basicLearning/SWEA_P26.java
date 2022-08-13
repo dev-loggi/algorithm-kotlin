@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * [String Matching]
  * 1. Brute-Force
- * 2. 라빈-카프(Rabin-Karp) 알고리즘 - 해시 함수
+ * 2. 라빈-카프(Rabin-Karp) 알고리즘 - Hash, Sliding Window
  * 3. KMP(Knuth–Morris–Pratt) 알고리즘
  * 4. 보이어-무어(Boyer-Moore) 알고리즘
  *

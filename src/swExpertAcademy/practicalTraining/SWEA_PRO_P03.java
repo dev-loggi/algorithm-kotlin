@@ -12,13 +12,13 @@ import java.util.StringTokenizer;
  *
  *
  * */
-public class SWEA_PRO_P3 {
+public class SWEA_PRO_P03 {
 
     private final static int CMD_INIT = 1;
     private final static int CMD_ALLOCATE = 2;
     private final static int CMD_RELEASE = 3;
 
-    private final static SWEA_PRO_P3_UserSolution usersolution = new SWEA_PRO_P3_UserSolution();
+    private final static SWEA_PRO_P03_UserSolution usersolution = new SWEA_PRO_P03_UserSolution();
 
     private static boolean run(BufferedReader br) throws Exception {
         int q = Integer.parseInt(br.readLine());

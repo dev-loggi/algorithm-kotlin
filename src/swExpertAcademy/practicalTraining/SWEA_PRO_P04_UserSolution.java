@@ -5,8 +5,10 @@ package swExpertAcademy.practicalTraining;
  *
  * 시간 : 25개 테스트케이스를 합쳐서 C++의 경우 3초 / Java의 경우 3초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
+ *
+ * Hash, Sliding Window
  * */
-public class SWEA_PRO_P4_UserSolution implements SWEA_PRO_P4.UserSolution {
+public class SWEA_PRO_P04_UserSolution implements SWEA_PRO_P04.UserSolution {
 
     private static final int SIZE = 100_005;
     private static final int DIVISOR = 20;

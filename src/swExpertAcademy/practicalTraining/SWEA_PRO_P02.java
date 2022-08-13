@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * 시간 : 25개 테스트케이스를 합쳐서 C++의 경우 3초 / Java의 경우 3초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
  * */
-public class SWEA_PRO_P2 {
+public class SWEA_PRO_P02 {
 
     private final static int CMD_INIT				= 1;
     private final static int CMD_ADD				= 2;
@@ -18,7 +18,7 @@ public class SWEA_PRO_P2 {
     private final static int CMD_NUMBER_OF_CROSS	= 4;
     private final static int CMD_PARTICIPANT		= 5;
 
-    private final static SWEA_PRO_P2_UserSolution usersolution = new SWEA_PRO_P2_UserSolution();
+    private final static SWEA_PRO_P02_UserSolution usersolution = new SWEA_PRO_P02_UserSolution();
 
     private static boolean run(BufferedReader br) throws Exception
     {

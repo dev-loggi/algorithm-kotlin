@@ -13,6 +13,8 @@ import java.util.stream.Collectors;
  *
  * 시간   : 10개 테스트 케이스를 합쳐서 C++의 경우 1초 / Java 의 경우 2초
  * 메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
+ *
+ * 연결 리스트
  * */
 public class SWEA_P08 {
 

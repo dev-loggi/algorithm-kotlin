@@ -13,9 +13,11 @@ import java.util.*;
  * 1. 각 테스트 케이스 시작 시 init() 함수가 호출된다.
  * 2. 각 테스트 케이스에서 모든 함수의 호출 횟수 총합은 30,000 이하이다.
  *
+ * 트리
+ *
  * TODO: 트립(Treap) 자료구조를 직접 구현해서 풀어보기
  * */
-public class SWEA_PRO_P3_UserSolution {
+public class SWEA_PRO_P03_UserSolution {
 
     /** Memory Size */
     private int memorySize;
