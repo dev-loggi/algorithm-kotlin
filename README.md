@@ -6,7 +6,7 @@
 
 1. [BOJ](#boj)
 2. [Programmers](#programmers)
-3. []
+3. SW Expert Academy(삼성전자 S/W 알고리즘 특강)
 
 <br/>
 
@@ -28,6 +28,7 @@
 
 </div>
 </details>
+
 
 <details>
 <summary>&nbsp;BOJ: 2000 ~ 2999</summary>
@@ -65,40 +66,64 @@
 </details>
 
 
-* 9000 ~ 9999
+<details>
+<summary>&nbsp;BOJ: 9000 ~ 9999</summary>
+<div markdown="1">
+<br/>
 
 | 번호                                          | 제목                                                   | 유형   | 풀이 |
 |----------------------------------------------|------------------------------------------------------|------|-----|
 | [9019](https://www.acmicpc.net/problem/9019) | [DSLR](src/boj/unsolved/BOJ_9019_DSLR.kt) | BFS  |
 | [9328](https://www.acmicpc.net/problem/9328) | [열쇠](src/boj/dfsBfs/BOJ_9328_Key.kt) | BFS  |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 10000 ~ 10999</summary>
+<div markdown="1">
 <br/>
-
-
-* 10000 ~ 10999
 
 | 번호                                          | 제목                                                   | 유형   | 풀이 |
 |----------------------------------------------|------------------------------------------------------|------|-----|
 | [10942](https://www.acmicpc.net/problem/10942) | [팰린드롬?](src/boj/dp/BOJ_10942_Palindrome.kt) | DP |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 11000 ~ 11999</summary>
+<div markdown="1">
 <br/>
-
-
-* 11000 ~ 11999
 
 | 번호                                             | 제목                                                 | 유형  | 풀이 |
 |------------------------------------------------|----------------------------------------------------|-----|-----|
 | [11005](https://www.acmicpc.net/problem/11005) | [진법 변환2](src/boj/etc/BOJ_11005_BaseConversion2.kt) | 구현  |
 | [11048](https://www.acmicpc.net/problem/11048) | [이동하기](src/boj/dp/BOJ_11048_Move.kt)               | DP  |
 | [11060](https://www.acmicpc.net/problem/11060) | [점프 점프](src/boj/dp/BOJ_11060_JumpJump.kt)          | DP  |
-<br/>
 
-* 12000 ~ 12999
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 12000 ~ 12999</summary>
+<div markdown="1">
+<br/>
 
 | 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [12851](https://www.acmicpc.net/problem/12851) | [숨바꼭질 2](src/boj/dfsBfs/BOJ_12851_HideAndSeek2.kt) | BFS |
-<br/>
 
-* 15000 ~ 15999
+</div>
+</details>
+
+<details>
+<summary>&nbsp;BOJ: 15000 ~ 15999</summary>
+<div markdown="1">
+<br/>
 
 | 번호                                             | 제목                                                   | 유형    | 풀이 |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
@@ -106,10 +131,15 @@
 | [15653](https://www.acmicpc.net/problem/15653) | [구슬 탈출 4](src/boj/dfsBfs/BOJ_15653_MarbleEscape4.kt) | BFS | [blog](https://jsl663.tistory.com/33) |
 | [15683](https://www.acmicpc.net/problem/15683) | [감시](src/boj/bruteForce/BOJ_15683_Serveillance.kt) | 완전 탐색 |
 | [15686](https://www.acmicpc.net/problem/15686) | [치킨 배달](src/boj/bruteForce/BOJ_15686_ChickenDelivery.kt) | 완전 탐색 |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 16000 ~ 16999</summary>
+<div markdown="1">
 <br/>
-
-
-* 16000 ~ 16999
 
 | 번호                                             | 제목                                                   | 유형    | 풀이                                     |
 |------------------------------------------------|------------------------------------------------------|-------|----------------------------------------|
@@ -125,10 +155,15 @@
 | [16968](https://www.acmicpc.net/problem/16968) | [차량 번호판1](src/boj/bruteForce/BOJ_16968_LicensePlate1.kt) | 완전 탐색 |
 | [16971](https://www.acmicpc.net/problem/16917) | [양념 반 후라이드 반](src/boj/bruteForce/BOJ_16971_HalfSeasonedHalfFried.kt) | 완전 탐색 |
 | [16973](https://www.acmicpc.net/problem/16973) | [직사각형 탈출](src/boj/dfsBfs/BOJ_16973_RectangleEscape.kt) | BFS |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 17000 ~ 17999</summary>
+<div markdown="1">
 <br/>
-
-
-* 17000 ~ 17999
 
 | 번호                                             | 제목                                                   | 유형    | 풀이  |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
@@ -138,22 +173,31 @@
 | [17135](https://www.acmicpc.net/problem/17135) | [캐슬 디펜스](src/boj/bruteForce/BOJ_17135_CastleDefense.kt) | 완전 탐색 |
 | [17281](https://www.acmicpc.net/problem/17281) | [야구](src/boj/bruteForce/BOJ_17281_Baseball.kt) | 완전 탐색 |
 | [17406](https://www.acmicpc.net/problem/17406) | [배열 돌리기4](src/boj/bruteForce/BOJ_17406_ArrayRotation4.kt) | 완전 탐색 |
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;BOJ: 21000 ~ 21999</summary>
+<div markdown="1">
 <br/>
-
-
-* 17000 ~ 17999
 
 | 번호                                             | 제목                                                   | 유형    | 풀이  |
 |------------------------------------------------|------------------------------------------------------|-------|-----|
 | [21921](https://www.acmicpc.net/problem/21921) | [블로그](src/boj/etc/BOJ_21921_Blog.kt) | 슬라이딩 윈도우 |
-<br/>
 
+</div>
+</details>
 
 
 
 ## Programmers
 
-* 코딩테스트 연습 Level 1
+<details>
+<summary>&nbsp;Programmers: Level1</summary>
+<div markdown="1">
+<br/>
 
 |  레벨  |제목|유형|
 |:----:|----|----|
@@ -174,9 +218,15 @@
 |  1   |[두 개 뽑아서 더하기](src/programmers/practice/level1/TakeTwoNumbersAndSums.kt)|
 |  1   |[3진법 뒤집기](src/programmers/practice/level1/TernaryReversed.kt)|
 |  1   |[2016년](src/programmers/practice/level1/Year2016.kt)|
-<br/>
 
-* 코딩테스트 연습 Level 2
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;Programmers: Level2</summary>
+<div markdown="1">
+<br/>
 
 |레벨|제목|유형|
 |:----:|----|----|
@@ -205,9 +255,15 @@
 |  2   |[삼각 달팽이](src/programmers/practice/level2/TriangleSnail.kt)|
 |  2   |[다리를 지나는 트럭](src/programmers/practice/level2/TrucksCrossingBridge.kt)|
 |  2   |[튜플](src/programmers/practice/level2/Tuple.kt)|
-<br/>
 
-* 코딩테스트 연습 Level 3
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;Programmers: Level3</summary>
+<div markdown="1">
+<br/>
 
 |  레벨  |제목|유형|
 |:----:|----|----|
@@ -221,4 +277,79 @@
 |  3   |[양과 늑대](src/programmers/practice/level3/SheepAndWolf.kt)|
 |  3   |[여행 경로](src/programmers/practice/level3/TravelRoute.kt)|
 |  3   |[단어 변환](src/programmers/practice/level3/WordConversion.kt)|
+
+</div>
+</details>
+
+
+## SW Expert Academy
+
+
+<details>
+<summary>&nbsp;Basic</summary>
+<div markdown="1">
 <br/>
+
+| 순서  | 제목                                                                           | 유형           |
+|:---:|------------------------------------------------------------------------------|--------------|
+|  1  | [새로운 불면증 치료법](src/swExpertAcademy/basicLearning/SWEA_P01.java)               | 비트 연산        |
+|  2  | [이진수 표현](src/swExpertAcademy/basicLearning/SWEA_P02.java)                    | 비트 연산        |
+|  3  | [동아리실 관리하기](src/swExpertAcademy/basicLearning/SWEA_P03.java)                 | 비트 연산        |
+|  4  | [기초 Single Linked List 연습](src/swExpertAcademy/basicLearning/SWEA_P04.java)  | 연결 리스트       |
+|  5  | [기초 Double Linked List 연습](src/swExpertAcademy/basicLearning/SWEA_P05.java)  | 연결 리스트       |
+|  6  | [암호문3](src/swExpertAcademy/basicLearning/SWEA_P05.java)                      | 연결 리스트       |
+|  7  | -                                                                            | 연결 리스트       |
+|  8  | [수열 편집](src/swExpertAcademy/basicLearning/SWEA_P08.java)                     | 연결 리스트       |
+|  9  | [중위 순회](src/swExpertAcademy/basicLearning/SWEA_P09.java)                     | 트리           |
+| 10  | [사칙연산 유효성 검사](src/swExpertAcademy/basicLearning/SWEA_P10.java)               | 트리           |
+| 11  | [사칙연산](src/swExpertAcademy/basicLearning/SWEA_P11.java)                      | 트리           |
+| 12  | [공통조상](src/swExpertAcademy/basicLearning/SWEA_P12.java)                      | 트리           |
+| 13  | [Directory](src/swExpertAcademy/basicLearning/SWEA_P13.java)                 | 트리           |
+| 14  | [기초 DFS 연습](src/swExpertAcademy/basicLearning/SWEA_P14.java)                 | 그래프          |
+| 15  | [기초 BFS 연습](src/swExpertAcademy/basicLearning/SWEA_P15.java)                 | 그래프          |
+| 16  | [프로세서 연결하기](src/swExpertAcademy/basicLearning/SWEA_P16.java)                 | 그래프          |
+| 17  | [파핑파핑 지뢰찾기](src/swExpertAcademy/basicLearning/SWEA_P17.java)                 | 그래프          |
+| 18  | [영준이의 진짜 BFS](src/swExpertAcademy/basicLearning/SWEA_P18.java)               | 그래프          |
+| 19  | [최장 공통 부분 수열](src/swExpertAcademy/basicLearning/SWEA_P19.java)               | DP           |
+| 20  | [0/1 Knapsack](src/swExpertAcademy/basicLearning/SWEA_P20.java)              | DP           |
+| 21  | [스팟마트](src/swExpertAcademy/basicLearning/SWEA_P21.java)                      | DP           |
+| 22  | [쉬운 거스름돈](src/swExpertAcademy/basicLearning/SWEA_P22.java)                   | 그리디          |
+| 23  | [자기 방으로 돌아가기](src/swExpertAcademy/basicLearning/SWEA_P23.java)               | 그리디          |
+| 24  | [최대 상금](src/swExpertAcademy/basicLearning/SWEA_P24.java)                     | 그리디          |
+| 25  | [문자열 교집합](src/swExpertAcademy/basicLearning/SWEA_P25.java)                   | 해시           |
+| 26  | [[Pro] 단어가 등장하는 횟수](src/swExpertAcademy/basicLearning/SWEA_P26.java)         | 해시           |
+| 27  | [은기의 아주 큰 그림](src/swExpertAcademy/basicLearning/SWEA_P27.java)               | 해시           |
+| 28  | [연락처 Database](src/swExpertAcademy/basicLearning/SWEA_P28.java)              | 해시           |
+| 29  | [메일 서버](src/swExpertAcademy/basicLearning/SWEA_P29.java)                     | 해시           |
+| 30  | [문자열 암호화](src/swExpertAcademy/basicLearning/SWEA_P30.java)                   | 해시           |
+| 31  | [기초 Partial Sort 연습](src/swExpertAcademy/basicLearning/SWEA_P31.java)        | 힙            |
+| 32  | [힙](src/swExpertAcademy/basicLearning/SWEA_P32.java)                         | 힙            |
+| 33  | [보급로](src/swExpertAcademy/basicLearning/SWEA_P33.java)                       | 힙            |
+| 34  | [중간값 구하기](src/swExpertAcademy/basicLearning/SWEA_P34.java)                   | 힙            |
+| 35  | [수 만들기](src/swExpertAcademy/basicLearning/SWEA_P35.java)                     | 힙            |
+| 36  | [Social Media](src/swExpertAcademy/basicLearning/SWEA_P36.java)              | 힙            |
+| 37  | [염라대왕의 이름 정렬](src/swExpertAcademy/basicLearning/SWEA_P37.java)               | 분할정복         |
+| 38  | [사탕 분배](src/swExpertAcademy/basicLearning/SWEA_P38.java)                     | 분할정복         |
+| 39  | [[Pro] Inversion Counting](src/swExpertAcademy/basicLearning/SWEA_P39.java)  | 분할정복         |
+| 40  | [영어 공부](src/swExpertAcademy/basicLearning/SWEA_P40.java)                     | 이분 탐색        |
+| 41  | [촛불 이벤트](src/swExpertAcademy/basicLearning/SWEA_P41.java)                    | 이분 탐색        |
+| 42  | [사탕 가방](src/swExpertAcademy/basicLearning/SWEA_P42.java)                     | 이분 탐색        |
+
+
+</div>
+</details>
+
+
+<details>
+<summary>&nbsp;Professional</summary>
+<div markdown="1">
+<br/>
+
+| 순서  | 제목                                                                               | 유형                   |
+|:---:|----------------------------------------------------------------------------------|----------------------|
+|  2  | [긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                   |
+|  3  | [메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                   |
+|  4  | [계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
+
+</div>
+</details>
