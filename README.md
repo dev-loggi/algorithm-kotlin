@@ -4,9 +4,9 @@
 알고리즘 문제 및 풀이 정리<br/>
 
 
-[1. BOJ](#1.-boj) <br/>
-[2. Programmers](#2.-programmers) <br/>
-[3. SW Expert Academy(삼성전자 S/W 알고리즘 특강)](#3.-sw-expert-academy) <br/>
+1. [BOJ](#1.-boj) <br/>
+2. [Programmers](#2.-programmers) <br/>
+3. [SW Expert Academy(삼성전자 S/W 알고리즘 특강)](#3.-sw-expert-academy) <br/>
 
 
 <br/>
