@@ -4,13 +4,13 @@
 알고리즘 문제 및 풀이 정리<br/>
 
 
-1. [BOJ](#boj)
-2. [Programmers](#programmers)
-3. [SW Expert Academy(삼성전자 S/W 알고리즘 특강)](#SW Expert Academy)
+1. [BOJ](#1.-boj)
+2. [Programmers](#2.-programmers)
+3. [SW Expert Academy(삼성전자 S/W 알고리즘 특강)](#3.-SW-Expert-Academy)
 
 <br/>
 
-## BOJ
+## 1. BOJ
 
 <details>
 <summary>&nbsp;BOJ: 1000 ~ 1999 (6)</summary>
@@ -192,8 +192,9 @@
 </details>
 
 
+<br/>
 
-## Programmers
+## 2. Programmers
 
 <details>
 <summary>&nbsp;Programmers: Level1 (18)</summary>
@@ -283,7 +284,9 @@
 </details>
 
 
-## SW Expert Academy
+<br/>
+
+## 3. SW Expert Academy
 
 
 <details>
