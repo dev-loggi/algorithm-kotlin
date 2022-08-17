@@ -339,7 +339,7 @@
 | 40  | [영어 공부](src/swExpertAcademy/basicLearning/userSolution/SWEA_P40_UserSolution.java)                    | 이분 탐색        |
 | 41  | [촛불 이벤트](src/swExpertAcademy/basicLearning/userSolution/SWEA_P41_UserSolution.java)                   | 이분 탐색        |
 | 42  | [사탕 가방](src/swExpertAcademy/basicLearning/userSolution/SWEA_P42_UserSolution.java)                    | 이분 탐색        |
-
+| 43  | [광고 시간 정하기](src/swExpertAcademy/basicLearning/SWEA_P43.java)                                          | 이분 탐색        |
 
 
 </div>
@@ -347,7 +347,7 @@
 
 
 <details>
-<summary>&nbsp;Professional (3)</summary>
+<summary>&nbsp;Professional (6)</summary>
 <div markdown="1">
 <br/>
 
@@ -357,6 +357,8 @@
 |  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                   |
 |  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                   |
 |  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
+|  5  | [[Pro] 섬 지키기](src/swExpertAcademy/practicalTraining/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP    |
+|  6  | [[Pro] 가게 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree    |
 
 </div>
 </details>
