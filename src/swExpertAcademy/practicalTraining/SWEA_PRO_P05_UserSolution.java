@@ -47,6 +47,8 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
             System.arraycopy(map[r], 0, tempMap[r + 1], 1, N);
         }
 
+        // 이 방법 말고 각 위치당 하나의 구조물 패턴을 찾아서 할 수도 있다.
+        // 그러나, 이번 문제에서는 map 과 구조물의 최대 크기가 많이 크지 않기 때문에 속도 차이가 크게 나지는 않는다.
         int[] struct = new int[5];
         for (int r = 0; r < N; r++) {
             for (int c = 0; c < N; c++) {
@@ -103,7 +105,7 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
                 for (int i = 0; i < M; i++) // 구조물 짓기
                     tempMap[r + 1][c + i + 1] += mStructure[i];
 
-                max = Math.max(max, bfs(mSeaLevel));
+                max = Math.max(max, floodFill(mSeaLevel));
 
                 for (int i = c; i < c + M; i++) // 구조물 부수기
                     tempMap[r + 1][i + 1] = map[r][i];
@@ -114,7 +116,7 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
                 for (int i = 0; i < M; i++) // 구조물 짓기
                     tempMap[r + 1][c + i + 1] += mStructure[M - i - 1];
 
-                max = Math.max(max, bfs(mSeaLevel));
+                max = Math.max(max, floodFill(mSeaLevel));
 
                 for (int i = c + M - 1; i >= c; i--) // 구조물 부수기
                     tempMap[r + 1][i + 1] = map[r][i];
@@ -125,7 +127,7 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
                 for (int i = 0; i < M; i++) // 구조물 짓기
                     tempMap[r + i + 1][c + 1] += mStructure[i];
 
-                max = Math.max(max, bfs(mSeaLevel));
+                max = Math.max(max, floodFill(mSeaLevel));
 
                 for (int i = r; i < r + M; i++) // 구조물 부수기
                     tempMap[i + 1][c + 1] = map[i][c];
@@ -136,7 +138,7 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
                 for (int i = 0; i < M; i++) // 구조물 짓기
                     tempMap[r + i + 1][c + 1] += mStructure[M - i - 1];
 
-                max = Math.max(max, bfs(mSeaLevel));
+                max = Math.max(max, floodFill(mSeaLevel));
 
                 for (int i = r + M - 1; i >= r; i--) // 구조물 부수기
                     tempMap[i + 1][c + 1] = map[i][c];
@@ -146,7 +148,8 @@ public class SWEA_PRO_P05_UserSolution implements SWEA_PRO_P05.UserSolution {
         return max;
     }
 
-    private int bfs(int seaLevel) {
+    /** BFS */
+    private int floodFill(int seaLevel) {
         int count = 0;
 
         ArrayDeque<Node> queue = new ArrayDeque<>();
