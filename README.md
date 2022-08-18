@@ -359,6 +359,8 @@
 |  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
 |  5  | [[Pro] 섬 지키기](src/swExpertAcademy/practicalTraining/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP    |
 |  6  | [[Pro] 가게 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree    |
+|  7  | [[Pro] 우주자원개발](src/swExpertAcademy/practicalTraining/SWEA_PRO_P07_UserSolution.java)   | 트라이, 정렬              |
+
 
 </div>
 </details>
