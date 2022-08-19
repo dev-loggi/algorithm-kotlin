@@ -353,7 +353,7 @@
 
 | 순서  | 제목                                                                                     | 유형                   |
 |:---:|----------------------------------------------------------------------------------------|----------------------|
-|  1  | -                                                                                      |                      |
+|  1  | [[Pro] 병사 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P01_UserSolution.java)    | 원형 더블 연결 리스트         |
 |  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                   |
 |  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                   |
 |  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window |
