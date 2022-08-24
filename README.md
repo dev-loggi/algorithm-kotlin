@@ -347,7 +347,7 @@
 
 
 <details>
-<summary>&nbsp;Professional (10)</summary>
+<summary>&nbsp;Professional (11)</summary>
 <div markdown="1">
 <br/>
 
@@ -363,6 +363,7 @@
 |  8  | [[Pro] 리스트 복사](src/swExpertAcademy/practicalTraining/SWEA_PRO_P08_UserSolution.java)   | Trie, HashMap, List, Reference, DeepCopy |
 |  9  | [[Pro] 끝말잇기2](src/swExpertAcademy/practicalTraining/SWEA_PRO_P09_UserSolution.java)    | 해시 함수, AVL Tree, HashSet                 |
 | 10  | [[Pro] AI 로봇](src/swExpertAcademy/practicalTraining/SWEA_PRO_P10_UserSolution.java)    | AVL Tree, 우선순위 큐                         |
+| 11  | [[Pro] P2P 네트워크](src/swExpertAcademy/practicalTraining/SWEA_PRO_P11_UserSolution.java) | Trie, BFS, Graph                         |
 
 </div>
 </details>
