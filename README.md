@@ -347,21 +347,22 @@
 
 
 <details>
-<summary>&nbsp;Professional (8)</summary>
+<summary>&nbsp;Professional (10)</summary>
 <div markdown="1">
 <br/>
 
-| 순서  | 제목                                                                                     | 유형                                         |
-|:---:|----------------------------------------------------------------------------------------|--------------------------------------------|
-|  1  | [[Pro] 병사 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P01_UserSolution.java)    | 원형 더블 연결 리스트                               |
-|  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                                         |
-|  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                                         |
-|  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window                       |
-|  5  | [[Pro] 섬 지키기](src/swExpertAcademy/practicalTraining/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP                          |
-|  6  | [[Pro] 가게 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree                          |
-|  7  | [[Pro] 우주자원개발](src/swExpertAcademy/practicalTraining/SWEA_PRO_P07_UserSolution.java)   | 트라이, 정렬                                    |
-|  8  | [[Pro] 리스트 복사](src/swExpertAcademy/practicalTraining/SWEA_PRO_P08_UserSolution.java)   | Trie, HashMap, List, Reference, DeepCopy   |
-
+| 순서  | 제목                                                                                     | 키워드                                      |
+|:---:|----------------------------------------------------------------------------------------|------------------------------------------|
+|  1  | [[Pro] 병사 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P01_UserSolution.java)    | 원형 더블 연결 리스트                             |
+|  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                                       |
+|  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                                       |
+|  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window                     |
+|  5  | [[Pro] 섬 지키기](src/swExpertAcademy/practicalTraining/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP                        |
+|  6  | [[Pro] 가게 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree                        |
+|  7  | [[Pro] 우주자원개발](src/swExpertAcademy/practicalTraining/SWEA_PRO_P07_UserSolution.java)   | 트라이, 정렬                                  |
+|  8  | [[Pro] 리스트 복사](src/swExpertAcademy/practicalTraining/SWEA_PRO_P08_UserSolution.java)   | Trie, HashMap, List, Reference, DeepCopy |
+|  9  | [[Pro] 끝말잇기2](src/swExpertAcademy/practicalTraining/SWEA_PRO_P09_UserSolution.java)    | 해시 함수, AVL Tree, HashSet                 |
+| 10  | [[Pro] AI 로봇](src/swExpertAcademy/practicalTraining/SWEA_PRO_P10_UserSolution.java)    | AVL Tree, 우선순위 큐                         |
 
 </div>
 </details>
