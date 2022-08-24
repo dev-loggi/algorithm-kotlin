@@ -14,6 +14,41 @@ import java.util.StringTokenizer;
  * */
 public class SWEA_PRO_P03 {
 
+    interface UserSolution {
+
+        /**
+         * 각 테스트 케이스의 처음에 호출된다.<br/>
+         * 전체 메모리의 크기 N이 주어진다. 모두 빈 공간이다.
+         *
+         * @param N 메모리의 크기 (30 ≤ N ≤ 100,000,000)
+         * */
+        void init(int N);
+
+        /**
+         * mSize 크기의 메모리 할당이 요청된다.<br/>
+         * 수용할 수 있는 빈 공간 중에서, 가장 작은 빈 공간에 할당한다. 즉, 최적 적합 할당(Best Fit Allocation) 방식을 사용한다.<br/>
+         * 가장 작은 빈 공간이 여러 개 있을 경우에는, 가장 앞쪽에 있는 빈 공간에 할당한다.<br/>
+         *
+         * @param mSize 할당이 요청된 메모리 크기 (1 ≤ mSize ≤ N)
+         *
+         * @return  할당된 메모리 공간의 시작 주소 값을 반환한다.
+         *          할당에 실패한 경우에는 -1을 반환한다.
+         * */
+        int allocate(int mSize);
+
+        /**
+         * mAddr 시작 주소 값을 갖는 메모리의 해제가 요청된다.<br/>
+         * mAddr 값이 시작 주소 값이 아니거나, 이미 빈 공간일 경우에는 해제에 실패하고 -1을 반환한다.<br/>
+         * 그렇지 않을 경우, 해당 메모리 공간을 빈 공간으로 바꾸고, 인접한 빈 공간이 있다면 병합한다. 그리고 해제된 메모리 공간의 크기를 반환한다.
+         *
+         * @param mAddr 해제가 요청된 메모리 주소 ( 0 ≤ mAddr ≤ N - 1 )
+         *
+         * @return  해제된 메모리 공간의 크기를 반환한다.
+         *          해제에 실패한 경우에는 -1을 반환한다.
+         * */
+        int release(int mAddr);
+    }
+
     private final static int CMD_INIT = 1;
     private final static int CMD_ALLOCATE = 2;
     private final static int CMD_RELEASE = 3;

@@ -54,7 +54,6 @@ public class SWEA_PRO_P01_UserSolution implements SWEA_PRO_P01.UserSolution {
 
     @Override
     public void hire(int mID, int mTeam, int mScore) {
-//        log("[▶1] hire: mID=%d, mTeam=%d. mScore=%d", mID, mTeam, mScore);
         Node newNode = new Node(mTeam, mID);
 
         soldiers[mID] = newNode;
@@ -66,12 +65,10 @@ public class SWEA_PRO_P01_UserSolution implements SWEA_PRO_P01.UserSolution {
         newNode.next = list;
         tail.next = newNode;
         list.prev = newNode;
-//        printSoldier(mTeam);
     }
 
     @Override
     public void fire(int mID) {
-//        log("[▶2] fire: mID=%d", mID);
         Node node = soldiers[mID];
         node.prev.next = node.next;
         node.next.prev = node.prev;
@@ -83,7 +80,6 @@ public class SWEA_PRO_P01_UserSolution implements SWEA_PRO_P01.UserSolution {
 
     @Override
     public void updateSoldier(int mID, int mScore) {
-//        log("[▶3] updateSoldier: mID=%d, mScore=%d", mID, mScore);
         Node node = soldiers[mID];
         node.prev.next = node.next;
         node.next.prev = node.prev;
@@ -99,7 +95,6 @@ public class SWEA_PRO_P01_UserSolution implements SWEA_PRO_P01.UserSolution {
 
     @Override
     public void updateTeam(int mTeam, int mChangeScore) {
-//        log("[▶4] updateTeam: mTeam=%d, mChangeScore=%d", mTeam, mChangeScore);
         if (mChangeScore == 0)
             return;
 
@@ -120,9 +115,6 @@ public class SWEA_PRO_P01_UserSolution implements SWEA_PRO_P01.UserSolution {
 
     @Override
     public int bestSoldier(int mTeam) {
-//        log("[▶5] bestSoldier: mTeam=%d", mTeam);
-//        printSoldier(mTeam);
-
         int maxId = 0;
 
         for (int score = MAX_SCORE; score >= 1; score--) {

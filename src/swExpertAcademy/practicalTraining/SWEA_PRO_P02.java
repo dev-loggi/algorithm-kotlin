@@ -12,13 +12,62 @@ import java.util.StringTokenizer;
  * */
 public class SWEA_PRO_P02 {
 
+    interface UserSolution {
+        /**
+         * 각 테스트 케이스의 처음에 호출된다.<br/>
+         * 테스트 케이스의 시작 시, 모든 세로줄이 그어져 있다.<br/>
+         * 테스트 케이스의 시작 시, 가로줄은 없다.
+         * */
+        void init();
+
+        /**
+         * Y 좌표가 mY인 가로줄이 존재하지 않음이 보장된다.<br/>
+         * (mX, mY)와 (mX+1, mY)를 잇는 가로줄을 추가한다.
+         *
+         * @param mX : X 좌표 (1 ≤ mX ≤ 99)
+         * @param mY : Y 좌표 (1 ≤ mY ≤ 999,999,999)
+         * */
+        void add(int mX, int mY);
+
+        /**
+         * (mX, mY)와 (mX+1, mY)를 잇는 가로줄이 존재함이 보장된다.<br/>
+         * (mX, mY)와 (mX+1, mY)를 잇는 가로줄을 삭제한다.
+         *
+         * @param mX X 좌표 (1 ≤ mX ≤ 99)
+         * @param mY Y 좌표 (1 ≤ mY ≤ 999,999,999)
+         * */
+        void remove(int mX, int mY);
+
+        /**
+         * 현재 맵에서 사다리 게임을 진행했을 때, mID번 참가자가 지나게 되는 가로줄의 개수를 반환한다.<br/>
+         * mID번 참가자는 (mID, 0)에서 출발한다.
+         *
+         * @param mID 참가자의 번호 (1 ≤ mID ≤ 100)
+         *
+         * @return mID번 참가자가 지나게 되는 가로줄의 개수
+         * */
+        int numberOfCross(int mID);
+
+        /**
+         * 현재 맵에서 사다리 게임을 진행했을 때, (mX, mY)를 지나게 되는 참가자의 번호를 반환한다.<br/>
+         * (mX, mY)는 가로줄과 세로줄이 만나는 지점이 아님이 보장된다.<br/>
+         * (mX, mY)를 지나게 되는 참가자는 항상 존재하며, 유일하다.
+         *
+         * @param mX X 좌표 (1 ≤ mX ≤ 100)
+         * @param mY Y 좌표 (1 ≤ mY ≤ 1,000,000,000)
+         *
+         * @return (mX, mY)를 지나게 되는 참가자의 번호
+         * */
+        int participant(int mX, int mY);
+    }
+
     private final static int CMD_INIT				= 1;
     private final static int CMD_ADD				= 2;
     private final static int CMD_REMOVE				= 3;
     private final static int CMD_NUMBER_OF_CROSS	= 4;
     private final static int CMD_PARTICIPANT		= 5;
 
-    private final static SWEA_PRO_P02_UserSolution usersolution = new SWEA_PRO_P02_UserSolution();
+    private final static SWEA_PRO_P02_UserSolution userSolution = new SWEA_PRO_P02_UserSolution();
 
     private static boolean run(BufferedReader br) throws Exception
     {
@@ -44,22 +93,22 @@ public class SWEA_PRO_P02 {
             switch (cmd)
             {
                 case CMD_INIT:
-                    usersolution.init();
+                    userSolution.init();
                     isCorrect = true;
                     break;
                 case CMD_ADD:
                     mX = Integer.parseInt(st.nextToken());
                     mY = Integer.parseInt(st.nextToken());
-                    usersolution.add(mX, mY);
+                    userSolution.add(mX, mY);
                     break;
                 case CMD_REMOVE:
                     mX = Integer.parseInt(st.nextToken());
                     mY = Integer.parseInt(st.nextToken());
-                    usersolution.remove(mX, mY);
+                    userSolution.remove(mX, mY);
                     break;
                 case CMD_NUMBER_OF_CROSS:
                     mID = Integer.parseInt(st.nextToken());
-                    userAns = usersolution.numberOfCross(mID);
+                    userAns = userSolution.numberOfCross(mID);
                     ans = Integer.parseInt(st.nextToken());
                     if (userAns != ans)
                     {
@@ -69,7 +118,7 @@ public class SWEA_PRO_P02 {
                 case CMD_PARTICIPANT:
                     mX = Integer.parseInt(st.nextToken());
                     mY = Integer.parseInt(st.nextToken());
-                    userAns = usersolution.participant(mX, mY);
+                    userAns = userSolution.participant(mX, mY);
                     ans = Integer.parseInt(st.nextToken());
                     if (userAns != ans)
                     {
