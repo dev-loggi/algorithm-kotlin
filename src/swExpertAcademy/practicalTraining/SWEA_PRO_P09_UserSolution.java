@@ -74,7 +74,6 @@ public class SWEA_PRO_P09_UserSolution implements SWEA_PRO_P09.UserSolution {
             firstMap[first[idx]].put(hash, idx);
             usedWordSet.add(hash);
         }
-//        printArrays();
     }
 
     @Override

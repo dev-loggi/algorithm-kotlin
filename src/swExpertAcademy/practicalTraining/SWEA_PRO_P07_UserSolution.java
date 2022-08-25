@@ -63,38 +63,6 @@ public class SWEA_PRO_P07_UserSolution implements SWEA_PRO_P07.UserSolution {
         }
     }
 
-    static class Participant implements Comparable<Participant> {
-        int companyCode, profit;
-
-        public Participant(int companyCode, int profit) {
-            this.companyCode = companyCode;
-            this.profit = profit;
-        }
-
-        @Override
-        public int compareTo(Participant o) {
-            return o.profit - profit;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Participant that = (Participant) o;
-            return companyCode == that.companyCode;
-        }
-
-        @Override
-        public int hashCode() {
-            return companyCode;
-        }
-
-        @Override
-        public String toString() {
-            return "[" + companyCode + ", " + profit + ']';
-        }
-    }
-
     static class Company {
         int code;
         int r1, c1, r2, c2;
@@ -121,7 +89,6 @@ public class SWEA_PRO_P07_UserSolution implements SWEA_PRO_P07.UserSolution {
 
     @Override
     public void init(int N, int K, int M, int[] mResPrice) {
-//        log("♠ init: N=%d, K=%d, M=%d, mResPrice=%s", N, K, M, Arrays.toString(mResPrice));
         this.N = N;
         this.K = K;
         this.M = M;

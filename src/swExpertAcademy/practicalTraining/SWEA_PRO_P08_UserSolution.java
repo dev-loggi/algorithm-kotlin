@@ -87,11 +87,6 @@ public class SWEA_PRO_P08_UserSolution implements SWEA_PRO_P08.UserSolution {
     private int[] historyReference;
     private HashMap<Integer, Integer>[] updateHistoryMap;
 
-    private int testcase;
-    public void initTestCase(int testcase) {
-        this.testcase = testcase;
-    }
-
     @Override
     public void init() {
         trie = new Trie();
@@ -106,7 +101,6 @@ public class SWEA_PRO_P08_UserSolution implements SWEA_PRO_P08.UserSolution {
     @Override
     public void makeList(char[] mName, int mLength, int[] mListValue) {
         int trieCode = trie.insertSpecial(mName);
-//        log("[▶ 1] makeList: %d, len=%d", trieCode, mLength);
 
         immutableList[trieCode] = new int[mLength];
         System.arraycopy(mListValue, 0, immutableList[trieCode], 0, mLength);
@@ -130,13 +124,11 @@ public class SWEA_PRO_P08_UserSolution implements SWEA_PRO_P08.UserSolution {
             }
 
             HashMap<Integer, Integer> history = updateHistoryMap[historyRef];
-//            log("    [▶ 2] copyList: %d → %d (deep) size=%d", srcTrieCode, dstTrieCode, history.size());
 
             updateHistoryMap[dstTrieCode] = new HashMap<>(history);
 
             historyReference[dstTrieCode] = dstTrieCode;
         } else { // 참조
-//            log("    [▶ 2] copyList: %d → %d", srcTrieCode, dstTrieCode);
             historyReference[dstTrieCode] = historyReference[srcTrieCode];
         }
 
@@ -147,8 +139,6 @@ public class SWEA_PRO_P08_UserSolution implements SWEA_PRO_P08.UserSolution {
     public void updateElement(char[] mName, int mIndex, int mValue) {
         int trieCode = trie.getCode(mName);
         int historyRef = historyReference[trieCode];
-
-//        log("        [▶ 3] updateElement: %d, index=%d, value=%d", trieCode, mIndex, mValue);
 
         if (historyRef < MAX_IMMUTABLE_LIST && !isDeepCopyImmutableList[historyRef]) {
             immutableList[historyRef][mIndex] = mValue;
