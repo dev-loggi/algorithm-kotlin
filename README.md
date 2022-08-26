@@ -291,79 +291,86 @@
 
 
 <details>
-<summary>&nbsp;Basic (42)</summary>
+<summary>&nbsp;Basic (50)</summary>
 <div markdown="1">
 <br/>
 
-| 순서  | 제목                                                                                                    | 유형           |
-|:---:|-------------------------------------------------------------------------------------------------------|--------------|
-|  1  | [새로운 불면증 치료법](src/swExpertAcademy/basicLearning/SWEA_P01.java)                                        | 비트 연산        |
-|  2  | [이진수 표현](src/swExpertAcademy/basicLearning/SWEA_P02.java)                                             | 비트 연산        |
-|  3  | [동아리실 관리하기](src/swExpertAcademy/basicLearning/SWEA_P03.java)                                          | 비트 연산        |
-|  4  | [기초 Single Linked List 연습](src/swExpertAcademy/basicLearning/SWEA_P04.java)                           | 연결 리스트       |
-|  5  | [기초 Double Linked List 연습](src/swExpertAcademy/basicLearning/SWEA_P05.java)                           | 연결 리스트       |
-|  6  | [암호문3](src/swExpertAcademy/basicLearning/SWEA_P05.java)                                               | 연결 리스트       |
-|  7  | -                                                                                                     |              |
-|  8  | [수열 편집](src/swExpertAcademy/basicLearning/SWEA_P08.java)                                              | 연결 리스트       |
-|  9  | [중위 순회](src/swExpertAcademy/basicLearning/SWEA_P09.java)                                              | 트리           |
-| 10  | [사칙연산 유효성 검사](src/swExpertAcademy/basicLearning/SWEA_P10.java)                                        | 트리           |
-| 11  | [사칙연산](src/swExpertAcademy/basicLearning/SWEA_P11.java)                                               | 트리           |
-| 12  | [공통조상](src/swExpertAcademy/basicLearning/SWEA_P12.java)                                               | 트리           |
-| 13  | [Directory](src/swExpertAcademy/basicLearning/SWEA_P13.java)                                          | 트리           |
-| 14  | [기초 DFS 연습](src/swExpertAcademy/basicLearning/SWEA_P14.java)                                          | 그래프          |
-| 15  | [기초 BFS 연습](src/swExpertAcademy/basicLearning/SWEA_P15.java)                                          | 그래프          |
-| 16  | [프로세서 연결하기](src/swExpertAcademy/basicLearning/SWEA_P16.java)                                          | 그래프          |
-| 17  | [파핑파핑 지뢰찾기](src/swExpertAcademy/basicLearning/SWEA_P17.java)                                          | 그래프          |
-| 18  | [영준이의 진짜 BFS](src/swExpertAcademy/basicLearning/SWEA_P18.java)                                        | 그래프          |
-| 19  | [최장 공통 부분 수열](src/swExpertAcademy/basicLearning/SWEA_P19.java)                                        | DP           |
-| 20  | [0/1 Knapsack](src/swExpertAcademy/basicLearning/SWEA_P20.java)                                       | DP           |
-| 21  | [스팟마트](src/swExpertAcademy/basicLearning/SWEA_P21.java)                                               | DP           |
-| 22  | [쉬운 거스름돈](src/swExpertAcademy/basicLearning/SWEA_P22.java)                                            | 그리디          |
-| 23  | [자기 방으로 돌아가기](src/swExpertAcademy/basicLearning/SWEA_P23.java)                                        | 그리디          |
-| 24  | [최대 상금](src/swExpertAcademy/basicLearning/SWEA_P24.java)                                              | 그리디          |
-| 25  | [문자열 교집합](src/swExpertAcademy/basicLearning/SWEA_P25.java)                                            | 해시           |
-| 26  | [[Pro] 단어가 등장하는 횟수](src/swExpertAcademy/basicLearning/SWEA_P26.java)                                  | 해시           |
-| 27  | [은기의 아주 큰 그림](src/swExpertAcademy/basicLearning/SWEA_P27.java)                                        | 해시           |
-| 28  | [연락처 Database](src/swExpertAcademy/basicLearning/SWEA_P28.java)                                       | 해시           |
-| 29  | [메일 서버](src/swExpertAcademy/basicLearning/SWEA_P29.java)                                              | 해시           |
-| 30  | [문자열 암호화](src/swExpertAcademy/basicLearning/SWEA_P30.java)                                            | 해시           |
-| 31  | [기초 Partial Sort 연습](src/swExpertAcademy/basicLearning/userSolution/SWEA_P31_UserSolution.java)       | 힙            |
-| 32  | [힙](src/swExpertAcademy/basicLearning/SWEA_P32.java)                                                  | 힙            |
-| 33  | [보급로](src/swExpertAcademy/basicLearning/SWEA_P33.java)                                                | 힙            |
-| 34  | [중간값 구하기](src/swExpertAcademy/basicLearning/userSolution/SWEA_P34_UserSolution.java)                  | 힙            |
-| 35  | [수 만들기](src/swExpertAcademy/basicLearning/userSolution/SWEA_P35_UserSolution.java)                    | 힙            |
-| 36  | [Social Media](src/swExpertAcademy/basicLearning/userSolution/SWEA_P36_UserSolution.java)             | 힙            |
-| 37  | [염라대왕의 이름 정렬](src/swExpertAcademy/basicLearning/userSolution/SWEA_P37_UserSolution.java)              | 분할정복         |
-| 38  | [사탕 분배](src/swExpertAcademy/basicLearning/userSolution/SWEA_P38_UserSolution.java)                    | 분할정복         |
-| 39  | [[Pro] Inversion Counting](src/swExpertAcademy/basicLearning/userSolution/SWEA_P39_UserSolution.java) | 분할정복         |
-| 40  | [영어 공부](src/swExpertAcademy/basicLearning/userSolution/SWEA_P40_UserSolution.java)                    | 이분 탐색        |
-| 41  | [촛불 이벤트](src/swExpertAcademy/basicLearning/userSolution/SWEA_P41_UserSolution.java)                   | 이분 탐색        |
-| 42  | [사탕 가방](src/swExpertAcademy/basicLearning/userSolution/SWEA_P42_UserSolution.java)                    | 이분 탐색        |
-| 43  | [광고 시간 정하기](src/swExpertAcademy/basicLearning/SWEA_P43.java)                                          | 이분 탐색        |
-
+| 순서  | 제목                                                                                            | 유형           |
+|:---:|-----------------------------------------------------------------------------------------------|--------------|
+|  1  | [새로운 불면증 치료법](src/swExpertAcademy/basic/SWEA_P01.java)                                        | 비트 연산        |
+|  2  | [이진수 표현](src/swExpertAcademy/basic/SWEA_P02.java)                                             | 비트 연산        |
+|  3  | [동아리실 관리하기](src/swExpertAcademy/basic/SWEA_P03.java)                                          | 비트 연산        |
+|  4  | [기초 Single Linked List 연습](src/swExpertAcademy/basic/SWEA_P04.java)                           | 연결 리스트       |
+|  5  | [기초 Double Linked List 연습](src/swExpertAcademy/basic/SWEA_P05.java)                           | 연결 리스트       |
+|  6  | [암호문3](src/swExpertAcademy/basic/SWEA_P05.java)                                               | 연결 리스트       |
+|  7  | -                                                                                             |              |
+|  8  | [수열 편집](src/swExpertAcademy/basic/SWEA_P08.java)                                              | 연결 리스트       |
+|  9  | [중위 순회](src/swExpertAcademy/basic/SWEA_P09.java)                                              | 트리           |
+| 10  | [사칙연산 유효성 검사](src/swExpertAcademy/basic/SWEA_P10.java)                                        | 트리           |
+| 11  | [사칙연산](src/swExpertAcademy/basic/SWEA_P11.java)                                               | 트리           |
+| 12  | [공통조상](src/swExpertAcademy/basic/SWEA_P12.java)                                               | 트리           |
+| 13  | [Directory](src/swExpertAcademy/basic/SWEA_P13.java)                                          | 트리           |
+| 14  | [기초 DFS 연습](src/swExpertAcademy/basic/SWEA_P14.java)                                          | 그래프          |
+| 15  | [기초 BFS 연습](src/swExpertAcademy/basic/SWEA_P15.java)                                          | 그래프          |
+| 16  | [프로세서 연결하기](src/swExpertAcademy/basic/SWEA_P16.java)                                          | 그래프          |
+| 17  | [파핑파핑 지뢰찾기](src/swExpertAcademy/basic/SWEA_P17.java)                                          | 그래프          |
+| 18  | [영준이의 진짜 BFS](src/swExpertAcademy/basic/SWEA_P18.java)                                        | 그래프          |
+| 19  | [최장 공통 부분 수열](src/swExpertAcademy/basic/SWEA_P19.java)                                        | DP           |
+| 20  | [0/1 Knapsack](src/swExpertAcademy/basic/SWEA_P20.java)                                       | DP           |
+| 21  | [스팟마트](src/swExpertAcademy/basic/SWEA_P21.java)                                               | DP           |
+| 22  | [쉬운 거스름돈](src/swExpertAcademy/basic/SWEA_P22.java)                                            | 그리디          |
+| 23  | [자기 방으로 돌아가기](src/swExpertAcademy/basic/SWEA_P23.java)                                        | 그리디          |
+| 24  | [최대 상금](src/swExpertAcademy/basic/SWEA_P24.java)                                              | 그리디          |
+| 25  | [문자열 교집합](src/swExpertAcademy/basic/SWEA_P25.java)                                            | 해시           |
+| 26  | [[Pro] 단어가 등장하는 횟수](src/swExpertAcademy/basic/SWEA_P26.java)                                  | 해시           |
+| 27  | [은기의 아주 큰 그림](src/swExpertAcademy/basic/SWEA_P27.java)                                        | 해시           |
+| 28  | [연락처 Database](src/swExpertAcademy/basic/SWEA_P28.java)                                       | 해시           |
+| 29  | [메일 서버](src/swExpertAcademy/basic/SWEA_P29.java)                                              | 해시           |
+| 30  | [문자열 암호화](src/swExpertAcademy/basic/SWEA_P30.java)                                            | 해시           |
+| 31  | [기초 Partial Sort 연습](src/swExpertAcademy/basic/userSolution/SWEA_P31_UserSolution.java)       | 힙            |
+| 32  | [힙](src/swExpertAcademy/basic/SWEA_P32.java)                                                  | 힙            |
+| 33  | [보급로](src/swExpertAcademy/basic/SWEA_P33.java)                                                | 힙            |
+| 34  | [중간값 구하기](src/swExpertAcademy/basic/userSolution/SWEA_P34_UserSolution.java)                  | 힙            |
+| 35  | [수 만들기](src/swExpertAcademy/basic/userSolution/SWEA_P35_UserSolution.java)                    | 힙            |
+| 36  | [Social Media](src/swExpertAcademy/basic/userSolution/SWEA_P36_UserSolution.java)             | 힙            |
+| 37  | [염라대왕의 이름 정렬](src/swExpertAcademy/basic/userSolution/SWEA_P37_UserSolution.java)              | 분할정복         |
+| 38  | [사탕 분배](src/swExpertAcademy/basic/userSolution/SWEA_P38_UserSolution.java)                    | 분할정복         |
+| 39  | [[Pro] Inversion Counting](src/swExpertAcademy/basic/userSolution/SWEA_P39_UserSolution.java) | 분할정복         |
+| 40  | [영어 공부](src/swExpertAcademy/basic/userSolution/SWEA_P40_UserSolution.java)                    | 이분 탐색        |
+| 41  | [촛불 이벤트](src/swExpertAcademy/basic/userSolution/SWEA_P41_UserSolution.java)                   | 이분 탐색        |
+| 42  | [사탕 가방](src/swExpertAcademy/basic/userSolution/SWEA_P42_UserSolution.java)                    | 이분 탐색        |
+| 43  | [광고 시간 정하기](src/swExpertAcademy/basic/userSolution/SWEA_P43_UserSolution.java)                | 이분 탐색        |
+| 44  | [3차원 농부](src/swExpertAcademy/basic/SWEA_P44.java)                                             | 이분 탐색        |
+| 45  | [[Pro] 그래도 수명이 절반이 되어서는...](src/swExpertAcademy/basic/SWEA_P45.java)                          | 이분 탐색        |
+| 46  | [K번째 접미어](src/swExpertAcademy/basic/SWEA_P46.java)                                            | 트라이          |
+| 47  | [K번째 문자열](src/swExpertAcademy/basic/SWEA_P47.java)                                            | 트라이          |
+| 48  | [단어 검색](src/swExpertAcademy/basic/userSolution/SWEA_P48_UserSolution.java)                    | 트라이          |
+| 49  | [Segment Tree 연습 - 1](src/swExpertAcademy/basic/SWEA_P49.java)                                | Segment Tree |
+| 50  | [Segment Tree 연습 - 2](src/swExpertAcademy/basic/SWEA_P50.java)                                | Segment Tree |
 
 </div>
 </details>
 
 
 <details>
-<summary>&nbsp;Professional (11)</summary>
+<summary>&nbsp;Professional (12)</summary>
 <div markdown="1">
 <br/>
 
-| 순서  | 제목                                                                                     | 키워드                                      |
-|:---:|----------------------------------------------------------------------------------------|------------------------------------------|
-|  1  | [[Pro] 병사 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P01_UserSolution.java)    | 원형 더블 연결 리스트                             |
-|  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P02_UserSolution.java) | 트리                                       |
-|  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/practicalTraining/SWEA_PRO_P03_UserSolution.java)  | 트리                                       |
-|  4  | [[Pro] 계산 게임](src/swExpertAcademy/practicalTraining/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window                     |
-|  5  | [[Pro] 섬 지키기](src/swExpertAcademy/practicalTraining/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP                        |
-|  6  | [[Pro] 가게 관리](src/swExpertAcademy/practicalTraining/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree                        |
-|  7  | [[Pro] 우주자원개발](src/swExpertAcademy/practicalTraining/SWEA_PRO_P07_UserSolution.java)   | 트라이, 정렬                                  |
-|  8  | [[Pro] 리스트 복사](src/swExpertAcademy/practicalTraining/SWEA_PRO_P08_UserSolution.java)   | Trie, HashMap, List, Reference, DeepCopy |
-|  9  | [[Pro] 끝말잇기2](src/swExpertAcademy/practicalTraining/SWEA_PRO_P09_UserSolution.java)    | 해시 함수, AVL Tree, HashSet                 |
-| 10  | [[Pro] AI 로봇](src/swExpertAcademy/practicalTraining/SWEA_PRO_P10_UserSolution.java)    | AVL Tree, 우선순위 큐                         |
-| 11  | [[Pro] P2P 네트워크](src/swExpertAcademy/practicalTraining/SWEA_PRO_P11_UserSolution.java) | Trie, BFS, Graph                         |
+| 순서  | 제목                                                                                | 키워드                                      |
+|:---:|-----------------------------------------------------------------------------------|------------------------------------------|
+|  1  | [[Pro] 병사 관리](src/swExpertAcademy/professional/SWEA_PRO_P01_UserSolution.java)    | 원형 더블 연결 리스트                             |
+|  2  | [[Pro] 긴 사다리 게임](src/swExpertAcademy/professional/SWEA_PRO_P02_UserSolution.java) | 트리                                       |
+|  3  | [[Pro] 메모리 시스템](src/swExpertAcademy/professional/SWEA_PRO_P03_UserSolution.java)  | 트리                                       |
+|  4  | [[Pro] 계산 게임](src/swExpertAcademy/professional/SWEA_PRO_P04_UserSolution.java)    | Hash, Sliding Window                     |
+|  5  | [[Pro] 섬 지키기](src/swExpertAcademy/professional/SWEA_PRO_P05_UserSolution.java)    | 배열, Hash, BFS, DP                        |
+|  6  | [[Pro] 가게 관리](src/swExpertAcademy/professional/SWEA_PRO_P06_UserSolution.java)    | HashMap, AVL Tree                        |
+|  7  | [[Pro] 우주자원개발](src/swExpertAcademy/professional/SWEA_PRO_P07_UserSolution.java)   | 트라이, 정렬                                  |
+|  8  | [[Pro] 리스트 복사](src/swExpertAcademy/professional/SWEA_PRO_P08_UserSolution.java)   | Trie, HashMap, List, Reference, DeepCopy |
+|  9  | [[Pro] 끝말잇기2](src/swExpertAcademy/professional/SWEA_PRO_P09_UserSolution.java)    | 해시 함수, AVL Tree, HashSet                 |
+| 10  | [[Pro] AI 로봇](src/swExpertAcademy/professional/SWEA_PRO_P10_UserSolution.java)    | AVL Tree, 우선순위 큐                         |
+| 11  | [[Pro] P2P 네트워크](src/swExpertAcademy/professional/SWEA_PRO_P11_UserSolution.java) | Trie, BFS, Graph                         |
+| 12  | [[Pro] 순위표](src/swExpertAcademy/professional/SWEA_PRO_P12_UserSolution.java)      | 세그먼트 트리, 이분 탐색, AVL Tree                 |
 
 </div>
 </details>
