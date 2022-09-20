@@ -285,6 +285,25 @@
 </details>
 
 
+<details>
+<summary>&nbsp;2019 KAKAO BLIND RECRUITMENT (7)</summary>
+<div markdown="1">
+<br/>
+
+| 번호  | 제목 |
+|:---:|----|
+|  1  |[실패율](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P1.kt)|
+|  2  |[오픈채팅방](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P2.kt)|
+|  3  |[후보키](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P3.kt)|
+|  4  |[길 찾기 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P4.kt)|
+|  5  |[무지의 먹방 라이브](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P5.kt)|
+|  6  |[매칭 점수](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P6.kt)|
+|  7  |[블록 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P7.kt)|
+
+</div>
+</details>
+
+
 <br/>
 
 ## 3. SW Expert Academy
