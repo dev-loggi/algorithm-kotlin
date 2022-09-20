@@ -1,6 +1,14 @@
-package programmers.skillCheck.level2
+package programmers.kakao.y2019
 
-class CandidateKey {
+import programmers.Programmers
+
+/**
+ * 2019 KAKAO BLIND RECRUITMENT
+ * [No. 3] 후보키
+ *
+ * https://school.programmers.co.kr/learn/courses/30/lessons/42890
+ * */
+class KAKAO_BLIND_2019_P3 : Programmers.Solution {
 
     // [["100","ryan","music","2"],["200","apeach","math","2"],["300","tube","computer","3"],
     // ["400","con","computer","4"],["500","muzi","music","3"],["600","apeach","music","2"]]
@@ -17,7 +25,7 @@ class CandidateKey {
     // ["c","1","aaa","d","ng"],
     // ["d","2","bbb","d","ng"]
     // answer=5, [02, 03, 04, 13, 23]
-    fun execute() {
+    override fun execute() {
         var answer = solution(
             arrayOf(
                 arrayOf("100","ryan","music","2"),

@@ -1,12 +1,14 @@
-package programmers.practice.level1
+package programmers.kakao.y2019
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
- * 실패율
+ * 2019 KAKAO BLIND RECRUITMENT
+ * [No. 1] 실패율
+ *
  * https://programmers.co.kr/learn/courses/30/lessons/42889?language=kotlin
  * */
-class FailureRate : Solution {
+class KAKAO_BLIND_2019_P1 : Solution {
 
     override fun execute() {
         bestSolution(5, intArrayOf(2, 1, 2, 6, 2, 4, 3, 3))
