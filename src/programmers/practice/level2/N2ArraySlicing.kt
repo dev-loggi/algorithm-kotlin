@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * n^2 배열 자르기

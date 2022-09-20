@@ -1,6 +1,6 @@
 package programmers.practice.level4
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 미로 탈출

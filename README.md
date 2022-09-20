@@ -209,7 +209,7 @@
 |  1   |[부족한 금액 계산하기](src/programmers/practice/level1/CalculateShortfall.kt)|
 |  1   |[크레인 인형뽑기 게임](src/programmers/practice/level1/CranePuppetGame.kt)|
 |  1   |[내적(Dot product)](src/programmers/practice/level1/DotProduct.kt)|
-|  1   |[실패율](src/programmers/practice/level1/FailureRate.kt)|
+|  1   |[실패율](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P1.kt)|
 |  1   |[나머지가 1이 되는 수 찾기](src/programmers/practice/level1/FindRemainderOne.kt)|
 |  1   |[신고 결과 받기](src/programmers/practice/level1/GetReportResults.kt)|
 |  1   |[체육복](src/programmers/practice/level1/GymSuit.kt)|

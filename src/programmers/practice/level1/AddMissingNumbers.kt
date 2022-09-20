@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import Solution
+import programmers.Programmers.Solution
 
 /*
  * 없는 숫자 더하기

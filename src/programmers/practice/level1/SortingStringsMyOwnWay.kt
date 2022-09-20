@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 문자열 내 마음대로 정렬하기

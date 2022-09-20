@@ -1,6 +1,6 @@
 package programmers.practice.level3
 
-import Solution
+import programmers.Programmers.Solution
 import java.util.Queue
 import java.util.LinkedList
 import kotlin.collections.HashMap

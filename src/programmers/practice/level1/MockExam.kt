@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 모의고사

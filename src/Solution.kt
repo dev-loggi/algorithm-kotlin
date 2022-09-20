@@ -1,3 +1,0 @@
-interface Solution {
-    fun execute()
-}

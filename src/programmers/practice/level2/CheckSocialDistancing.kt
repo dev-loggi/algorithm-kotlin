@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 거리두기 확인하기

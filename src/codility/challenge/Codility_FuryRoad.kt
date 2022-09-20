@@ -1,13 +1,11 @@
 package codility.challenge
 
-import Solution
-
 /**
  * https://app.codility.com/c/run/cert7UQYXD-VQVVY6DAEM8RZW78/
  * */
-class Codility_FuryRoad : Solution {
+class Codility_FuryRoad {
 
-    override fun execute() {
+    fun execute() {
         // 스쿠터
         // A: 5, S: 40
         // 도보

@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 2022 KAKAO BLIND RECRUITMENT

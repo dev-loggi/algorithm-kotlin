@@ -1,6 +1,6 @@
 package programmers.practice.level2
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 빛의 경로 싸이클

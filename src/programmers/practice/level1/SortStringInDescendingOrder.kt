@@ -1,6 +1,6 @@
 package programmers.practice.level1
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 문자열 내림차순으로 배치하기

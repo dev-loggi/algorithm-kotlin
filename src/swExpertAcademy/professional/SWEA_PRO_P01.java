@@ -93,6 +93,7 @@ public class SWEA_PRO_P01 {
     private final static int CMD_BEST_SOLDIER		= 6;
 
     private final static SWEA_PRO_P01_UserSolution usersolution = new SWEA_PRO_P01_UserSolution();
+//    private final static SWEA_PRO_P01_UserSolution2 usersolution = new SWEA_PRO_P01_UserSolution2();
 
     private static boolean run(BufferedReader br) throws Exception {
         StringTokenizer st;

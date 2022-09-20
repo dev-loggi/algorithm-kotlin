@@ -1,13 +1,11 @@
 package codility.exercise
 
-import Solution
-
 /**
  * https://app.codility.com/c/run/training369CDM-AJV/
  * */
-class Codility_Ex9_BinaryGap : Solution {
+class Codility_Ex9_BinaryGap {
 
-    override fun execute() {
+    fun execute() {
         solution(1041).let { println("answer=$it") } // 5
         solution(10).let { println("answer=$it") } // 0
         solution(31).let { println("answer=$it") } // 0

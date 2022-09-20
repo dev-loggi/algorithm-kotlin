@@ -1,6 +1,6 @@
 package programmers.skillCheck.level2
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 삼각형, 반시계 방향 달팽이

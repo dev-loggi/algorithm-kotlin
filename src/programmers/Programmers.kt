@@ -1,6 +1,6 @@
 package programmers
 
-import Solution
+import programmers.kakao.y2019.*
 import programmers.mockExam.*
 import programmers.practice.level1.*
 import programmers.practice.level2.*
@@ -8,6 +8,11 @@ import programmers.practice.level3.*
 import programmers.practice.level4.MazeEscape
 
 object Programmers {
+
+    interface Solution {
+        fun execute()
+    }
+
     val practice = Practice
     val skillCheck = SkillCheck
     val mockExam = MockExam
@@ -25,7 +30,6 @@ object Programmers {
             val cranePuppetGame: Solution get() = CranePuppetGame()
             val divisibleIntArray: Solution get() = DivisibleIntArray()
             val dotProduct: Solution get() = DotProduct()
-            val failureRate: Solution get() = FailureRate()
             val findRemainderOne: Solution get() = FindRemainderOne()
             val getMutableList: Solution get() = GetMiddleLetter()
             val getReportResults: Solution get() = GetReportResults()
@@ -107,5 +111,15 @@ object Programmers {
         val p2_1: Pro_MockExam2_1 get() = Pro_MockExam2_1()
         val p2_2: Pro_MockExam2_2 get() = Pro_MockExam2_2()
         val p2_3: Pro_MockExam2_3 get() = Pro_MockExam2_3()
+    }
+
+    object KAKAO {
+        val blind2019_P1: Solution get() = KAKAO_BLIND_2019_P1()
+        val blind2019_P2: Solution get() = KAKAO_BLIND_2019_P2()
+        val blind2019_P3: Solution get() = KAKAO_BLIND_2019_P3()
+        val blind2019_P4: Solution get() = KAKAO_BLIND_2019_P4()
+        val blind2019_P5: Solution get() = KAKAO_BLIND_2019_P5()
+        val blind2019_P6: Solution get() = KAKAO_BLIND_2019_P6()
+        val blind2019_P7: Solution get() = KAKAO_BLIND_2019_P7()
     }
 }

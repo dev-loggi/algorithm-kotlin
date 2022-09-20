@@ -1,6 +1,6 @@
 package programmers.practice.level3
 
-import Solution
+import programmers.Programmers.Solution
 
 /**
  * 베스트 앨범
