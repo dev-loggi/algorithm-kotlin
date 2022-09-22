@@ -1,6 +1,8 @@
 package programmers
 
 import programmers.kakao.y2019.*
+import programmers.kakao.y2020.*
+import programmers.kakao.y2021.KAKAO_BLIND_2021_P1
 import programmers.mockExam.*
 import programmers.practice.level1.*
 import programmers.practice.level2.*
@@ -113,13 +115,24 @@ object Programmers {
         val p2_3: Pro_MockExam2_3 get() = Pro_MockExam2_3()
     }
 
-    object KAKAO {
-        val blind2019_P1: Solution get() = KAKAO_BLIND_2019_P1()
-        val blind2019_P2: Solution get() = KAKAO_BLIND_2019_P2()
-        val blind2019_P3: Solution get() = KAKAO_BLIND_2019_P3()
-        val blind2019_P4: Solution get() = KAKAO_BLIND_2019_P4()
-        val blind2019_P5: Solution get() = KAKAO_BLIND_2019_P5()
-        val blind2019_P6: Solution get() = KAKAO_BLIND_2019_P6()
-        val blind2019_P7: Solution get() = KAKAO_BLIND_2019_P7()
+    object KAKAO_BLIND {
+        object Y2019 {
+            val p1: Solution get() = KAKAO_BLIND_2019_P1()
+            val p2: Solution get() = KAKAO_BLIND_2019_P2()
+            val p3: Solution get() = KAKAO_BLIND_2019_P3()
+            val p4: Solution get() = KAKAO_BLIND_2019_P4()
+            val p5: Solution get() = KAKAO_BLIND_2019_P5()
+            val p6: Solution get() = KAKAO_BLIND_2019_P6()
+            val p7: Solution get() = KAKAO_BLIND_2019_P7()
+        }
+        object Y2020 {
+            val p1: Solution get() = KAKAO_BLIND_2020_P1()
+            val p2: Solution get() = KAKAO_BLIND_2020_P2()
+            val p3: Solution get() = KAKAO_BLIND_2020_P3()
+            val p4: Solution get() = KAKAO_BLIND_2020_P4()
+            val p5: Solution get() = KAKAO_BLIND_2020_P5()
+            val p6: Solution get() = KAKAO_BLIND_2020_P6()
+            val p7: Solution get() = KAKAO_BLIND_2020_P7()
+        }
     }
 }

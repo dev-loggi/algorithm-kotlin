@@ -23,7 +23,7 @@
 | [1012](https://www.acmicpc.net/problem/1012) |[유기농 배추](src/boj/dfsBfs/BOJ_1012_OrganicCabbage.kt)| BFS      |
 | [1175](https://www.acmicpc.net/problem/1175) |[배달](src/boj/dfsBfs/BOJ_1175_Delivery.kt)| BFS      | [blog](https://jsl663.tistory.com/33) |
 | [1260](https://www.acmicpc.net/problem/1260) |[DFS 와 BFS](src/boj/dfsBfs/BOJ_1260_DFSandBFS.kt)| DFS, BFS |
-| [1385](https://www.acmicpc.net/problem/1385) |[벌집](src/boj/dfsBfs/BOJ_1385_HoneyComb.kt) | BFS | [blog](https://jsl663.tistory.com/38) |
+| [1385](https://www.acmicpc.net/problem/1385) |[벌집](src/boj/dfsBfs/BOJ_1385_HoneyComb.kt) | BFS      | [blog](https://jsl663.tistory.com/38) |
 | [1525](https://www.acmicpc.net/problem/1525) |[퍼즐](src/boj/dfsBfs/BOJ_1525_Puzzle.kt) | BFS      | [blog](https://jsl663.tistory.com/31) |
 | [1913](https://www.acmicpc.net/problem/1913) |[달팽이1](src/boj/unsolved/BOJ_1913_Snail.kt)| 구현       |
 
@@ -290,15 +290,33 @@
 <div markdown="1">
 <br/>
 
-| 번호  | 제목 |
-|:---:|----|
-|  1  |[실패율](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P1.kt)|
-|  2  |[오픈채팅방](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P2.kt)|
-|  3  |[후보키](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P3.kt)|
-|  4  |[길 찾기 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P4.kt)|
-|  5  |[무지의 먹방 라이브](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P5.kt)|
-|  6  |[매칭 점수](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P6.kt)|
-|  7  |[블록 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P7.kt)|
+| 번호  | 제목                                                               |
+|:---:|------------------------------------------------------------------|
+|  1  | [실패율](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P1.kt)        |
+|  2  | [오픈채팅방](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P2.kt)      |
+|  3  | [후보키](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P3.kt)        |
+|  4  | [길 찾기 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P4.kt)    |
+|  5  | [무지의 먹방 라이브](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P5.kt) |
+|  6  | [블록 게임](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P6.kt)      |
+|  7  | [매칭 점수](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P7.kt)      |
+
+</div>
+</details>
+
+<details>
+<summary>&nbsp;2020 KAKAO BLIND RECRUITMENT (7)</summary>
+<div markdown="1">
+<br/>
+
+| 번호  | 제목                                                             |
+|:---:|----------------------------------------------------------------|
+|  1  | [괄호 변환](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P1.kt)    |
+|  2  | [문자열 압축](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P2.kt)   |
+|  3  | [자물쇠와 열쇠](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P3.kt)  |
+|  4  | [기둥과 보 설치](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P4.kt) |
+|  5  | [외벽 점검](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P5.kt)    |
+|  6  | [가사 검색](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P6.kt)    |
+|  7  | [블록 이동하기](src/programmers/kakao/y2020/KAKAO_BLIND_2020_P7.kt)  |
 
 </div>
 </details>
