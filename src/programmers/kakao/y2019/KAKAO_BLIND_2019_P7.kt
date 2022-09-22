@@ -5,194 +5,136 @@ import java.util.*
 
 /**
  * 2019 KAKAO BLIND RECRUITMENT
- * [No. 7] 블록 게임
+ * [No. 7] 매칭 점수
  *
- * https://school.programmers.co.kr/learn/courses/30/lessons/42894
+ * https://school.programmers.co.kr/learn/courses/30/lessons/42893
  * */
 class KAKAO_BLIND_2019_P7 : Programmers.Solution {
 
     override fun execute() {
-        testCases().forEach { testCase ->
-            solution(testCase).let { println("answer=$it\n") }
+        solution(
+            "blind",
+            arrayOf(
+                "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>",
+                "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://b.com\"/>\n</head>  \n<body>\nSuspendisse potenti. Vivamus venenatis tellus non turpis bibendum, \n<a href=\"https://a.com\"> Link to a </a>\nblind sed congue urna varius. Suspendisse feugiat nisl ligula, quis malesuada felis hendrerit ut.\n<a href=\"https://c.com\"> Link to c </a>\n</body>\n</html>",
+                "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://c.com\"/>\n</head>  \n<body>\nUt condimentum urna at felis sodales rutrum. Sed dapibus cursus diam, non interdum nulla tempor nec. Phasellus rutrum enim at orci consectetu blind\n<a href=\"https://a.com\"> Link to a </a>\n</body>\n</html>"
+            )
+        ).let { println("answer=$it") }
+        solution(
+            "Muzi",
+            arrayOf(
+                "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://careers.kakao.com/interview/list\"/>\n</head>  \n<body>\n<a href=\"https://programmers.co.kr/learn/courses/4673\"></a>#!MuziMuzi!)jayg07con&&\n\n</body>\n</html>",
+                "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://www.kakaocorp.com\"/>\n</head>  \n<body>\ncon%\tmuzI92apeach&2<a href=\"https://hashcode.co.kr/tos\"></a>\n\n\t^\n</body>\n</html>"
+            )
+        ).let { println("answer=$it") }
+    }
+
+    data class WebPage(
+        val index: Int,
+        val url: String,
+        val outLinks: List<String>,
+        val baseScore: Int
+    ) : Comparable<WebPage> {
+
+        var matchingScore = 0.0
+
+        override fun compareTo(other: WebPage): Int {
+            return if (matchingScore > other.matchingScore) -1
+            else if (matchingScore < other.matchingScore) 1
+            else index - other.index
         }
     }
 
-    class Block(val type: Int, val r: Int, val c: Int) {
-        override fun toString(): String {
-            return "Block(type=$type, r=$r, c=$c)"
-        }
-    }
+    fun solution(word: String, pages: Array<String>): Int {
+        val linkMap = hashMapOf<String, LinkedList<WebPage>>()
 
-    private val blockInfos = arrayOf(
-        arrayOf(intArrayOf(1, 0), intArrayOf(1, 1), intArrayOf(1, 2)),
-        arrayOf(intArrayOf(1, 0), intArrayOf(2, 0), intArrayOf(2, -1)),
-        arrayOf(intArrayOf(1, 0), intArrayOf(2, 0), intArrayOf(2, 1)),
-        arrayOf(intArrayOf(1, 0), intArrayOf(1, -1), intArrayOf(1, -2)),
-        arrayOf(intArrayOf(1, -1), intArrayOf(1, 0), intArrayOf(1, 1)),
-    )
-
-    private var N = -1
-    private lateinit var board: Array<IntArray>
-    private lateinit var visited: Array<BooleanArray>
-
-    fun solution(board: Array<IntArray>): Int {
-        this.N = board.size
-        this.board = board
-        this.visited = Array(N) { BooleanArray(N) }
-
-        // 없앨 수 있는 블록 리스트
-        val blockList = LinkedList<Block>()
-
-        for (r in board.indices) for (c in board[r].indices) {
-            if (board[r][c] == 0 || visited[r][c])
-                continue
-
-            getBlock(r, c)?.let {
-                blockList.add(it)
-            }
-        }
-
-        blockList.forEach { println("    $it") }
-
-        val listInitSize = blockList.size
-
-        while (blockList.isNotEmpty()) {
-            var removeCount = 0
-            val it = blockList.listIterator()
-
-            while (it.hasNext()) {
-                val block = it.next()
-
-                if (isPossibleRemoveBlock(block)) {
-                    removeCount += 1
-                    removeBlock(block)
-                    it.remove()
+        return pages.mapIndexed { index, page -> parse(index, page, word) }
+            .onEach { linkMap[it.url] = LinkedList() }
+            .onEach { page ->
+                page.outLinks.forEach { outLink ->
+                    linkMap[outLink]?.add(page)
                 }
             }
+            .onEach {
+                val linkScore = linkMap[it.url]!!.fold(0.0) { sum, page ->
+                    sum + page.baseScore / page.outLinks.size.toFloat()
+                }
 
-            if (removeCount == 0)
+                it.matchingScore = it.baseScore + linkScore
+            }
+            .sorted()[0].index
+    }
+
+    private fun parse(index: Int, page: String, word: String): WebPage {
+        val metaIndexStart = page.indexOf("<meta property")
+
+        val urlIndexStart = page.indexOf("content=", metaIndexStart) + 9
+        val urlIndexEnd = page.indexOf('"', urlIndexStart)
+
+        val url = page.substring(urlIndexStart, urlIndexEnd).lowercase()
+
+        val bodyIndexStart = page.indexOf("<body>", urlIndexEnd) + 6
+        val bodyIndexEnd = page.indexOf("</body>", bodyIndexStart)
+
+        var bodyContent = page.substring(bodyIndexStart, bodyIndexEnd)
+
+        val outLinks = mutableListOf<String>()
+        val outLinkIndexStack = ArrayDeque<IntRange>()
+
+        var aIndexStart = bodyIndexStart
+        var aIndexEnd = bodyIndexStart
+
+        while (true) {
+            aIndexStart = page.indexOf("<a", aIndexEnd)
+
+            if (aIndexStart == -1)
                 break
+
+            aIndexEnd = page.indexOf("</a>", aIndexStart) + 4
+
+            val hrefIndexStart = page.indexOf("href=", aIndexStart)
+            val hrefIndexEnd = page.indexOf('"', hrefIndexStart + 6)
+
+            val outLink = page.substring(hrefIndexStart + 6, hrefIndexEnd).lowercase()
+
+            outLinks.add(outLink)
+            outLinkIndexStack.push(aIndexStart - bodyIndexStart until aIndexEnd - bodyIndexStart)
         }
 
-        printBoard()
-        return listInitSize - blockList.size
+        while (outLinkIndexStack.isNotEmpty()) {
+            val range = outLinkIndexStack.pop()
+
+            bodyContent = bodyContent.removeRange(range)
+        }
+
+        return WebPage(index, url, outLinks, getBaseScore(bodyContent, word))
     }
-    
-    private fun getBlock(r: Int, c: Int): Block? {
-        var block: Block? = null
-        val blockNumber = board[r][c]
 
-        for (type in blockInfos.indices) {
-            val blockInfo = blockInfos[type]
-            var matchCount = 0
+    private fun getBaseScore(body: String, word: String): Int {
+        var (score, index) = 0 to 0
 
-            for (info in blockInfo) {
-                val nr = r + info[0]
-                val nc = c + info[1]
+        while (true) {
+            index = body.indexOf(word, index, true)
 
-                if (nr !in 0 until N || nc !in 0 until N || board[nr][nc] != blockNumber)
-                    break
-
-                visited[nr][nc] = true
-                matchCount += 1
-            }
-
-            if (matchCount == 3) {
-                block = Block(type, r, c)
-                visited[r][c] = true
+            if (index == -1)
                 break
-            }
+
+            val prev = body.getOrNull(index - 1) ?: ' '
+            val next = body.getOrNull(index + word.length) ?: ' '
+
+            if (prev.isNotLetter() && next.isNotLetter())
+                score += 1
+
+            index += word.length
         }
-
-        return block
-    }
-    
-    private fun isPossibleRemoveBlock(block: Block): Boolean {
-        var r: Int
-        var c: Int
-
-        when (block.type) {
-            0 -> {
-                r = block.r
-                c = block.c + 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-                r = block.r
-                c = block.c + 2
-                while (r >= 0) if (board[r--][c] != 0) return false
-            }
-            1 -> {
-                r = block.r + 1
-                c = block.c - 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-            }
-            2 -> {
-                r = block.r + 1
-                c = block.c + 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-            }
-            3 -> {
-                r = block.r
-                c = block.c - 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-                r = block.r
-                c = block.c - 2
-                while (r >= 0) if (board[r--][c] != 0) return false
-            }
-            4 -> {
-                r = block.r
-                c = block.c - 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-                r = block.r
-                c = block.c + 1
-                while (r >= 0) if (board[r--][c] != 0) return false
-            }
-        }
-
-        return true
+        println("getBaseScore()")
+        println("    body=$body")
+        println("    word=$word")
+        println("    baseScore=$score")
+        return score
     }
 
-    private fun removeBlock(block: Block) {
-        board[block.r][block.c] = 0
-
-        for (info in blockInfos[block.type]) {
-            board[block.r + info[0]][block.c + info[1]] = 0
-        }
+    private fun Char.isNotLetter(): Boolean {
+        return code !in 65..90 && code !in 97..122
     }
-
-    private fun printBoard() {
-        println("printBoard")
-        board.forEach { println("    ${it.joinToString("")}") }
-    }
-}
-
-private fun testCases(): Array<Array<IntArray>> {
-    return arrayOf(
-        // test case 1
-        arrayOf(
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,4,0,0,0),
-            intArrayOf(0,0,0,0,0,4,4,0,0,0),
-            intArrayOf(0,0,0,0,3,0,4,0,0,0),
-            intArrayOf(0,0,0,2,3,0,0,0,5,5),
-            intArrayOf(1,2,2,2,3,3,0,0,0,5),
-            intArrayOf(1,1,1,0,0,0,0,0,0,5),
-        ), // answer = 2
-
-        // test case 2
-        arrayOf(
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,0,0),
-            intArrayOf(0,0,0,0,0,0,0,0,9,9),
-            intArrayOf(0,0,0,0,0,0,4,0,9,6),
-            intArrayOf(0,0,0,0,0,4,4,0,9,6),
-            intArrayOf(0,7,0,0,3,0,4,0,6,6),
-            intArrayOf(7,7,7,2,3,0,0,0,5,5),
-            intArrayOf(1,2,2,2,3,3,0,8,0,5),
-            intArrayOf(1,1,1,0,0,0,8,8,8,5),
-        ), // answer = 3
-    )
 }
