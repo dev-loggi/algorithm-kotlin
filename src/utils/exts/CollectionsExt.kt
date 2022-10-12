@@ -47,7 +47,8 @@ fun <T> List<T>.homoPermutation(r: Int): List<List<T>> {
             result.add(list)
             return
         }
-        for (e in this) recursive(depth + 1, list.toMutableList().also { it.add(e) })
+        for (e in this)
+            recursive(depth + 1, list.toMutableList().also { it.add(e) })
     }
     recursive(0, emptyList())
     return result

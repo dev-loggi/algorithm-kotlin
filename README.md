@@ -321,6 +321,24 @@
 </div>
 </details>
 
+<details>
+<summary>&nbsp;2021 KAKAO BLIND RECRUITMENT (7)</summary>
+<div markdown="1">
+<br/>
+
+| 번호  | 제목                                                              |
+|:---:|-----------------------------------------------------------------|
+|  1  | [신규 아이디 추천](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P1.kt) |
+|  2  | [메뉴 리뉴얼](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P2.kt)    |
+|  3  | [합승 택시 요금](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P3.kt)  |
+|  4  | [순위 검색](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P4.kt)     |
+|  5  | [광고 삽입](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P5.kt)     |
+|  6  | [카드 짝 맞추기](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P6.kt)  |
+|  7  | [매출 하락 최소화](src/programmers/kakao/y2021/KAKAO_BLIND_2021_P7.kt) |
+
+</div>
+</details>
+
 
 <br/>
 

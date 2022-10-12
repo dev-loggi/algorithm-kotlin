@@ -1,8 +1,8 @@
 package programmers.kakao.test
 
-import test.Solution
+import programmers.Programmers
 
-class KakaoInternship2022ex1 : Solution {
+class KakaoInternship2022ex1 : Programmers.Solution {
 
     override fun execute() {
         var answer: IntArray

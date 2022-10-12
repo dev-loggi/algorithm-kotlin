@@ -2,7 +2,7 @@ package programmers
 
 import programmers.kakao.y2019.*
 import programmers.kakao.y2020.*
-import programmers.kakao.y2021.KAKAO_BLIND_2021_P1
+import programmers.kakao.y2021.*
 import programmers.mockExam.*
 import programmers.practice.level1.*
 import programmers.practice.level2.*
@@ -133,6 +133,15 @@ object Programmers {
             val p5: Solution get() = KAKAO_BLIND_2020_P5()
             val p6: Solution get() = KAKAO_BLIND_2020_P6()
             val p7: Solution get() = KAKAO_BLIND_2020_P7()
+        }
+        object Y2021 {
+            val p1: Solution get() = KAKAO_BLIND_2021_P1()
+            val p2: Solution get() = KAKAO_BLIND_2021_P2()
+            val p3: Solution get() = KAKAO_BLIND_2021_P3()
+            val p4: Solution get() = KAKAO_BLIND_2021_P4()
+            val p5: Solution get() = KAKAO_BLIND_2021_P5()
+            val p6: Solution get() = KAKAO_BLIND_2021_P6()
+            val p7: Solution get() = KAKAO_BLIND_2021_P7()
         }
     }
 }

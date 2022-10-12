@@ -1,6 +1,6 @@
 package programmers.kakao.y2021
 
-import test.Solution
+import programmers.Programmers.Solution
 
 class KakaoInternship2021p4 : Solution {
 

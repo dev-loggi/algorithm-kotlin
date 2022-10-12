@@ -1,6 +1,6 @@
 package programmers.kakao.y2022
 
-import test.Solution
+import programmers.Programmers.Solution
 import java.util.ArrayDeque
 import kotlin.math.min
 

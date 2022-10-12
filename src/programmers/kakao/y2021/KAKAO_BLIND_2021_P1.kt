@@ -1,17 +1,23 @@
 package programmers.kakao.y2021
 
-import test.Solution
+import programmers.Programmers
 
+/**
+ * 2021 KAKAO BLIND RECRUITMENT
+ * [No. 1] 신규 아이디 추천
+ *
+ * https://programmers.co.kr/learn/courses/30/lessons/72410?language=kotlin
+ * */
+class KAKAO_BLIND_2021_P1 : Programmers.Solution {
 
-// 신규 아이디 추천
-// https://programmers.co.kr/learn/courses/30/lessons/72410?language=kotlin
-class KakaoBlindRecruitment2021p1 : Solution {
-
-    //직사각형을 만드는 데 필요한 4개의 점 중 3개의 좌표가 주어질 때, 나머지 한 점의 좌표를 구하려고 합니다. 점 3개의 좌표가 들어있는 배열 v가 매개변수로 주어질 때, 직사각형을 만드는 데 필요한 나머지 한 점의 좌표를 return 하도록 solution 함수를 완성해주세요. 단, 직사각형의 각 변은 x축, y축에 평행하며, 반드시 직사각형을 만들 수 있는 경우만 입력으로 주어집니다.
     //[[1, 4], [3, 4], [3, 10]]
     override fun execute() {
-        //	bat.y.abcdefgh
+        testCases().forEachIndexed { index, case ->
+            println("test case $index → $case")
 
+            val answer = solution(case)
+            println("★ answer=$answer")
+        }
 
     }
 
@@ -52,3 +58,25 @@ class KakaoBlindRecruitment2021p1 : Solution {
         return sb.toString()
     }
 }
+
+private fun testCases(): Array<String> = arrayOf(
+    // case 1
+    // answer = "bat.y.abcdefghi"
+    "...!@BaT#*..y.abcdefghijklm",
+
+    // case 1
+    // answer = "z--"
+    "z-+.^.",
+
+    // case 1
+    // answer = "aaa"
+    "=.=",
+
+    // case 1
+    // answer = "123_.def"
+    "123_.def",
+
+    // case 1
+    // answer = "abcdefghijklmn"
+    "abcdefghijklmn.p",
+)
