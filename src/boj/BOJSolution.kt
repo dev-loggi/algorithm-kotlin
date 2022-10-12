@@ -8,6 +8,7 @@ abstract class BOJSolution(
     companion object {
         const val MATERIALIZATION = "구현"
         const val BRUTE_FORCE = "Brute Force"
+        const val BITMASK = "BitMask"
         const val DFS = "DFS"
         const val BFS = "BFS"
         const val GREEDY = "Greedy"
