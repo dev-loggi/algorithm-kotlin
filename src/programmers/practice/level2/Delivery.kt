@@ -9,9 +9,6 @@ import programmers.Programmers.Solution
 class Delivery : Solution {
 
     override fun execute() {
-        //5	[[1,2,1],[2,3,3],[5,2,2],[1,4,2],[5,3,1],[5,4,2]]	3	4
-        //6	[[1,2,1],[1,3,2],[2,3,2],[3,4,3],[3,5,2],[3,5,3],[5,6,1]]	4	4
-
         solution(5, arrayOf(
             intArrayOf(1,2,1),
             intArrayOf(2,3,3),
@@ -34,7 +31,53 @@ class Delivery : Solution {
             .let { println("answer=$it") } // 4
     }
 
+    private lateinit var graph: MutableMap<Int, MutableSet<Int>>
+    private lateinit var time: Array<IntArray>
+
     fun solution(N: Int, road: Array<IntArray>, k: Int): Int {
+        graph = mutableMapOf()
+        time = Array(N + 1) { IntArray(N + 1) { Int.MAX_VALUE } }
+
+        for ((c1, c2, t) in road) {
+            graph.getOrPut(c1) { mutableSetOf() }.add(c2)
+            graph.getOrPut(c2) { mutableSetOf() }.add(c1)
+
+            if (t < time[c1][c2]) {
+                time[c1][c2] = t
+                time[c2][c1] = t
+            }
+        }
+
+        return delivery(N, k)
+    }
+
+    private fun delivery(N: Int, k: Int): Int {
+        val set = mutableSetOf<Int>()
+        val visited = BooleanArray(N + 1)
+        visited[1] = true
+
+        fun dfs(curr: Int, accTime: Int, tab: String) {
+            if (k < accTime)
+                return
+
+            println("${tab}dfs(curr=$curr, accTime=$accTime)")
+            set.add(curr)
+
+            for (next in graph[curr]!!) {
+                if (visited[next])
+                    continue
+
+                visited[next] = true
+                dfs(next, accTime + time[curr][next], "$tab    ")
+                visited[next] = false
+            }
+        }
+
+        dfs(1, 0, "")
+        return set.size
+    }
+
+    fun solution2(N: Int, road: Array<IntArray>, k: Int): Int {
         val graph = mutableMapOf<Int, MutableList<Pair<Int, Int>>>()
 
         for (info in road) {

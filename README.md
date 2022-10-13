@@ -220,66 +220,78 @@
 ## 2. Programmers
 
 <details>
-<summary>&nbsp;Programmers: Level 1 (18)</summary>
+<summary>&nbsp;Programmers: Level 1 (21)</summary>
 <div markdown="1">
 <br/>
 
-|  레벨  | 제목                                                                           | 유형  |
-|:----:|------------------------------------------------------------------------------|-----|
-|  1   | [없는 숫자 더하기](src/programmers/practice/level1/AddMissingNumbers.kt)            |
-|  1   | [음양 더하기](src/programmers/practice/level1/AddNegativePositiveNumbers.kt)      |
-|  1   | [부족한 금액 계산하기](src/programmers/practice/level1/CalculateShortfall.kt)         |
-|  1   | [크레인 인형뽑기 게임](src/programmers/practice/level1/CranePuppetGame.kt)            |
-|  1   | [내적(Dot product)](src/programmers/practice/level1/DotProduct.kt)             |
-|  1   | [실패율](src/programmers/kakao/y2019/KAKAO_BLIND_2019_P1.kt)                    |
-|  1   | [나머지가 1이 되는 수 찾기](src/programmers/practice/level1/FindRemainderOne.kt)       |
-|  1   | [신고 결과 받기](src/programmers/practice/level1/GetReportResults.kt)              |
-|  1   | [체육복](src/programmers/practice/level1/GymSuit.kt)                            |
-|  1   | [K번째 수](src/programmers/practice/level1/KthNumber.kt)                        |
-|  1   | [로또](src/programmers/practice/level1/Lotto.kt)                               |
-|  1   | [최소 직사각형](src/programmers/practice/level1/MinRectangle.kt)                   |
-|  1   | [모의고사](src/programmers/practice/level1/MockExam.kt)                          |
-|  1   | [약수의 갯수와 덧셈](src/programmers/practice/level1/NumberOfDivisorsAndAddition.kt) |
-|  1   | [두 개 뽑아서 더하기](src/programmers/practice/level1/TakeTwoNumbersAndSums.kt)      |
-|  1   | [3진법 뒤집기](src/programmers/practice/level1/TernaryReversed.kt)                |
-|  1   | [2016년](src/programmers/practice/level1/Year2016.kt)                         |
+| 레벨  | 제목                                                                                | 유형  |
+|:---:|-----------------------------------------------------------------------------------|-----|
+|  1  | [없는 숫자 더하기](src/programmers/practice/level1/AddMissingNumbers.kt)                 |
+|  1  | [음양 더하기](src/programmers/practice/level1/AddNegativePositiveNumbers.kt)           |
+|  1  | [부족한 금액 계산하기](src/programmers/practice/level1/CalculateShortfall.kt)              |
+|  1  | [크레인 인형뽑기 게임](src/programmers/practice/level1/CranePuppetGame.kt)                 |
+|  1  | [나누어 떨어지는 숫자 배열](src/programmers/practice/level1/DivisibleIntArray.kt)            |
+|  1  | [내적(Dot product)](src/programmers/practice/level1/DotProduct.kt)                  |
+|  1  | [나머지가 1이 되는 수 찾기](src/programmers/practice/level1/FindRemainderOne.kt)            |
+|  1  | [가운데 글자 가져오기](src/programmers/practice/level1/GetMiddleLetter.kt)                 |
+|  1  | [신고 결과 받기](src/programmers/practice/level1/GetReportResults.kt)                   |
+|  1  | [체육복](src/programmers/practice/level1/GymSuit.kt)                                 |
+|  1  | [K번째 수](src/programmers/practice/level1/KthNumber.kt)                             |
+|  1  | [로또](src/programmers/practice/level1/Lotto.kt)                                    |
+|  1  | [최소 직사각형](src/programmers/practice/level1/MinRectangle.kt)                        |
+|  1  | [모의고사](src/programmers/practice/level1/MockExam.kt)                               |
+|  1  | [약수의 갯수와 덧셈](src/programmers/practice/level1/NumberOfDivisorsAndAddition.kt)      |
+|  1  | [문자열 내 마음대로 정렬하기](src/programmers/practice/level1/SortingStringsMyOwnWay.kt)      |
+|  1  | [문자열 내림차순으로 배치하기](src/programmers/practice/level1/SortStringInDescendingOrder.kt) |
+|  1  | [두 정수 사이의 합](src/programmers/practice/level1/SumBetweenTwoIntegers.kt)            |
+|  1  | [두 개 뽑아서 더하기](src/programmers/practice/level1/TakeTwoNumbersAndSums.kt)           |
+|  1  | [3진법 뒤집기](src/programmers/practice/level1/TernaryReversed.kt)                     |
+|  1  | [2016년](src/programmers/practice/level1/Year2016.kt)                              |
 
 </div>
 </details>
 
 
 <details>
-<summary>&nbsp;Programmers: Level 2 (25)</summary>
+<summary>&nbsp;Programmers: Level 2 (33)</summary>
 <div markdown="1">
 <br/>
 
-| 레벨  | 제목                                                                        | 유형  |
-|:---:|---------------------------------------------------------------------------|-----|
-|  2  | [양궁 대회](src/programmers/practice/level2/ArcheryCompetition.kt)            |
-|  2  | [카펫](src/programmers/practice/level2/Carpet.kt)                           |
-|  2  | [거리두기 확인하](src/programmers/practice/level2/CheckSocialDistancing.kt)      |
-|  2  | [배달](src/programmers/practice/level2/Delivery.kt)                         |
-|  2  | [위장](src/programmers/practice/level2/DisGuise.kt)                         |
-|  2  | [피로도](src/programmers/practice/level2/FatigueLevel.kt)                    |
-|  2  | [소수 찾기](src/programmers/practice/level2/FindPrimeNumber.kt)               |
-|  2  | [기능 개발](src/programmers/practice/level2/FunctionDevelopment.kt)           |
-|  2  | [H-Index](src/programmers/practice/level2/H_Index.kt)                     |
-|  2  | [조이스틱](src/programmers/practice/level2/JoyStick.kt)                       |
-|  2  | [K진수에서 소수 갯수 구하기](src/programmers/practice/level2/KdecimalPrimeNumber.kt) |
-|  2  | [가장 큰 수](src/programmers/practice/level2/LargestNumber.kt)                |
-|  2  | [빛의 경로 싸이클](src/programmers/practice/level2/LightPathCycle.kt)            |
-|  2  | [행렬 테두리 회전하기](src/programmers/practice/level2/MatrixEdgeRotation.kt)      |
-|  2  | [수식 최대화](src/programmers/practice/level2/MaximizeFormulas.kt)             |
-|  2  | [괄호 변환](src/programmers/practice/level2/ParenthesisConversion.kt)         |
-|  2  | [주차 요금 계산](src/programmers/practice/level2/ParkingFeeCalculation.kt)      |
-|  2  | [멀쩡한 사각형](src/programmers/practice/level2/PlainSquare.kt)                 |
-|  2  | [프린터](src/programmers/practice/level2/Printer.kt)                         |
-|  2  | [괄호 회전하기](src/programmers/practice/level2/RotateParentheses.kt)           |
-|  2  | [문자열 압축](src/programmers/practice/level2/StringZip.kt)                    |
-|  2  | [타겟 넘버](src/programmers/practice/level2/TargetNumber.kt)                  |
-|  2  | [삼각 달팽이](src/programmers/practice/level2/TriangleSnail.kt)                |
-|  2  | [다리를 지나는 트럭](src/programmers/practice/level2/TrucksCrossingBridge.kt)     |
-|  2  | [튜플](src/programmers/practice/level2/Tuple.kt)                            |
+| 레벨  | 제목                                                                            | 유형  |
+|:---:|-------------------------------------------------------------------------------|-----|
+|  2  | [양궁 대회](src/programmers/practice/level2/ArcheryCompetition.kt)                |
+|  2  | [카펫](src/programmers/practice/level2/Carpet.kt)                               |
+|  2  | [거리두기 확인하](src/programmers/practice/level2/CheckSocialDistancing.kt)          |
+|  2  | [배달](src/programmers/practice/level2/Delivery.kt)                             |
+|  2  | [할인 행사](src/programmers/practice/level2/DiscountEvent.kt)                     |
+|  2  | [위장](src/programmers/practice/level2/DisGuise.kt)                             |
+|  2  | [예상 대진표](src/programmers/practice/level2/ExpectedScorecard.kt)                |
+|  2  | [피로도](src/programmers/practice/level2/FatigueLevel.kt)                        |
+|  2  | [소수 찾기](src/programmers/practice/level2/FindPrimeNumber.kt)                   |
+|  2  | [기능 개발](src/programmers/practice/level2/FunctionDevelopment.kt)               |
+|  2  | [H-Index](src/programmers/practice/level2/H_Index.kt)                         |
+|  2  | [조이스틱](src/programmers/practice/level2/JoyStick.kt)                           |
+|  2  | [K진수에서 소수 갯수 구하기](src/programmers/practice/level2/KdecimalPrimeNumber.kt)     |
+|  2  | [가장 큰 수](src/programmers/practice/level2/LargestNumber.kt)                    |
+|  2  | [빛의 경로 싸이클](src/programmers/practice/level2/LightPathCycle.kt)                |
+|  2  | [멀리뛰기](src/programmers/practice/level2/LongJump.kt)                           |
+|  2  | [큰 수 만들기](src/programmers/practice/level2/MakingBigNumbers.kt)                |
+|  2  | [행렬 테두리 회전하기](src/programmers/practice/level2/MatrixEdgeRotation.kt)          |
+|  2  | [수식 최대화](src/programmers/practice/level2/MaximizeFormulas.kt)                 |
+|  2  | [괄호 변환](src/programmers/practice/level2/ParenthesisConversion.kt)             |
+|  2  | [주차 요금 계산](src/programmers/practice/level2/ParkingFeeCalculation.kt)          |
+|  2  | [멀쩡한 사각형](src/programmers/practice/level2/PlainSquare.kt)                     |
+|  2  | [프린터](src/programmers/practice/level2/Printer.kt)                             |
+|  2  | [쿼드압축 후 개수 세기](src/programmers/practice/level2/QuadExpressionCounting.kt)     |
+|  2  | [N개의 최소공배수](src/programmers/practice/level2/Nlcm.kt)                          |
+|  2  | [2개 이하로 다른 비트](src/programmers/practice/level2/NoMoreThanTwoDifferentBits.kt) |
+|  2  | [괄호 회전하기](src/programmers/practice/level2/RotateParentheses.kt)               |
+|  2  | [문자열 압축](src/programmers/practice/level2/StringZip.kt)                        |
+|  2  | [타겟 넘버](src/programmers/practice/level2/TargetNumber.kt)                      |
+|  2  | [삼각 달팽이](src/programmers/practice/level2/TriangleSnail.kt)                    |
+|  2  | [다리를 지나는 트럭](src/programmers/practice/level2/TrucksCrossingBridge.kt)         |
+|  2  | [튜플](src/programmers/practice/level2/Tuple.kt)                                |
+|  2  | [모음 사전](src/programmers/practice/level2/VowelDictionary.kt)                   |
 
 </div>
 </details>
