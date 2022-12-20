@@ -1,7 +1,7 @@
 package programmers.practice.level3
 
 import programmers.Programmers.Solution
-import utils.Util
+import codelab.Util
 
 // 입국심사
 // 이분탐색

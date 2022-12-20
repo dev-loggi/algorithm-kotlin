@@ -1,7 +1,7 @@
 package programmers.practice.level3
 
 import programmers.Programmers.Solution
-import utils.Util
+import codelab.Util
 import java.util.Queue
 import java.util.LinkedList
 import kotlin.collections.HashMap

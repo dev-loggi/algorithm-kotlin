@@ -1,5 +1,7 @@
+.idea/
+out/
 src/_exam/
-src/test2/
 src/test/
-out
+src/codelab/
+
 Algorithm-Kotlin.iml

@@ -1,6 +1,6 @@
 package programmers.skillCheck.level1
 
-import utils.Util
+import codelab.Util
 import kotlin.math.abs
 
 class PhoneKeyPad {
