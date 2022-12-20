@@ -1,6 +1,5 @@
 package programmers.skillCheck.level1
 
-import codelab.Util
 import kotlin.math.abs
 
 class PhoneKeyPad {
@@ -76,7 +75,6 @@ class PhoneKeyPad {
         }
 
 
-        println("solution(): numbers=${Util.getLog(numbers)}, answer=$answer")
         return answer
     }
 

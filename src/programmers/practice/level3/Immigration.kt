@@ -1,7 +1,6 @@
 package programmers.practice.level3
 
 import programmers.Programmers.Solution
-import codelab.Util
 
 // 입국심사
 // 이분탐색
@@ -38,7 +37,6 @@ class Immigration : Solution {
             }
         }
 
-        println("Immigration.solution(): n=$n, ${Util.getLog(times)}, answer=$answer")
         return answer
     }
 

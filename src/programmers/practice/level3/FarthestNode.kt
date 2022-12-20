@@ -1,7 +1,6 @@
 package programmers.practice.level3
 
 import programmers.Programmers.Solution
-import codelab.Util
 import java.util.Queue
 import java.util.LinkedList
 import kotlin.collections.HashMap
@@ -48,9 +47,6 @@ class FarthestNode : Solution {
 
         traverseByBFS(graph, 1, depths)
 
-        println("graph=$graph")
-        println("depths=${Util.getLog(depths)}")
-
         val maxDepth = depths.maxOf { it }
 
         return depths.count { it == maxDepth }
@@ -64,7 +60,6 @@ class FarthestNode : Solution {
 
         while (queue.isNotEmpty()) {
             val node = queue.poll()
-            println("traverse(): node=$node, depth=${depths[node - 1]}")
 
             graph[node]?.forEach {
                 if (!set.contains(it)) {

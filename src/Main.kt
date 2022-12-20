@@ -2,9 +2,14 @@ import programmers.Programmers
 import kotlin.system.measureNanoTime
 
 fun main() {
-    //BOJ.execute()
+    measure(::runSolution)
+}
 
-    measureNanoTime {
-        Programmers.KAKAO.blind2019_P2.execute()
-    }.let { println("${it / 1_000_000_000.0}초") }
+private inline fun measure(block: () -> Unit) {
+    val nanoTime = measureNanoTime(block)
+    println("${nanoTime / 1_000_000_000.0}초")
+}
+
+private fun runSolution() {
+    Programmers.practice.levelTwo.carpet.execute()
 }
