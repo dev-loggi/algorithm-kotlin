@@ -1,6 +1,7 @@
 package boj.dp
 
 import boj.BOJSolution
+import java.util.*
 import kotlin.math.max
 
 /**
@@ -11,46 +12,33 @@ class BOJ_11052_BuyCards : BOJSolution(info(), testCase()) {
 
     override fun main() {
         val N = readln().toInt() // 카드의 개수 (1 ≤ N ≤ 1,000)
-        val cards = intArrayOf(0) + readln().split(" ")
-            .map { it.toInt() } // (1 ≤ Pi ≤ 10,000)
+        val cards = intArrayOf(0) + readln()
+            .split(" ")
+            .map(String::toInt) // (1 ≤ Pi ≤ 10,000)
             .toIntArray()
 
-        println(solutionByDFS2(N, cards))
+        println(solutionByDP(N, cards))
     }
 
-    private fun solutionByDFS2(N: Int, cards: IntArray): Long {
-        val dp = Array(N + 1) { LongArray(N + 1) }
+    private fun solutionByDP(N: Int, cards: IntArray): Int {
+        val dp = cards.clone()
 
-        fun dfs(n: Int, sum: Long): Long {
-            if (n == N)
-                return sum
-
-            var max = 0L
-
-            for (i in 1..(N - n)) {
-                val sub = if (dp[n][i] != 0L) {
-                    dp[n][i]
-                } else {
-                    dp[n][i] = dfs(n + i, sum + cards[i])
-                    dp[n][i]
-                }
-
-                if (max < sub)
-                    max = sub
+        for (i in 1..N) {
+            for (j in 1 until i) {
+                dp[i] = max(dp[i], dp[j] + dp[i - j])
             }
-
-            return max
         }
 
-        return dfs(0, 0)
+        return dp[N]
     }
 
     /** 시간초과 */
     private fun solutionByDFS(N: Int, cards: IntArray): Long {
 
         fun dfs(n: Int, sum: Long): Long {
-            if (n == N)
+            if (n == N) {
                 return sum
+            }
 
             var max = 0L
 
