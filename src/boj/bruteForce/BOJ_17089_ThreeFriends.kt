@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_17089_ThreeFriends : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 사람의 수(3 ≤ N ≤ 4,000)
         val M = input[1].toInt() // 친구 관계의 수(0 ≤ M ≤ 4,000)
@@ -60,11 +60,11 @@ class BOJ_17089_ThreeFriends : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 17089,
     title = "세 친구",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/17089"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "5 6\n" +
                 "1 2\n" +

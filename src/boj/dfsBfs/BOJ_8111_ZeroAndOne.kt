@@ -15,7 +15,7 @@ class BOJ_8111_ZeroAndOne : BOJSolution(info(), testCases()) {
         private const val MAX = 20000
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         val T = readLine()!!.toInt() // 테스트 케이스 갯수(T < 10)
         val answers = mutableListOf<String>()
 
@@ -97,11 +97,11 @@ class BOJ_8111_ZeroAndOne : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 8111,
     title = "0 과 1",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/8111"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "6\n" +
                 "17\n" +

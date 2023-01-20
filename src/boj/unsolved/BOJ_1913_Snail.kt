@@ -17,7 +17,7 @@ import java.text.DecimalFormat
  * */
 class BOJ_1913_Snail : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()?.toIntOrNull() ?: return
         val number = readLine()?.toIntOrNull() ?: return
 
@@ -109,11 +109,11 @@ class BOJ_1913_Snail : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1913,
     title = "달팽이1",
-    category = arrayOf(BOJSolution.MATERIALIZATION),
+    category = listOf(BOJSolution.MATERIALIZATION),
     problemUrl = "https://www.acmicpc.net/problem/1913"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "7\n" +
                 "35",

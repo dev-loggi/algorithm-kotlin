@@ -8,7 +8,7 @@ import boj.BOJSolution
  * */
 class BOJ_1182_SumOfSubsequences : BOJSolution(info(), testCase()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         // (1 ≤ N ≤ 20, |S| ≤ 1,000,000)
         val (N, S) = readln().split(" ").map { it.toInt() }
 
@@ -53,11 +53,11 @@ class BOJ_1182_SumOfSubsequences : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 1182,
     title = "부분수열의 합",
-    category = arrayOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
+    category = listOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
     problemUrl = "https://www.acmicpc.net/problem/1182",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "5 0\n" +
                 "-7 -3 -2 5 8",

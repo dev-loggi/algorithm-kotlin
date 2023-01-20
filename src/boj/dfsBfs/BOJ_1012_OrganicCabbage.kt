@@ -5,7 +5,7 @@ import java.util.ArrayDeque
 
 class BOJ_1012_OrganicCabbage : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val T = readLine()?.toIntOrNull() ?: return // 테스트 케이스 갯수
         val answers = mutableListOf<Int>()
 
@@ -91,11 +91,11 @@ class BOJ_1012_OrganicCabbage : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1012,
     title = "유기농 배추",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/1012"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "10 8 17\n" +

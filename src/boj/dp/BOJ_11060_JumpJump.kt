@@ -11,7 +11,7 @@ import java.util.ArrayDeque
  * */
 class BOJ_11060_JumpJump : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readln().toInt() // (1 ≤ N ≤ 1,000)
         val maze = readln().split(" ").map { it.toInt() }.toIntArray() // (0 ≤ maze[i] ≤ 100)
 
@@ -75,11 +75,11 @@ class BOJ_11060_JumpJump : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 11060,
     title = "점프 점프",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/11060",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "10\n" +
                 "1 2 0 1 3 2 1 5 4 2",

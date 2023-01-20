@@ -18,7 +18,7 @@ class BOJ_17071_HideAndSeek5 : BOJSolution(info(), testCases()) {
         private val DM = intArrayOf(1, 1, 2) // 곱하기
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 수빈이의 위치(0 ≤ N ≤ 500,000)
         val K = input[1].toInt() // 동생의 위치(0 ≤ K ≤ 500,000)
@@ -75,11 +75,11 @@ class BOJ_17071_HideAndSeek5 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 17071,
     title = "숨바꼭질 5",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/17071",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "5 17",
         output = "2"

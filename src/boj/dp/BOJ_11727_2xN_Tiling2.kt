@@ -15,7 +15,7 @@ class BOJ_11727_2xN_Tiling2 : BOJSolution(info(), testCase()) {
     }
     private var start = 3
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readln().toInt() // (1 ≤ N ≤ 1,000)
 
         println(solution(N))
@@ -37,11 +37,11 @@ class BOJ_11727_2xN_Tiling2 : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 11727,
     title = "2×n 타일링 2",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/11727"
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "2",
         output = "3",

@@ -1,4 +1,4 @@
-import programmers.Programmers
+import boj.BOJ
 import kotlin.system.measureNanoTime
 
 fun main() {
@@ -11,5 +11,5 @@ private inline fun measure(block: () -> Unit) {
 }
 
 private fun runSolution() {
-    Programmers.practice.levelTwo.carpet.execute()
+    BOJ.execute()
 }

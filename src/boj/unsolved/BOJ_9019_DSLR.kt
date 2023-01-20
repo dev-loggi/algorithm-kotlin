@@ -15,7 +15,7 @@ class BOJ_9019_DSLR : BOJSolution(info(), testCases()) {
 
     private val formatter = DecimalFormat()
 
-    override fun main() {
+    override fun runEachSolution() {
         val T = readLine()!!.toInt()
         val answers = mutableListOf<String>()
 
@@ -83,11 +83,11 @@ class BOJ_9019_DSLR : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 9019,
     title = "DSLR",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/9019"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "3\n" +
                 "1234 3412\n" +

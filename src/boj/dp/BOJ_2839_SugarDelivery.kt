@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_2839_SugarDelivery : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()?.toIntOrNull() ?: return
 
         // N = 5 * a + 3 * b
@@ -40,11 +40,11 @@ class BOJ_2839_SugarDelivery : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2839,
     title = "설탕 배달",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/2839"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "18",
         output = "4",

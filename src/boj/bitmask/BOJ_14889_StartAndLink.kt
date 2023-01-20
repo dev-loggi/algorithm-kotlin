@@ -10,7 +10,7 @@ import kotlin.math.absoluteValue
  * */
 class BOJ_14889_StartAndLink : BOJSolution(info(), testCase()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readln().toInt() // 사람 수 (4 ≤ N ≤ 20, N은 짝수)
         val S = Array(N) {
             readln().split(" ").map { it.toInt() }.toIntArray()
@@ -101,11 +101,11 @@ class BOJ_14889_StartAndLink : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 14889,
     title = "스타트와 링크",
-    category = arrayOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
+    category = listOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
     problemUrl = "https://www.acmicpc.net/problem/14889",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "4\n" +
                 "0 1 2 3\n" +

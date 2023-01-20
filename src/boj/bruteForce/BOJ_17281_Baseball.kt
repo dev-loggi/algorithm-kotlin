@@ -12,7 +12,7 @@ import kotlin.math.max
  * */
 class BOJ_17281_Baseball : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()!!.toInt() // 이닝 수(2 ≤ N ≤ 50)
         val playersByInning = (0 until N).map {
             readLine()!!.split(" ").map { it.toInt() }.toIntArray()
@@ -255,11 +255,11 @@ class BOJ_17281_Baseball : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 17281,
     title = "야구",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/17281"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "4 0 0 0 0 0 0 0 0\n" +

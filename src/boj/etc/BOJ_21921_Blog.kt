@@ -7,7 +7,7 @@ import boj.BOJSolution
  * */
 class BOJ_21921_Blog : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val (N, X) = readln().split(" ").map { it.toInt() }
         val visitor = readln().split(" ").map { it.toInt() }.toIntArray()
 
@@ -43,11 +43,11 @@ class BOJ_21921_Blog : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 21921,
     title = "블로그",
-    category = arrayOf(BOJSolution.SLIDING_WINDOW),
+    category = listOf(BOJSolution.SLIDING_WINDOW),
     problemUrl = "https://www.acmicpc.net/problem/21921",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "5 2\n" +
                 "1 4 2 5 1",

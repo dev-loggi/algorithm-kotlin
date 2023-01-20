@@ -11,7 +11,7 @@ import java.util.ArrayDeque
  * */
 class BOJ_2606_Virus : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()?.toIntOrNull() ?: return // 컴퓨터 갯수
         val M = readLine()?.toIntOrNull() ?: return // 네트워크 갯수
 
@@ -54,11 +54,11 @@ class BOJ_2606_Virus : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2606,
     title = "바이러스",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/2606"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "7\n" +
                 "6\n" +

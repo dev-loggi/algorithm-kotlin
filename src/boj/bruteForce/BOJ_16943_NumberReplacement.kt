@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_16943_NumberReplacement : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val A = input[0].toInt()
         val B = input[1].toInt()
@@ -60,11 +60,11 @@ class BOJ_16943_NumberReplacement : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16943,
     title = "숫자 재배치",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16943"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "1234 3456",
         output = "3421"

@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_2902_WhyIsKMPaKMP : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         println(solution(readLine()!!))
     }
 
@@ -16,11 +16,11 @@ class BOJ_2902_WhyIsKMPaKMP : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2210,
     title = "숫자판 점프",
-    category = arrayOf(),
+    category = listOf(),
     problemUrl = ""
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "Knuth-Morris-Pratt",
         output = "KMP"

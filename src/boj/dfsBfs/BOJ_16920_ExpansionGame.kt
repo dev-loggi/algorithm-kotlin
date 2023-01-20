@@ -17,7 +17,7 @@ class BOJ_16920_ExpansionGame : BOJSolution(info(), testCases()) {
         private val DC = intArrayOf(-1, 0, 1, 0)
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         // 1 ≤ N, M ≤ 1,000
         // 1 ≤ P ≤ 9
         // 1 ≤ Si ≤ 10^9
@@ -119,12 +119,12 @@ class BOJ_16920_ExpansionGame : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16920,
     title = "확장 게임",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/16920",
     solutionUrl = "",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "3 3 2\n" +
                 "1 1\n" +

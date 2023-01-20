@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_9095_Plus123 : BOJSolution(info(), testCase()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val T = readln().toInt()
         val answers = IntArray(T) {
             val N = readln().toInt() // (1 ≤ N ≤ 11)
@@ -79,11 +79,11 @@ class BOJ_9095_Plus123 : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 9095,
     title = "1,2,3 더하기",
-    category = arrayOf(BOJSolution.DP, BOJSolution.BFS, BOJSolution.DFS),
+    category = listOf(BOJSolution.DP, BOJSolution.BFS, BOJSolution.DFS),
     problemUrl = "https://www.acmicpc.net/problem/9095",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "3\n" +
                 "4\n" +

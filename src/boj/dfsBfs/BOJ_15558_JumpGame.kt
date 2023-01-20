@@ -17,7 +17,7 @@ class BOJ_15558_JumpGame : BOJSolution(info(), testCases()) {
         private val DI = intArrayOf(-1, 1, 1)
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         // (1 ≤ N, k ≤ 100,000)
         val (N, k) = readln().split(" ").map { it.toInt() }.toIntArray()
 
@@ -72,12 +72,12 @@ class BOJ_15558_JumpGame : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 15558,
     title = "점프 게임",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/15558",
     solutionUrl = "",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "7 3\n" +
                 "1110110\n" +

@@ -9,7 +9,7 @@ import boj.BOJSolution
  * */
 class BOJ_16968_LicensePlate1 : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val formats = readLine()?.map { it } ?: return
 
         val map = mapOf(
@@ -33,11 +33,11 @@ class BOJ_16968_LicensePlate1 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16968,
     title = "차량 번호판1",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16968"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "dd",
         output = "90"

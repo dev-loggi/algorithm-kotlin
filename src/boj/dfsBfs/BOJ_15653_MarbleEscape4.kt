@@ -15,7 +15,7 @@ class BOJ_15653_MarbleEscape4 : BOJSolution(info(), testCases()) {
         )
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         // (3 ≤ N, M ≤ 10)
         val (N, M) = readln().split(" ").map { it.toInt() }.toIntArray()
 
@@ -152,12 +152,12 @@ class BOJ_15653_MarbleEscape4 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 15643,
     title =" 구슬 탈출 4",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/15653",
     solutionUrl = "",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "5 5\n" +
                 "#####\n" +

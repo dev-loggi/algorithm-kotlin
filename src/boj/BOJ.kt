@@ -20,7 +20,7 @@ object BOJ {
     fun execute() {
         print("BOJ 문제 번호를 입력해주세요: ")
 
-        readLine()?.toIntOrNull()?.let { no ->
+        readlnOrNull()?.toIntOrNull()?.let { no ->
             println()
             println("=======================================================")
             getSolution(no)?.createInstance()?.execute()

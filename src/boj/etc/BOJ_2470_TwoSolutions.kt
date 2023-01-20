@@ -12,7 +12,7 @@ import kotlin.random.Random
  * */
 class BOJ_2470_TwoSolutions : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         IntArray(10) { Random.nextInt(-50, 50) }.let { println(it.joinToString(" ")) }
         IntArray(10) { Random.nextInt(0, 50) }.let { println(it.joinToString(" ")) }
         IntArray(10) { Random.nextInt(-50, -1) }.let { println(it.joinToString(" ")) }
@@ -52,11 +52,11 @@ class BOJ_2470_TwoSolutions : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2470,
     title = "두 용액",
-    category = arrayOf(BOJSolution.TWO_POINTER),
+    category = listOf(BOJSolution.TWO_POINTER),
     problemUrl = "https://www.acmicpc.net/problem/2470",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "5\n" +
                 "-2 4 -99 -1 98",

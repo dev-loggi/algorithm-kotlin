@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_15683_Serveillance : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 사무실 세로 크기
         val M = input[1].toInt() // 사무실 가로 크기
@@ -95,11 +95,11 @@ class BOJ_15683_Serveillance : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 15638,
     title = "감시",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/15683"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "4 6\n" +

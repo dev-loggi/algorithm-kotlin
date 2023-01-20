@@ -55,7 +55,7 @@ class BOJ_16959_ChessboardTravel1 : BOJSolution(info(), testCases()) {
     private lateinit var visited: Array<Array<Array<BooleanArray>>>
     private lateinit var queue: ArrayDeque<Node>
 
-    override fun main() {
+    override fun runEachSolution() {
         N = readLine()!!.toInt() // 체스판의 크기 (3 ≤ N ≤ 10)
 
         destination = N * N
@@ -165,12 +165,12 @@ class BOJ_16959_ChessboardTravel1 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16959,
     title = "체스판 여행1",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/16959",
     solutionUrl = ""
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "3\n" +
                 "1 9 3\n" +

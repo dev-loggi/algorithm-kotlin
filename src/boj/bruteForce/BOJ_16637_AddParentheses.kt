@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_16637_AddParentheses : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()!!.toInt()
         val equation = readLine()!!.toCharArray()
 
@@ -88,11 +88,11 @@ class BOJ_16637_AddParentheses : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16637,
     title = "괄호 추가하기",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16637"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "9\n" +

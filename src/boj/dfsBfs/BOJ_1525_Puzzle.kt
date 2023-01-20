@@ -18,7 +18,7 @@ class BOJ_1525_Puzzle : BOJSolution(info(), testCases()) {
         private val DY = intArrayOf(0, -1, 0, 1)
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         var puzzle = ""
 
         for (i in 0 until 3) {
@@ -81,12 +81,12 @@ class BOJ_1525_Puzzle : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1525,
     title = "퍼즐",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/1525",
     solutionUrl = "https://jsl663.tistory.com/31"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "1 0 3\n" +
                 "4 2 5\n" +

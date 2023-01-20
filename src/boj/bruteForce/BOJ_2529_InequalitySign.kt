@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_2529_InequalitySign : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val k = readLine()?.toIntOrNull() ?: return
         val operators = readLine()?.split(" ") ?: return
 
@@ -58,11 +58,11 @@ class BOJ_2529_InequalitySign : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2529,
     title = "부등호",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/2529"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "2\n" +

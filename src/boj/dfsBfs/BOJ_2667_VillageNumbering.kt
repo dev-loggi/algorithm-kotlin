@@ -10,7 +10,7 @@ import java.util.ArrayDeque
  * */
 class BOJ_2667_VillageNumbering : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val n = readLine()?.toIntOrNull() ?: return
         val map = mutableListOf<IntArray>()
         val visited = Array(n) { BooleanArray(n) { false } }
@@ -76,11 +76,11 @@ class BOJ_2667_VillageNumbering : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2667,
     title = "단지 번호 붙이기",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/2667"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "7\n" +
                 "0110100\n" +

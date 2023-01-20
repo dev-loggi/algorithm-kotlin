@@ -11,7 +11,7 @@ import java.util.ArrayDeque
  * */
 class BOJ_16973_RectangleEscape : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input1 = readLine()!!.split(" ")
         val N = input1[0].toInt()
         val M = input1[1].toInt()
@@ -106,11 +106,11 @@ class BOJ_16973_RectangleEscape : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16973,
     title = "직사각형 탈출",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/16973"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "4 5\n" +
                 "0 0 0 0 0\n" +

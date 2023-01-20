@@ -11,7 +11,7 @@ import kotlin.math.max
  * */
 class BOJ_16937_TwoStickers : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val H = input[0].toInt() // 모눈종이 세로 크기
         val W = input[1].toInt() // 모눈종이 가로 크기
@@ -75,11 +75,11 @@ class BOJ_16937_TwoStickers : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16937,
     title = "두 스티커",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16937"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "2 2\n" +

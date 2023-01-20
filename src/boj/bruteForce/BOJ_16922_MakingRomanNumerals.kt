@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_16922_MakingRomanNumerals : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()!!.toInt()
 
         solution(N)
@@ -42,11 +42,11 @@ class BOJ_16922_MakingRomanNumerals : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16922,
     title = "로마 숫자 만들기",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16922"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "1",
         output = "4"

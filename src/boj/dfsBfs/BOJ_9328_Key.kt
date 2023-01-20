@@ -19,7 +19,7 @@ class BOJ_9328_Key : BOJSolution(info(), testCases()) {
         private val KEY = IntRange('a'.code, 'z'.code)
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         // 테스트 케이스 (T ≤ 100)
         val T = readLine()!!.toInt()
         val answers = IntArray(T)
@@ -142,12 +142,12 @@ class BOJ_9328_Key : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 9328,
     title = "열쇠",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/9328",
     solutionUrl = ""
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "3\n" +
                 "5 17\n" +

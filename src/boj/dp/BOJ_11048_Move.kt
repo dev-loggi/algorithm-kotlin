@@ -16,7 +16,7 @@ class BOJ_11048_Move : BOJSolution(info(), testCases()) {
         private val DC = intArrayOf(0, 1, 1)
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         // 미로의 크기 (1 ≤ N, M ≤ 1,000)
 //        val (N, M) = readln().split(" ").map { it.toInt() }
 //        val maze = Array(N) { intArrayOf() }
@@ -93,11 +93,11 @@ class BOJ_11048_Move : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 11048,
     title = "이동하기",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/11048",
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "3 4\n" +
                 "1 2 3 4\n" +

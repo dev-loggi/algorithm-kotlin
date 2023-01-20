@@ -16,7 +16,7 @@ class BOJ_14391_PaperPiece : BOJSolution(info(), testCase()) {
     private lateinit var num: Array<IntArray>
     private lateinit var combs: Array<Array<BooleanArray>>
 
-    override fun main() {
+    override fun runEachSolution() {
         // (1 ≤ N, M ≤ 4)
         val line = readln().split(" ").map { it.toInt() }
         maxSum = 0
@@ -120,11 +120,11 @@ class BOJ_14391_PaperPiece : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 14391,
     title = "종이 조각",
-    category = arrayOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
+    category = listOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK, BOJSolution.DFS),
     problemUrl = "https://www.acmicpc.net/problem/14391",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "2 3\n" +
                 "123\n" +

@@ -5,7 +5,7 @@ import java.util.ArrayDeque
 
 class BOJ_2178_MazeExploration : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()?.split(" ") ?: return
         val n = input[0].toIntOrNull() ?: return
         val m = input[1].toIntOrNull() ?: return
@@ -69,11 +69,11 @@ class BOJ_2178_MazeExploration : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2178,
     title = "미로 탐색",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/2178"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "4 6\n" +
                 "101111\n" +

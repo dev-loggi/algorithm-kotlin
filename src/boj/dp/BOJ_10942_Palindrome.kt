@@ -17,7 +17,7 @@ class BOJ_10942_Palindrome : BOJSolution(info(), testCases()) {
     var m = 0
     lateinit var questions: Array<Pair<Int, Int>>
 
-    override fun main() {
+    override fun runEachSolution() {
         init()
         solve()
     }
@@ -149,11 +149,11 @@ class BOJ_10942_Palindrome : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 10942,
     title = "팰린드롬?",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/10942"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "7\n" +
                 "1 2 1 3 1 2 1\n" +

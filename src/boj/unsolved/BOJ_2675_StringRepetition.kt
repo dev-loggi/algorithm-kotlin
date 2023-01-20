@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_2675_StringRepetition : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val case = readLine()?.toIntOrNull() ?: return
         val repeats = mutableListOf<Int>()
         val stringList = mutableListOf<String>()
@@ -39,11 +39,11 @@ class BOJ_2675_StringRepetition : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2675,
     title = "문자열 반복",
-    category = arrayOf(BOJSolution.MATERIALIZATION),
+    category = listOf(BOJSolution.MATERIALIZATION),
     problemUrl = "https://www.acmicpc.net/problem/2675"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "2\n" +
                 "3 ABC\n" +

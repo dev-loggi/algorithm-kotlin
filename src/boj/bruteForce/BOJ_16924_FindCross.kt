@@ -5,7 +5,7 @@ import kotlin.math.max
 
 class BOJ_16924_FindCross : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt()
         val M = input[1].toInt()
@@ -73,11 +73,11 @@ class BOJ_16924_FindCross : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16924,
     title = "십자가 찾기",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16924"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "6 8\n" +

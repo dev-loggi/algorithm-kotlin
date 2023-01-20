@@ -20,7 +20,7 @@ class BOJ_1385_HoneyComb : BOJSolution(info(), testCases()) {
 
     private val graph: Array<IntArray> = makeGraph()
 
-    override fun main() {
+    override fun runEachSolution() {
         // (1 ≤ from, to ≤ 1,000,000)
         val (from, to) = readln().split(" ").map { it.toInt() }.toIntArray()
 
@@ -165,12 +165,12 @@ class BOJ_1385_HoneyComb : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1385,
     title = "벌집",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/1385",
     solutionUrl = ""
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "10 15",
         output = "10 3 4 14 15",

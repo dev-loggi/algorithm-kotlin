@@ -12,7 +12,7 @@ import kotlin.math.abs
  * */
 class BOJ_17135_CastleDefense : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 격자판 세로 크기(3 ≤ N ≤ 15)
         val M = input[1].toInt() // 격자판 가로 크기(3 ≤ M ≤ 15)
@@ -153,11 +153,11 @@ class BOJ_17135_CastleDefense : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 17135,
     title = "캐슬 디펜스",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/17135"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "5 5 1\n" +
                 "0 0 0 0 0\n" +

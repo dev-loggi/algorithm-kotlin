@@ -11,7 +11,7 @@ class BOJ1238 : BOJSolution(info(), testCase()) {
 
 
 
-    override fun main() {
+    override fun runEachSolution() {
         // N(1 ≤ N ≤ 1,000), M(1 ≤ M ≤ 10,000), X
         val (N, M, X) = readln().split(" ").map { it.toInt() }
         val time = Array(N + 1) { IntArray(N + 1) }
@@ -24,11 +24,11 @@ class BOJ1238 : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 1238,
     title = "파티",
-    category = arrayOf(),
+    category = listOf(),
     problemUrl = "https://www.acmicpc.net/problem/1238",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = """
             4 8 2

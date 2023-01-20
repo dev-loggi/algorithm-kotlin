@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_2422_ItalyIcecream : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 아이스크림 종류의 수 (1 ≤ N ≤ 200)
         val M = input[1].toInt() // 섞어먹으면 안 되는 조합의 수 (0 ≤ M ≤ 10,000)
@@ -92,11 +92,11 @@ class BOJ_2422_ItalyIcecream : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2422,
     title = "한윤정이 이탈리아에 가서 아이스크림을 사먹는데",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/2422"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "5 3\n" +

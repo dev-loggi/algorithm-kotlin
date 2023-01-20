@@ -17,7 +17,7 @@ class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
         private val MC = intArrayOf(-1, 0, 1, 0) // move col
     }
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // 세로 크기
         val M = input[1].toInt() // 가로 크기
@@ -108,12 +108,12 @@ class BOJ_1175_Delivery : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1175,
     title = "배달",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/1175",
     solutionUrl = "https://jsl663.tistory.com/33"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "2 3\n" +
                 "SCC\n" +

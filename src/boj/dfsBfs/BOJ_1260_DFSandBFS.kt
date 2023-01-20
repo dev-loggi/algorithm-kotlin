@@ -10,7 +10,7 @@ import java.util.*
  * */
 class BOJ_1260_DFSandBFS : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val nmv = readLine()?.split(" ") ?: return
         val n = nmv[0].toInt()
         val m = nmv[1].toInt()
@@ -73,11 +73,11 @@ class BOJ_1260_DFSandBFS : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 1260,
     title = "DFS 와 BFS",
-    category = arrayOf(BOJSolution.BFS),
+    category = listOf(BOJSolution.BFS),
     problemUrl = "https://www.acmicpc.net/problem/1260"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase( // case 1
         input = "4 5 1\n" +
                 "1 2\n" +

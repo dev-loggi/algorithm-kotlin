@@ -10,7 +10,7 @@ import boj.BOJSolution
  * */
 class BOJ_16938_CampReady : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toInt() // N개의 문제
         val L = input[1].toInt() // L <= 출제할 문제 난이도의 합
@@ -58,11 +58,11 @@ class BOJ_16938_CampReady : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16938,
     title = "캠프 준비",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16938"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "3 5 6 1\n" +

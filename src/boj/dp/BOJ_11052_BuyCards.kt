@@ -10,7 +10,7 @@ import kotlin.math.max
  * */
 class BOJ_11052_BuyCards : BOJSolution(info(), testCase()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readln().toInt() // 카드의 개수 (1 ≤ N ≤ 1,000)
         val cards = intArrayOf(0) + readln()
             .split(" ")
@@ -56,11 +56,11 @@ class BOJ_11052_BuyCards : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 11052,
     title = "카드 구매하기",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/11052",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "4\n" +
                 "1 5 6 7",

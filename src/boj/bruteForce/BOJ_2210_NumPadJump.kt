@@ -4,7 +4,7 @@ import boj.BOJSolution
 
 class BOJ_2210_NumPadJump : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val matrix = Array(5) { CharArray(5) }
         for (i in 0 until 5) {
             matrix[i] = readLine()!!.split(" ")
@@ -46,11 +46,11 @@ class BOJ_2210_NumPadJump : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 2210,
     title = "숫자판 점프",
-    category = arrayOf(BOJSolution.BRUTE_FORCE),
+    category = listOf(BOJSolution.BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/submit/2210"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "1 1 1 1 1\n" +

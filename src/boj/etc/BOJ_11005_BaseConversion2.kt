@@ -9,7 +9,7 @@ import boj.BOJSolution
  * */
 class BOJ_11005_BaseConversion2 : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val input = readLine()!!.split(" ")
         val N = input[0].toLong()
         val B = input[1].toInt()
@@ -44,11 +44,11 @@ class BOJ_11005_BaseConversion2 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 11005,
     title = "진법 변환2",
-    category = arrayOf(BOJSolution.MATERIALIZATION),
+    category = listOf(BOJSolution.MATERIALIZATION),
     problemUrl = "https://www.acmicpc.net/problem/11005"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "60466175 36",
         output = "ZZZZZ"

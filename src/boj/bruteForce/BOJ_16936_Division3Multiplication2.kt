@@ -11,7 +11,7 @@ import boj.BOJSolution.Companion.BRUTE_FORCE
  * */
 class BOJ_16936_Division3Multiplication2 : BOJSolution(info(), testCases()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readLine()!!.toInt()
         val sequence = readLine()!!.split(" ")
             .map { it.toLong() }
@@ -57,11 +57,11 @@ class BOJ_16936_Division3Multiplication2 : BOJSolution(info(), testCases()) {
 private fun info() = BOJSolution.Info(
     no = 16936,
     title = "나3곱2",
-    category = arrayOf(BRUTE_FORCE),
+    category = listOf(BRUTE_FORCE),
     problemUrl = "https://www.acmicpc.net/problem/16936"
 )
 
-private fun testCases() = arrayOf(
+private fun testCases() = listOf(
     BOJSolution.TestCase(
         input =
         "6\n" +

@@ -15,7 +15,7 @@ class BOJ_1463_MakeItToOne : BOJSolution(info(), testCase()) {
 
     class Point(val x: Int, val count: Int)
 
-    override fun main() {
+    override fun runEachSolution() {
         val N = readln().toInt() // (1 ≤ N ≤ 10^6)
 
         println(solution2(N))
@@ -81,12 +81,12 @@ class BOJ_1463_MakeItToOne : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 1463,
     title = "1로 만들기",
-    category = arrayOf(BOJSolution.DP),
+    category = listOf(BOJSolution.DP),
     problemUrl = "https://www.acmicpc.net/problem/1463",
     solutionUrl = "",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "2",
         output = "1",

@@ -8,7 +8,7 @@ import boj.BOJSolution
  * */
 class BOJ_11723_Set : BOJSolution(info(), testCase()) {
 
-    override fun main() {
+    override fun runEachSolution() {
         val M = readln().toInt() // 연산의 수 (1 ≤ M ≤ 3,000,000)
         var n = 0
         val answer = StringBuilder()
@@ -37,11 +37,11 @@ class BOJ_11723_Set : BOJSolution(info(), testCase()) {
 private fun info() = BOJSolution.Info(
     no = 11723,
     title = "집합",
-    category = arrayOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK),
+    category = listOf(BOJSolution.BRUTE_FORCE, BOJSolution.BITMASK),
     problemUrl = "",
 )
 
-private fun testCase() = arrayOf(
+private fun testCase() = listOf(
     BOJSolution.TestCase(
         input = "26\n" +
                 "add 1\n" +
