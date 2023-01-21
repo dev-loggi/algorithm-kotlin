@@ -11,6 +11,7 @@ import boj.etc.BOJ_11005_BaseConversion2
 import boj.etc.BOJ_21921_Blog
 import boj.etc.BOJ_2470_TwoSolutions
 import boj.etc.BOJ_2902_WhyIsKMPaKMP
+import boj.undefined.*
 import boj.unsolved.*
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
@@ -78,6 +79,7 @@ object BOJ {
         // 14000 ~ 14999
         14391 -> BOJ_14391_PaperPiece::class
         14889 -> BOJ_14889_StartAndLink::class
+        14891 -> BOJ14891::class
 
         // 15000 ~ 15999
         15558 -> BOJ_15558_JumpGame::class

@@ -130,14 +130,15 @@
 
 
 <details>
-<summary>&nbsp;BOJ: 14000 ~ 14999 (2)</summary>
+<summary>&nbsp;BOJ: 14000 ~ 14999 (3)</summary>
 <div markdown="1">
 <br/>
 
-| 번호                                             | 제목                                                    | 유형    | 풀이  |
-|------------------------------------------------|-------------------------------------------------------|-------|-----|
-| [14391](https://www.acmicpc.net/problem/14391) | [종이 조각](src/boj/bitmask/BOJ_14391_PaperPiece.kt)      | 비트마스크 |
-| [14889](https://www.acmicpc.net/problem/14889) | [스타트와 링크](src/boj/bitmask/BOJ_14889_StartAndLink.kt)  | 비트마스크 |
+| 번호                                             | 제목                                                   | 유형    | 풀이  |
+|------------------------------------------------|------------------------------------------------------|-------|-----|
+| [14391](https://www.acmicpc.net/problem/14391) | [종이 조각](src/boj/bitmask/BOJ_14391_PaperPiece.kt)     | 비트마스크 |
+| [14889](https://www.acmicpc.net/problem/14889) | [스타트와 링크](src/boj/bitmask/BOJ_14889_StartAndLink.kt) | 비트마스크 |
+| [14891](https://www.acmicpc.net/problem/14891) | [톱니바퀴](src/boj/undefined/BOJ14891.kt)                |       |
 
 
 </div>
