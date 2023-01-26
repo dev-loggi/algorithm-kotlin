@@ -1,8 +1,7 @@
 package boj
 
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
+import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-import kotlin.system.measureTimeMillis
 
 abstract class BOJSolution(
     private val info: Info,
@@ -35,6 +34,8 @@ abstract class BOJSolution(
 
         val userOutputs = runSolutions()
 
+        println(userOutputs.map { s -> s.map { c -> c.code } })
+
         printTestCaseResults(userOutputs)
     }
 
@@ -55,23 +56,21 @@ abstract class BOJSolution(
     }
 
     private fun runSolutions(): List<String> = onTestEnvironment { outputStream ->
-        val userOutputs = mutableListOf<String>()
+        val outputs = mutableListOf<String>()
 
         repeat(testCases.size) {
             runEachSolution()
 
-            val userOutput = outputStream
-                .newInputStream()
-                .reader()
-                .readLines()
-                .joinToString("\n")
+            val userOutput = outputStream.toByteArray()
+                .decodeToString()
+                .trim('\n', '\r')
 
-            userOutputs.add(userOutput)
+            outputs.add(userOutput)
 
             outputStream.reset()
         }
 
-        userOutputs
+        outputs
     }
 
     private fun printTestCaseResults(userOutputs: List<String>) {
@@ -95,6 +94,7 @@ abstract class BOJSolution(
             val template =
                 """-------------------------------
 [예제 입력 $testCaseNo]
+
 * input:
 $input
 
@@ -117,7 +117,7 @@ $answer
         """.trimIndent())
     }
 
-    private fun <R> onTestEnvironment(block: (outputStream: ByteOutputStream) -> R): R {
+    private fun <R> onTestEnvironment(block: (outputStream: ByteArrayOutputStream) -> R): R {
         val result: R
         val systemIn = System.`in`
         val systemOut = System.out
@@ -127,7 +127,7 @@ $answer
         inputData.byteInputStream().use { inputStream ->
             System.setIn(inputStream)
 
-            ByteOutputStream().use { outputStream ->
+            ByteArrayOutputStream().use { outputStream ->
                 PrintStream(outputStream).use { printStream ->
                     System.setOut(printStream)
 
