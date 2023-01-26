@@ -1,7 +1,5 @@
 package programmers.skillCheck.level2
 
-import com.sun.org.apache.xalan.internal.xsltc.DOM
-
 class Snail {
 
     // n=4, [1,2,9,3,10,8,4,5,6,7]
