@@ -34,8 +34,6 @@ abstract class BOJSolution(
 
         val userOutputs = runSolutions()
 
-        println(userOutputs.map { s -> s.map { c -> c.code } })
-
         printTestCaseResults(userOutputs)
     }
 
