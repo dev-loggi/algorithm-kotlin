@@ -32,6 +32,7 @@ class BOJ14891 : BOJSolution(info(), testCase()) {
     }
 
     fun solution(): Int {
+//        println("solution(): K=$K, wheels[0]=${wheels[0].contentToString()}")
         for ((i, dir) in rotates) {
             val index = i - 1
 

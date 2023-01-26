@@ -57,7 +57,7 @@ private fun testCases() = listOf(
     BOJSolution.TestCase(
         input = "7 5\n" +
                 "1 1 1 1 1 5 1",
-        output = "9" +
+        output = "9\n" +
                 "2",
     ),
     BOJSolution.TestCase(
