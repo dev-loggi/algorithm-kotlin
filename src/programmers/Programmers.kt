@@ -84,6 +84,7 @@ object Programmers {
             val trucksCrossingBridge: Solution get() = TrucksCrossingBridge()
             val tuple: Solution get() = Tuple()
             val vowelDictionary: Solution get() = VowelDictionary()
+            val 당구연습: Solution get() = 당구연습()
         }
 
         object LevelThree {
